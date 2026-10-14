@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Sistema de transporte de carga pesada
+# Sistema de transporte de carga pesada (Grywolf)
 
 Proyecto académico para la asignatura de **Pruebas de Software**. Es una API REST con interfaz web para una empresa ficticia
 de transporte terrestre de carga pesada (**Griwolf Carga Pesada S.A.S.**), acompañada de un programa de pruebas inspirado en
@@ -177,6 +176,4 @@ Todos los errores usan ProblemDetails (`application/problem+json`):
 - Sin autenticación, GPS, facturación, pagos ni integraciones externas (exclusiones del alcance).
 - La referencia a ISO/IEC/IEEE 29119 se limita a la estructura y la terminología de la documentación de pruebas; no implica
   conformidad total ni certificación.
-=======
-# sistema-cargas-pesadas-Grywolf
->>>>>>> d577320ca1ffd0ae8872da83ff3162ecc3179429
+

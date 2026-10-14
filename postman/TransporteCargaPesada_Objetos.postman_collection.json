@@ -1,0 +1,1504 @@
+﻿{
+    "info":  {
+                 "name":  "Transporte de Carga Pesada · Objetos y Relaciones (Integrante 3)",
+                 "description":  "Colección de pruebas para el módulo de Objetos, Relaciones e Integridad de Negocio (Responsabilidad Integrante 3 - Rama test/postman-objetos).\\n\\n- Endpoints: /api/objetos, /api/cargas/{id}/objetos, /api/cargas, /api/categorias\\n- Casos cubiertos: CP-OBJ-001 al CP-OBJ-016 y casos de integridad relacional (CP-CAR-022, CP-CAR-023, CP-CAT-013, CP-CAT-014, CP-CAT-015, CP-CAR-014, CP-CAR-025)\\n- Reglas de negocio: RN-02, RN-04, RN-05, RN-06, RN-07, RN-08, RN-09, RN-12, RN-13, RN-14, RN-15, RN-18\\n- Verificaciones automáticas: Códigos HTTP, contratos ProblemDetails, headers Location, ausencia de fugas de stack trace, y consistencia de datos calculados.",
+                 "schema":  "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+             },
+    "event":  [
+                  {
+                      "listen":  "test",
+                      "script":  {
+                                     "type":  "text/javascript",
+                                     "exec":  [
+                                                  "pm.test(\"[General] Tiempo de respuesta menor a 3000 ms\", () =\u003e pm.expect(pm.response.responseTime).to.be.below(3000));",
+                                                  "if (pm.response.code \u003e= 400) {",
+                                                  "    pm.test(\"[General] Error en formato ProblemDetails (application/problem+json)\", () =\u003e {",
+                                                  "        pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/problem+json\");",
+                                                  "        const j = pm.response.json();",
+                                                  "        pm.expect(j.status).to.eql(pm.response.code);",
+                                                  "        pm.expect(j.title).to.be.a(\"string\");",
+                                                  "        pm.expect(j.traceId).to.be.a(\"string\");",
+                                                  "    });",
+                                                  "    pm.test(\"[General] La respuesta no expone detalles internos\", () =\u003e pm.expect(pm.response.text()).to.not.match(/Exception|StackTrace|Data Source|System\\.|\\.cs:line/));",
+                                                  "}"
+                                              ]
+                                 }
+                  }
+              ],
+    "variable":  [
+                     {
+                         "key":  "baseUrl",
+                         "value":  "http://localhost:5080",
+                         "type":  "string"
+                     },
+                     {
+                         "key":  "sufijo",
+                         "value":  "",
+                         "type":  "string"
+                     },
+                     {
+                         "key":  "catTipoCargaId",
+                         "value":  "",
+                         "type":  "string"
+                     },
+                     {
+                         "key":  "catVehiculoId",
+                         "value":  "",
+                         "type":  "string"
+                     },
+                     {
+                         "key":  "catEntregaId",
+                         "value":  "",
+                         "type":  "string"
+                     },
+                     {
+                         "key":  "catEstadoId",
+                         "value":  "",
+                         "type":  "string"
+                     },
+                     {
+                         "key":  "catObjetoId",
+                         "value":  "",
+                         "type":  "string"
+                     },
+                     {
+                         "key":  "cargaId",
+                         "value":  "",
+                         "type":  "string"
+                     },
+                     {
+                         "key":  "cargaBId",
+                         "value":  "",
+                         "type":  "string"
+                     },
+                     {
+                         "key":  "objetoId",
+                         "value":  "",
+                         "type":  "string"
+                     }
+                 ],
+    "item":  [
+                 {
+                     "name":  "00 · Preparación y Prerrequisitos",
+                     "description":  "Inicializa el sufijo de prueba y crea las categorías y cargas base requeridas para evaluar Objetos y Relaciones.",
+                     "item":  [
+                                  {
+                                      "name":  "CP-CAT-005 Â· Crear categorÃ­a (cÃ³digo en minÃºsculas se normaliza)",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 201\", () =\u003e pm.response.to.have.status(201));",
+                                                                                    "pm.test(\"Devuelve un id numÃ©rico generado\", () =\u003e pm.expect(pm.response.json().id).to.be.a(\"number\").and.above(0));",
+                                                                                    "pm.test(\"Encabezado Location apunta al recurso\", () =\u003e pm.expect(pm.response.headers.get(\"Location\")).to.include(\"/\" + pm.response.json().id));",
+                                                                                    "pm.collectionVariables.set(\"catTipoCargaId\", pm.response.json().id);",
+                                                                                    "pm.test(\"CÃ³digo y tipo normalizados a mayÃºsculas\", () =\u003e { const j = pm.response.json(); pm.expect(j.tipoCategoria).to.eql(\"TIPO_CARGA\"); pm.expect(j.codigo).to.eql(j.codigo.toUpperCase()); });",
+                                                                                    "pm.test(\"Tipos de datos correctos\", () =\u003e { const j = pm.response.json(); pm.expect(j.id).to.be.a(\"number\"); pm.expect(j.codigo).to.be.a(\"string\"); pm.expect(j.activo).to.be.a(\"boolean\"); });"
+                                                                                ]
+                                                                   }
+                                                    },
+                                                    {
+                                                        "listen":  "prerequest",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "if (!pm.collectionVariables.get(\u0027sufijo\u0027)) { pm.collectionVariables.set(\u0027sufijo\u0027, Date.now().toString(36).toUpperCase()); }"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias",
+                                                      "description":  "Crea una categorÃ­a TIPO_CARGA enviando tipo y cÃ³digo en minÃºsculas.\n\n**Resultado esperado:** 201; tipoCategoria y cÃ³digo normalizados a mayÃºsculas.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"tipoCategoria\": \"tipo_carga\",\n  \"codigo\": \"pm_carga_{{sufijo}}\",\n  \"nombre\": \"Carga Postman\",\n  \"descripcion\": \"Creada por la colecciÃ³n Postman\"\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-CAT-005 Â· Crear categorÃ­a VEHICULO",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 201\", () =\u003e pm.response.to.have.status(201));",
+                                                                                    "pm.test(\"Devuelve un id numÃ©rico generado\", () =\u003e pm.expect(pm.response.json().id).to.be.a(\"number\").and.above(0));",
+                                                                                    "pm.test(\"Encabezado Location apunta al recurso\", () =\u003e pm.expect(pm.response.headers.get(\"Location\")).to.include(\"/\" + pm.response.json().id));",
+                                                                                    "pm.collectionVariables.set(\"catVehiculoId\", pm.response.json().id);",
+                                                                                    "pm.test(\"Contiene propiedades obligatorias\", () =\u003e { const j = pm.response.json(); [\"id\",\"tipoCategoria\",\"codigo\",\"nombre\",\"activo\",\"fechaCreacion\"].forEach(p =\u003e pm.expect(j).to.have.property(p)); });",
+                                                                                    "pm.test(\"Tipo VEHICULO y activa por defecto\", () =\u003e { pm.expect(pm.response.json().tipoCategoria).to.eql(\"VEHICULO\"); pm.expect(pm.response.json().activo).to.eql(true); });"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias",
+                                                      "description":  "Crea una categorÃ­a VEHICULO propia de la colecciÃ³n (se elimina en la carpeta de limpieza).\n\n**Resultado esperado:** 201 Created, Location y tipoCategoria = VEHICULO.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"tipoCategoria\": \"VEHICULO\",\n  \"codigo\": \"PM_VEH_{{sufijo}}\",\n  \"nombre\": \"VehÃ­culo Postman\",\n  \"descripcion\": \"Creada por la colecciÃ³n Postman\"\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-CAT-005 Â· Crear categorÃ­a TIPO_ENTREGA",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 201\", () =\u003e pm.response.to.have.status(201));",
+                                                                                    "pm.test(\"Devuelve un id numÃ©rico generado\", () =\u003e pm.expect(pm.response.json().id).to.be.a(\"number\").and.above(0));",
+                                                                                    "pm.test(\"Encabezado Location apunta al recurso\", () =\u003e pm.expect(pm.response.headers.get(\"Location\")).to.include(\"/\" + pm.response.json().id));",
+                                                                                    "pm.collectionVariables.set(\"catEntregaId\", pm.response.json().id);",
+                                                                                    "pm.test(\"Contiene propiedades obligatorias\", () =\u003e { const j = pm.response.json(); [\"id\",\"tipoCategoria\",\"codigo\",\"nombre\",\"activo\",\"fechaCreacion\"].forEach(p =\u003e pm.expect(j).to.have.property(p)); });",
+                                                                                    "pm.test(\"Tipo TIPO_ENTREGA y activa por defecto\", () =\u003e { pm.expect(pm.response.json().tipoCategoria).to.eql(\"TIPO_ENTREGA\"); pm.expect(pm.response.json().activo).to.eql(true); });"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias",
+                                                      "description":  "Crea una categorÃ­a TIPO_ENTREGA propia de la colecciÃ³n (se elimina en la carpeta de limpieza).\n\n**Resultado esperado:** 201 Created, Location y tipoCategoria = TIPO_ENTREGA.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"tipoCategoria\": \"TIPO_ENTREGA\",\n  \"codigo\": \"PM_ENT_{{sufijo}}\",\n  \"nombre\": \"Entrega Postman\",\n  \"descripcion\": \"Creada por la colecciÃ³n Postman\"\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-CAT-005 Â· Crear categorÃ­a ESTADO_CARGA",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 201\", () =\u003e pm.response.to.have.status(201));",
+                                                                                    "pm.test(\"Devuelve un id numÃ©rico generado\", () =\u003e pm.expect(pm.response.json().id).to.be.a(\"number\").and.above(0));",
+                                                                                    "pm.test(\"Encabezado Location apunta al recurso\", () =\u003e pm.expect(pm.response.headers.get(\"Location\")).to.include(\"/\" + pm.response.json().id));",
+                                                                                    "pm.collectionVariables.set(\"catEstadoId\", pm.response.json().id);",
+                                                                                    "pm.test(\"Contiene propiedades obligatorias\", () =\u003e { const j = pm.response.json(); [\"id\",\"tipoCategoria\",\"codigo\",\"nombre\",\"activo\",\"fechaCreacion\"].forEach(p =\u003e pm.expect(j).to.have.property(p)); });",
+                                                                                    "pm.test(\"Tipo ESTADO_CARGA y activa por defecto\", () =\u003e { pm.expect(pm.response.json().tipoCategoria).to.eql(\"ESTADO_CARGA\"); pm.expect(pm.response.json().activo).to.eql(true); });"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias",
+                                                      "description":  "Crea una categorÃ­a ESTADO_CARGA propia de la colecciÃ³n (se elimina en la carpeta de limpieza).\n\n**Resultado esperado:** 201 Created, Location y tipoCategoria = ESTADO_CARGA.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"tipoCategoria\": \"ESTADO_CARGA\",\n  \"codigo\": \"PM_EST_{{sufijo}}\",\n  \"nombre\": \"Estado Postman\",\n  \"descripcion\": \"Creada por la colecciÃ³n Postman\"\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-CAT-005 Â· Crear categorÃ­a TIPO_OBJETO",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 201\", () =\u003e pm.response.to.have.status(201));",
+                                                                                    "pm.test(\"Devuelve un id numÃ©rico generado\", () =\u003e pm.expect(pm.response.json().id).to.be.a(\"number\").and.above(0));",
+                                                                                    "pm.test(\"Encabezado Location apunta al recurso\", () =\u003e pm.expect(pm.response.headers.get(\"Location\")).to.include(\"/\" + pm.response.json().id));",
+                                                                                    "pm.collectionVariables.set(\"catObjetoId\", pm.response.json().id);",
+                                                                                    "pm.test(\"Contiene propiedades obligatorias\", () =\u003e { const j = pm.response.json(); [\"id\",\"tipoCategoria\",\"codigo\",\"nombre\",\"activo\",\"fechaCreacion\"].forEach(p =\u003e pm.expect(j).to.have.property(p)); });",
+                                                                                    "pm.test(\"Tipo TIPO_OBJETO y activa por defecto\", () =\u003e { pm.expect(pm.response.json().tipoCategoria).to.eql(\"TIPO_OBJETO\"); pm.expect(pm.response.json().activo).to.eql(true); });"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias",
+                                                      "description":  "Crea una categorÃ­a TIPO_OBJETO propia de la colecciÃ³n (se elimina en la carpeta de limpieza).\n\n**Resultado esperado:** 201 Created, Location y tipoCategoria = TIPO_OBJETO.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"tipoCategoria\": \"TIPO_OBJETO\",\n  \"codigo\": \"PM_OBJ_{{sufijo}}\",\n  \"nombre\": \"Objeto Postman\",\n  \"descripcion\": \"Creada por la colecciÃ³n Postman\"\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-CAR-002 Â· Crear carga vÃ¡lida (estado por defecto)",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 201\", () =\u003e pm.response.to.have.status(201));",
+                                                                                    "pm.test(\"Devuelve un id numÃ©rico generado\", () =\u003e pm.expect(pm.response.json().id).to.be.a(\"number\").and.above(0));",
+                                                                                    "pm.test(\"Encabezado Location apunta al recurso\", () =\u003e pm.expect(pm.response.headers.get(\"Location\")).to.include(\"/\" + pm.response.json().id));",
+                                                                                    "pm.collectionVariables.set(\"cargaId\", pm.response.json().id);",
+                                                                                    "pm.test(\"Contiene propiedades obligatorias\", () =\u003e { const j = pm.response.json(); [\"id\",\"codigo\",\"descripcion\",\"origen\",\"destino\",\"pesoTotalKg\",\"tipoCargaId\",\"tipoEntregaId\",\"estadoId\",\"fechaRegistro\",\"cantidadObjetos\",\"pesoObjetosKg\"].forEach(p =\u003e pm.expect(j).to.have.property(p)); });",
+                                                                                    "pm.test(\"Estado inicial PENDIENTE y sin objetos\", () =\u003e { const j = pm.response.json(); pm.expect(j.estadoCodigo).to.eql(\"PENDIENTE\"); pm.expect(j.cantidadObjetos).to.eql(0); });",
+                                                                                    "pm.test(\"Tipos de datos correctos\", () =\u003e { const j = pm.response.json(); pm.expect(j.pesoTotalKg).to.be.a(\"number\"); pm.expect(j.codigo).to.be.a(\"string\"); pm.expect(Date.parse(j.fechaRegistro)).to.not.be.NaN; });",
+                                                                                    "pm.collectionVariables.set(\"cargaCodigo\", pm.response.json().codigo);"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/cargas",
+                                                      "description":  "Crea una carga sin indicar estadoId.\n\n**Resultado esperado:** 201; estadoCodigo = PENDIENTE; cantidadObjetos = 0.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"codigo\": \"PM-{{sufijo}}\",\n  \"descripcion\": \"Carga de prueba Postman\",\n  \"origen\": \"BogotÃ¡\",\n  \"destino\": \"MedellÃ­n\",\n  \"pesoTotalKg\": 4000,\n  \"volumenTotalM3\": 30,\n  \"tipoCargaId\": {{catTipoCargaId}},\n  \"tipoVehiculoId\": {{catVehiculoId}},\n  \"tipoEntregaId\": {{catEntregaId}},\n  \"observaciones\": \"Creada por la colecciÃ³n Postman\"\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-CAR-002 Â· Crear segunda carga (para eliminar)",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 201\", () =\u003e pm.response.to.have.status(201));",
+                                                                                    "pm.test(\"Devuelve un id numÃ©rico generado\", () =\u003e pm.expect(pm.response.json().id).to.be.a(\"number\").and.above(0));",
+                                                                                    "pm.test(\"Encabezado Location apunta al recurso\", () =\u003e pm.expect(pm.response.headers.get(\"Location\")).to.include(\"/\" + pm.response.json().id));",
+                                                                                    "pm.collectionVariables.set(\"cargaBId\", pm.response.json().id);"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/cargas",
+                                                      "description":  "Segunda carga sin vehÃ­culo y con poco peso; se usa en CP-OBJ-016 y en la limpieza.\n\n**Resultado esperado:** 201.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"codigo\": \"PM-{{sufijo}}-B\",\n  \"descripcion\": \"Carga de prueba Postman\",\n  \"origen\": \"BogotÃ¡\",\n  \"destino\": \"MedellÃ­n\",\n  \"pesoTotalKg\": 1000,\n  \"volumenTotalM3\": 30,\n  \"tipoCargaId\": {{catTipoCargaId}},\n  \"tipoVehiculoId\": null,\n  \"tipoEntregaId\": {{catEntregaId}},\n  \"observaciones\": \"Creada por la colecciÃ³n Postman\"\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  }
+                              ]
+                 },
+                 {
+                     "name":  "01 · Objetos (Pruebas Positivas y Negativas)",
+                     "description":  "Pruebas funcionales y negativas completas de Objetos (CP-OBJ-001 a CP-OBJ-014, CP-OBJ-016).",
+                     "item":  [
+                                  {
+                                      "name":  "CP-OBJ-002 Â· Crear objeto vÃ¡lido",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 201\", () =\u003e pm.response.to.have.status(201));",
+                                                                                    "pm.test(\"Devuelve un id numÃ©rico generado\", () =\u003e pm.expect(pm.response.json().id).to.be.a(\"number\").and.above(0));",
+                                                                                    "pm.test(\"Encabezado Location apunta al recurso\", () =\u003e pm.expect(pm.response.headers.get(\"Location\")).to.include(\"/\" + pm.response.json().id));",
+                                                                                    "pm.collectionVariables.set(\"objetoId\", pm.response.json().id);",
+                                                                                    "pm.test(\"Contiene propiedades obligatorias\", () =\u003e { const j = pm.response.json(); [\"id\",\"cargaId\",\"cargaCodigo\",\"nombre\",\"cantidad\",\"pesoUnitarioKg\",\"pesoTotalKg\",\"categoriaId\"].forEach(p =\u003e pm.expect(j).to.have.property(p)); });",
+                                                                                    "pm.test(\"Peso total calculado y carga correcta\", () =\u003e { const j = pm.response.json(); pm.expect(j.pesoTotalKg).to.eql(2000); pm.expect(j.cargaId).to.eql(Number(pm.collectionVariables.get(\"cargaId\"))); });"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos",
+                                                      "description":  "Agrega 2 Ã— 1000 kg a la carga (peso declarado 4000 kg).\n\n**Resultado esperado:** 201; pesoTotalKg = 2000.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"cargaId\": {{cargaId}},\n  \"nombre\": \"Motor industrial\",\n  \"descripcion\": \"Objeto de prueba Postman\",\n  \"cantidad\": 2,\n  \"pesoUnitarioKg\": 1000,\n  \"volumenUnitarioM3\": 2.5,\n  \"categoriaId\": {{catObjetoId}}\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-001 Â· Listar objetos",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 200\", () =\u003e pm.response.to.have.status(200));",
+                                                                                    "pm.test(\"La respuesta es una lista JSON\", () =\u003e pm.expect(pm.response.json()).to.be.an(\"array\"));",
+                                                                                    "pm.test(\"Incluye el objeto creado\", () =\u003e pm.expect(pm.response.json().map(o =\u003e o.id)).to.include(Number(pm.collectionVariables.get(\"objetoId\"))));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos",
+                                                      "description":  "Consulta todos los objetos.\n\n**Resultado esperado:** 200 con el objeto creado."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-003 Â· Consultar objeto por id",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 200\", () =\u003e pm.response.to.have.status(200));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos/{{objetoId}}",
+                                                      "description":  "Consulta el objeto creado.\n\n**Resultado esperado:** 200."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-004 Â· Consultar objeto inexistente",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 404\", () =\u003e pm.response.to.have.status(404));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos/999999999",
+                                                      "description":  "Id inexistente.\n\n**Resultado esperado:** 404."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-005 Â· Objetos de una carga",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 200\", () =\u003e pm.response.to.have.status(200));",
+                                                                                    "pm.test(\"La respuesta es una lista JSON\", () =\u003e pm.expect(pm.response.json()).to.be.an(\"array\"));",
+                                                                                    "pm.test(\"Todos pertenecen a la carga\", () =\u003e { const l = pm.response.json(); pm.expect(l.length).to.eql(1); l.forEach(o =\u003e pm.expect(o.cargaId).to.eql(Number(pm.collectionVariables.get(\"cargaId\")))); });"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/cargas/{{cargaId}}/objetos",
+                                                      "description":  "Endpoint de relaciÃ³n carga â†’ objetos.\n\n**Resultado esperado:** 200; todos los objetos pertenecen a la carga."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-005 Â· Filtrar objetos por cargaId",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 200\", () =\u003e pm.response.to.have.status(200));",
+                                                                                    "pm.test(\"Lista vacÃ­a\", () =\u003e pm.expect(pm.response.json()).to.have.length(0));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos?cargaId={{cargaBId}}",
+                                                      "description":  "La segunda carga no tiene objetos.\n\n**Resultado esperado:** 200 con lista vacÃ­a."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-006 Â· Objetos de una carga inexistente",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 404\", () =\u003e pm.response.to.have.status(404));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/cargas/999999999/objetos",
+                                                      "description":  "Carga inexistente.\n\n**Resultado esperado:** 404."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-007 Â· Actualizar objeto",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 200\", () =\u003e pm.response.to.have.status(200));",
+                                                                                    "pm.test(\"Cantidad y peso actualizados\", () =\u003e { const j = pm.response.json(); pm.expect(j.cantidad).to.eql(3); pm.expect(j.pesoTotalKg).to.eql(3000); });"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "PUT",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos/{{objetoId}}",
+                                                      "description":  "Cambia la cantidad a 3 (3000 kg).\n\n**Resultado esperado:** 200; pesoTotalKg = 3000.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"cargaId\": {{cargaId}},\n  \"nombre\": \"Motor industrial reforzado\",\n  \"descripcion\": \"Objeto de prueba Postman\",\n  \"cantidad\": 3,\n  \"pesoUnitarioKg\": 1000,\n  \"volumenUnitarioM3\": 2.5,\n  \"categoriaId\": {{catObjetoId}}\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-002 Â· La carga refleja sus objetos",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 200\", () =\u003e pm.response.to.have.status(200));",
+                                                                                    "pm.test(\"Resumen de objetos coherente\", () =\u003e { const j = pm.response.json(); pm.expect(j.cantidadObjetos).to.eql(1); pm.expect(j.pesoObjetosKg).to.eql(3000); });"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/cargas/{{cargaId}}",
+                                                      "description":  "Comprueba la coherencia carga â†” objetos.\n\n**Resultado esperado:** 200; cantidadObjetos = 1 y pesoObjetosKg = 3000."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-008 Â· Objeto vinculado a una carga inexistente",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 400\", () =\u003e pm.response.to.have.status(400));",
+                                                                                    "pm.test(\"Error de validaciÃ³n en \u0027cargaId\u0027\", () =\u003e pm.expect(pm.response.json().errors).to.have.property(\"cargaId\"));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos",
+                                                      "description":  "RN-09.\n\n**Resultado esperado:** 400 con error en cargaId.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"cargaId\": 999999999,\n  \"nombre\": \"Motor industrial\",\n  \"descripcion\": \"Objeto de prueba Postman\",\n  \"cantidad\": 2,\n  \"pesoUnitarioKg\": 1000,\n  \"volumenUnitarioM3\": 2.5,\n  \"categoriaId\": {{catObjetoId}}\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-009 Â· Cantidad cero",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 400\", () =\u003e pm.response.to.have.status(400));",
+                                                                                    "pm.test(\"Error de validaciÃ³n en \u0027cantidad\u0027\", () =\u003e pm.expect(pm.response.json().errors).to.have.property(\"cantidad\"));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos",
+                                                      "description":  "RN-05.\n\n**Resultado esperado:** 400 con error en cantidad.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"cargaId\": {{cargaId}},\n  \"nombre\": \"Motor industrial\",\n  \"descripcion\": \"Objeto de prueba Postman\",\n  \"cantidad\": 0,\n  \"pesoUnitarioKg\": 1000,\n  \"volumenUnitarioM3\": 2.5,\n  \"categoriaId\": {{catObjetoId}}\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-010 Â· Peso unitario negativo",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 400\", () =\u003e pm.response.to.have.status(400));",
+                                                                                    "pm.test(\"Error de validaciÃ³n en \u0027pesoUnitarioKg\u0027\", () =\u003e pm.expect(pm.response.json().errors).to.have.property(\"pesoUnitarioKg\"));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos",
+                                                      "description":  "RN-04.\n\n**Resultado esperado:** 400 con error en pesoUnitarioKg.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"cargaId\": {{cargaId}},\n  \"nombre\": \"Motor industrial\",\n  \"descripcion\": \"Objeto de prueba Postman\",\n  \"cantidad\": 2,\n  \"pesoUnitarioKg\": -10,\n  \"volumenUnitarioM3\": 2.5,\n  \"categoriaId\": {{catObjetoId}}\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-011 Â· Objeto con campos obligatorios vacÃ­os",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 400\", () =\u003e pm.response.to.have.status(400));",
+                                                                                    "pm.test(\"Error de validaciÃ³n en \u0027cargaId\u0027\", () =\u003e pm.expect(pm.response.json().errors).to.have.property(\"cargaId\"));",
+                                                                                    "pm.test(\"Error de validaciÃ³n en \u0027nombre\u0027\", () =\u003e pm.expect(pm.response.json().errors).to.have.property(\"nombre\"));",
+                                                                                    "pm.test(\"Error de validaciÃ³n en \u0027cantidad\u0027\", () =\u003e pm.expect(pm.response.json().errors).to.have.property(\"cantidad\"));",
+                                                                                    "pm.test(\"Error de validaciÃ³n en \u0027pesoUnitarioKg\u0027\", () =\u003e pm.expect(pm.response.json().errors).to.have.property(\"pesoUnitarioKg\"));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos",
+                                                      "description":  "Faltan carga, nombre, cantidad y peso.\n\n**Resultado esperado:** 400 con los cuatro campos.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"nombre\": \"  \"\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-012 Â· CategorÃ­a VEHICULO usada como TIPO_OBJETO",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 400\", () =\u003e pm.response.to.have.status(400));",
+                                                                                    "pm.test(\"Error de validaciÃ³n en \u0027categoriaId\u0027\", () =\u003e pm.expect(pm.response.json().errors).to.have.property(\"categoriaId\"));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos",
+                                                      "description":  "RN-07.\n\n**Resultado esperado:** 400 con error en categoriaId.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"cargaId\": {{cargaId}},\n  \"nombre\": \"Motor industrial\",\n  \"descripcion\": \"Objeto de prueba Postman\",\n  \"cantidad\": 2,\n  \"pesoUnitarioKg\": 1000,\n  \"volumenUnitarioM3\": 2.5,\n  \"categoriaId\": {{catVehiculoId}}\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-013 Â· Objetos que superan el peso declarado de la carga",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 409\", () =\u003e pm.response.to.have.status(409));",
+                                                                                    "pm.test(\"El detalle menciona \u0027peso total declarado\u0027\", () =\u003e pm.expect(pm.response.json().detail).to.include(\"peso total declarado\"));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos",
+                                                      "description":  "La carga declara 4000 kg y ya tiene 3000 kg; se agregan 1001 kg (RN-18).\n\n**Resultado esperado:** 409 Conflict.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"cargaId\": {{cargaId}},\n  \"nombre\": \"Motor industrial\",\n  \"descripcion\": \"Objeto de prueba Postman\",\n  \"cantidad\": 1,\n  \"pesoUnitarioKg\": 1001,\n  \"volumenUnitarioM3\": 2.5,\n  \"categoriaId\": {{catObjetoId}}\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-014 Â· Cantidad con tipo de dato incorrecto",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 400\", () =\u003e pm.response.to.have.status(400));",
+                                                                                    "pm.test(\"Error de validaciÃ³n en \u0027cantidad\u0027\", () =\u003e pm.expect(pm.response.json().errors).to.have.property(\"cantidad\"));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos",
+                                                      "description":  "cantidad decimal en un campo entero.\n\n**Resultado esperado:** 400 con error en cantidad.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"cargaId\": {{cargaId}},\n  \"nombre\": \"Caja\",\n  \"cantidad\": 2.5,\n  \"pesoUnitarioKg\": 10\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-OBJ-016 Â· Mover objeto a una carga sin capacidad",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 409\", () =\u003e pm.response.to.have.status(409));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "PUT",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/objetos/{{objetoId}}",
+                                                      "description":  "La segunda carga declara 1000 kg; el objeto pesa 3000 kg.\n\n**Resultado esperado:** 409 Conflict.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"cargaId\": {{cargaBId}},\n  \"nombre\": \"Motor industrial\",\n  \"descripcion\": \"Objeto de prueba Postman\",\n  \"cantidad\": 3,\n  \"pesoUnitarioKg\": 1000,\n  \"volumenUnitarioM3\": 2.5,\n  \"categoriaId\": {{catObjetoId}}\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  }
+                              ]
+                 },
+                 {
+                     "name":  "02 · Reglas de Negocio e Integridad Relacional",
+                     "description":  "Pruebas de integridad referencial y reglas de negocio asociadas a objetos y cargas (CP-CAR-022, CP-CAR-023, CP-CAT-013, CP-CAT-014, CP-CAT-015, CP-CAR-014, CP-CAR-025, S-01).",
+                     "item":  [
+                                  {
+                                      "name":  "CP-CAR-022 Â· Eliminar carga con objetos",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 409\", () =\u003e pm.response.to.have.status(409));",
+                                                                                    "pm.test(\"El detalle menciona \u0027objeto\u0027\", () =\u003e pm.expect(pm.response.json().detail).to.include(\"objeto\"));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/cargas/{{cargaId}}",
+                                                      "description":  "La carga tiene un objeto asociado (RN-13).\n\n**Resultado esperado:** 409 Conflict."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-CAR-023 Â· Reducir peso por debajo del peso de los objetos",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 409\", () =\u003e pm.response.to.have.status(409));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "PUT",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/cargas/{{cargaId}}",
+                                                      "description":  "Los objetos suman 3000 kg (RN-18).\n\n**Resultado esperado:** 409 Conflict.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"codigo\": \"PM-{{sufijo}}\",\n  \"descripcion\": \"Carga de prueba Postman\",\n  \"origen\": \"BogotÃ¡\",\n  \"destino\": \"MedellÃ­n\",\n  \"pesoTotalKg\": 2999,\n  \"volumenTotalM3\": 30,\n  \"tipoCargaId\": {{catTipoCargaId}},\n  \"tipoVehiculoId\": {{catVehiculoId}},\n  \"tipoEntregaId\": {{catEntregaId}},\n  \"observaciones\": \"Creada por la colecciÃ³n Postman\",\n  \"estadoId\": {{catEstadoId}}\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-CAT-013 Â· Eliminar categorÃ­a en uso",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 409\", () =\u003e pm.response.to.have.status(409));",
+                                                                                    "pm.test(\"El detalle menciona \u0027DesactÃ­vela\u0027\", () =\u003e pm.expect(pm.response.json().detail).to.include(\"DesactÃ­vela\"));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias/{{catTipoCargaId}}",
+                                                      "description":  "La categorÃ­a TIPO_CARGA estÃ¡ referenciada por la carga (RN-14).\n\n**Resultado esperado:** 409 con sugerencia de desactivar."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-CAT-015 Â· Cambiar el tipo de una categorÃ­a en uso",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 409\", () =\u003e pm.response.to.have.status(409));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "PUT",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias/{{catTipoCargaId}}",
+                                                      "description":  "Cambiar TIPO_CARGA â†’ VEHICULO romperÃ­a la coherencia de la carga.\n\n**Resultado esperado:** 409.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"tipoCategoria\": \"VEHICULO\",\n  \"codigo\": \"PM_CARGA_{{sufijo}}\",\n  \"nombre\": \"Carga Postman\"\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-CAT-014 Â· Desactivar categorÃ­a en uso",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 200\", () =\u003e pm.response.to.have.status(200));",
+                                                                                    "pm.test(\"CategorÃ­a inactiva\", () =\u003e pm.expect(pm.response.json().activo).to.eql(false));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "PUT",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias/{{catTipoCargaId}}",
+                                                      "description":  "PolÃ­tica: las categorÃ­as en uso se desactivan en lugar de eliminarse.\n\n**Resultado esperado:** 200 con activo = false.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"tipoCategoria\": \"TIPO_CARGA\",\n  \"codigo\": \"PM_CARGA_{{sufijo}}\",\n  \"nombre\": \"Carga Postman\",\n  \"activo\": false\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-CAR-014 Â· Nueva carga con categorÃ­a inactiva",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 400\", () =\u003e pm.response.to.have.status(400));",
+                                                                                    "pm.test(\"Error de validaciÃ³n en \u0027tipoCargaId\u0027\", () =\u003e pm.expect(pm.response.json().errors).to.have.property(\"tipoCargaId\"));",
+                                                                                    "pm.test(\"El mensaje indica que estÃ¡ inactiva\", () =\u003e pm.expect(pm.response.json().errors.tipoCargaId[0]).to.include(\"inactiva\"));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "POST",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/cargas",
+                                                      "description":  "La categorÃ­a TIPO_CARGA estÃ¡ inactiva.\n\n**Resultado esperado:** 400 con error en tipoCargaId (inactiva).",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"codigo\": \"PM-NEG-{{sufijo}}\",\n  \"descripcion\": \"Carga de prueba Postman\",\n  \"origen\": \"BogotÃ¡\",\n  \"destino\": \"MedellÃ­n\",\n  \"pesoTotalKg\": 4000,\n  \"volumenTotalM3\": 30,\n  \"tipoCargaId\": {{catTipoCargaId}},\n  \"tipoVehiculoId\": {{catVehiculoId}},\n  \"tipoEntregaId\": {{catEntregaId}},\n  \"observaciones\": \"Creada por la colecciÃ³n Postman\"\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-CAR-025 Â· Actualizar carga conservando la categorÃ­a inactiva",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 200\", () =\u003e pm.response.to.have.status(200));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "PUT",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/cargas/{{cargaId}}",
+                                                      "description":  "La carga ya tenÃ­a asignada la categorÃ­a; se conserva el historial.\n\n**Resultado esperado:** 200.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"codigo\": \"PM-{{sufijo}}\",\n  \"descripcion\": \"Carga Postman actualizada\",\n  \"origen\": \"BogotÃ¡\",\n  \"destino\": \"MedellÃ­n\",\n  \"pesoTotalKg\": 4000,\n  \"volumenTotalM3\": 30,\n  \"tipoCargaId\": {{catTipoCargaId}},\n  \"tipoVehiculoId\": {{catVehiculoId}},\n  \"tipoEntregaId\": {{catEntregaId}},\n  \"observaciones\": \"Creada por la colecciÃ³n Postman\",\n  \"estadoId\": {{catEstadoId}}\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  },
+                                  {
+                                      "name":  "S-01 Â· Reactivar categorÃ­a (preparaciÃ³n de limpieza)",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 200\", () =\u003e pm.response.to.have.status(200));",
+                                                                                    "pm.test(\"CategorÃ­a activa\", () =\u003e pm.expect(pm.response.json().activo).to.eql(true));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "PUT",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias/{{catTipoCargaId}}",
+                                                      "description":  "Restaura el estado de la categorÃ­a.\n\n**Resultado esperado:** 200 con activo = true.",
+                                                      "body":  {
+                                                                   "mode":  "raw",
+                                                                   "raw":  "{\n  \"tipoCategoria\": \"TIPO_CARGA\",\n  \"codigo\": \"PM_CARGA_{{sufijo}}\",\n  \"nombre\": \"Carga Postman\",\n  \"activo\": true\n}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               }
+                                                               }
+                                                  }
+                                  }
+                              ]
+                 },
+                 {
+                     "name":  "03 · Eliminación y Limpieza",
+                     "description":  "Eliminación del objeto creado (CP-OBJ-015), verificación 404 y limpieza de cargas y categorías auxiliares.",
+                     "item":  [
+                                  [
+                                      {
+                                          "name":  "CP-OBJ-015 Â· Eliminar objeto",
+                                          "event":  [
+                                                        {
+                                                            "listen":  "test",
+                                                            "script":  {
+                                                                           "type":  "text/javascript",
+                                                                           "exec":  [
+                                                                                        "pm.test(\"HTTP 204\", () =\u003e pm.response.to.have.status(204));"
+                                                                                    ]
+                                                                       }
+                                                        }
+                                                    ],
+                                          "request":  {
+                                                          "method":  "DELETE",
+                                                          "header":  [
+                                                                         {
+                                                                             "key":  "Accept",
+                                                                             "value":  "application/json"
+                                                                         }
+                                                                     ],
+                                                          "url":  "{{baseUrl}}/api/objetos/{{objetoId}}",
+                                                          "description":  "Elimina el objeto creado.\n\n**Resultado esperado:** 204 No Content."
+                                                      }
+                                      },
+                                      {
+                                          "name":  "CP-OBJ-015 Â· Verificar objeto eliminado",
+                                          "event":  [
+                                                        {
+                                                            "listen":  "test",
+                                                            "script":  {
+                                                                           "type":  "text/javascript",
+                                                                           "exec":  [
+                                                                                        "pm.test(\"HTTP 404\", () =\u003e pm.response.to.have.status(404));"
+                                                                                    ]
+                                                                       }
+                                                        }
+                                                    ],
+                                          "request":  {
+                                                          "method":  "GET",
+                                                          "header":  [
+                                                                         {
+                                                                             "key":  "Accept",
+                                                                             "value":  "application/json"
+                                                                         }
+                                                                     ],
+                                                          "url":  "{{baseUrl}}/api/objetos/{{objetoId}}",
+                                                          "description":  "El objeto ya no existe.\n\n**Resultado esperado:** 404."
+                                                      }
+                                      }
+                                  ],
+                                  {
+                                      "name":  "CP-CAR-021 Â· Eliminar carga sin objetos",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 204\", () =\u003e pm.response.to.have.status(204));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/cargas/{{cargaId}}",
+                                                      "description":  "La carga ya no tiene objetos.\n\n**Resultado esperado:** 204 No Content."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-INT-004 Â· Eliminar segunda carga",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 204\", () =\u003e pm.response.to.have.status(204));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/cargas/{{cargaBId}}",
+                                                      "description":  "Limpieza.\n\n**Resultado esperado:** 204 No Content."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-INT-004 Â· Eliminar categorÃ­a TIPO_CARGA",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 204\", () =\u003e pm.response.to.have.status(204));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias/{{catTipoCargaId}}",
+                                                      "description":  "Ya no estÃ¡ referenciada por ningÃºn registro.\n\n**Resultado esperado:** 204 No Content."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-INT-004 Â· Eliminar categorÃ­a VEHICULO",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 204\", () =\u003e pm.response.to.have.status(204));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias/{{catVehiculoId}}",
+                                                      "description":  "Ya no estÃ¡ referenciada por ningÃºn registro.\n\n**Resultado esperado:** 204 No Content."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-INT-004 Â· Eliminar categorÃ­a TIPO_ENTREGA",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 204\", () =\u003e pm.response.to.have.status(204));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias/{{catEntregaId}}",
+                                                      "description":  "Ya no estÃ¡ referenciada por ningÃºn registro.\n\n**Resultado esperado:** 204 No Content."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-INT-004 Â· Eliminar categorÃ­a ESTADO_CARGA",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 204\", () =\u003e pm.response.to.have.status(204));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias/{{catEstadoId}}",
+                                                      "description":  "Ya no estÃ¡ referenciada por ningÃºn registro.\n\n**Resultado esperado:** 204 No Content."
+                                                  }
+                                  },
+                                  {
+                                      "name":  "CP-INT-004 Â· Eliminar categorÃ­a TIPO_OBJETO",
+                                      "event":  [
+                                                    {
+                                                        "listen":  "test",
+                                                        "script":  {
+                                                                       "type":  "text/javascript",
+                                                                       "exec":  [
+                                                                                    "pm.test(\"HTTP 204\", () =\u003e pm.response.to.have.status(204));"
+                                                                                ]
+                                                                   }
+                                                    }
+                                                ],
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ],
+                                                      "url":  "{{baseUrl}}/api/categorias/{{catObjetoId}}",
+                                                      "description":  "Ya no estÃ¡ referenciada por ningÃºn registro.\n\n**Resultado esperado:** 204 No Content."
+                                                  }
+                                  }
+                              ]
+                 }
+             ]
+}

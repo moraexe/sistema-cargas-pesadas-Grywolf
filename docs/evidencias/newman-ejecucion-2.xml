@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Transporte de Carga Pesada · API REST" tests="103" time="0.510">
+  <testsuite name="00 · Preparación / P-01 · Tipos de categoría permitidos [CP-CAT-018]" id="95f056c1-45e4-428c-8e14-9c0b1a3ddf44" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.031">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.031" classname="00PreparacionP01TiposDeCategoriaPermitidosCpCat018"/>
+    <testcase name="HTTP 200" time="0.031" classname="00PreparacionP01TiposDeCategoriaPermitidosCpCat018"/>
+    <testcase name="La respuesta es una lista JSON" time="0.031" classname="00PreparacionP01TiposDeCategoriaPermitidosCpCat018"/>
+    <testcase name="Incluye los seis tipos centralizados" time="0.031" classname="00PreparacionP01TiposDeCategoriaPermitidosCpCat018"/>
+  </testsuite>
+  <testsuite name="00 · Preparación / P-02 · Leer parámetros de límite [CP-PAR-001]" id="a0d5fed1-fd43-483d-987f-08e19a06a6f2" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.007">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.007" classname="00PreparacionP02LeerParametrosDeLimiteCpPar001"/>
+    <testcase name="HTTP 200" time="0.007" classname="00PreparacionP02LeerParametrosDeLimiteCpPar001"/>
+    <testcase name="La respuesta es una lista JSON" time="0.007" classname="00PreparacionP02LeerParametrosDeLimiteCpPar001"/>
+    <testcase name="Existen los parámetros de límite obligatorios" time="0.007" classname="00PreparacionP02LeerParametrosDeLimiteCpPar001"/>
+    <testcase name="Hay parámetros GENERAL y CATEGORIA" time="0.007" classname="00PreparacionP02LeerParametrosDeLimiteCpPar001"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-005 · Crear categoría (código en minúsculas se normaliza)" id="904e30e6-752a-4644-8997-ad9ea6336da0" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.007">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.007" classname="01CategoriasCpCat005CrearCategoriaCodigoEnMinusculasSeNormaliza"/>
+    <testcase name="HTTP 201" time="0.007" classname="01CategoriasCpCat005CrearCategoriaCodigoEnMinusculasSeNormaliza"/>
+    <testcase name="Devuelve un id numérico generado" time="0.007" classname="01CategoriasCpCat005CrearCategoriaCodigoEnMinusculasSeNormaliza"/>
+    <testcase name="Encabezado Location apunta al recurso" time="0.007" classname="01CategoriasCpCat005CrearCategoriaCodigoEnMinusculasSeNormaliza"/>
+    <testcase name="Código y tipo normalizados a mayúsculas" time="0.007" classname="01CategoriasCpCat005CrearCategoriaCodigoEnMinusculasSeNormaliza"/>
+    <testcase name="Tipos de datos correctos" time="0.007" classname="01CategoriasCpCat005CrearCategoriaCodigoEnMinusculasSeNormaliza"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-005 · Crear categoría VEHICULO" id="846737b5-37a2-4818-bd4d-3d3dfde675cf" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.007">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.007" classname="01CategoriasCpCat005CrearCategoriaVehiculo"/>
+    <testcase name="HTTP 201" time="0.007" classname="01CategoriasCpCat005CrearCategoriaVehiculo"/>
+    <testcase name="Devuelve un id numérico generado" time="0.007" classname="01CategoriasCpCat005CrearCategoriaVehiculo"/>
+    <testcase name="Encabezado Location apunta al recurso" time="0.007" classname="01CategoriasCpCat005CrearCategoriaVehiculo"/>
+    <testcase name="Contiene propiedades obligatorias" time="0.007" classname="01CategoriasCpCat005CrearCategoriaVehiculo"/>
+    <testcase name="Tipo VEHICULO y activa por defecto" time="0.007" classname="01CategoriasCpCat005CrearCategoriaVehiculo"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-005 · Crear categoría TIPO_ENTREGA" id="9a35e854-6a0c-49a7-8090-398c7f3c5a2e" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.006">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.006" classname="01CategoriasCpCat005CrearCategoriaTipoEntrega"/>
+    <testcase name="HTTP 201" time="0.006" classname="01CategoriasCpCat005CrearCategoriaTipoEntrega"/>
+    <testcase name="Devuelve un id numérico generado" time="0.006" classname="01CategoriasCpCat005CrearCategoriaTipoEntrega"/>
+    <testcase name="Encabezado Location apunta al recurso" time="0.006" classname="01CategoriasCpCat005CrearCategoriaTipoEntrega"/>
+    <testcase name="Contiene propiedades obligatorias" time="0.006" classname="01CategoriasCpCat005CrearCategoriaTipoEntrega"/>
+    <testcase name="Tipo TIPO_ENTREGA y activa por defecto" time="0.006" classname="01CategoriasCpCat005CrearCategoriaTipoEntrega"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-005 · Crear categoría ESTADO_CARGA" id="8d656cc4-e90b-4631-87fe-1fb07680c61e" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.006">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.006" classname="01CategoriasCpCat005CrearCategoriaEstadoCarga"/>
+    <testcase name="HTTP 201" time="0.006" classname="01CategoriasCpCat005CrearCategoriaEstadoCarga"/>
+    <testcase name="Devuelve un id numérico generado" time="0.006" classname="01CategoriasCpCat005CrearCategoriaEstadoCarga"/>
+    <testcase name="Encabezado Location apunta al recurso" time="0.006" classname="01CategoriasCpCat005CrearCategoriaEstadoCarga"/>
+    <testcase name="Contiene propiedades obligatorias" time="0.006" classname="01CategoriasCpCat005CrearCategoriaEstadoCarga"/>
+    <testcase name="Tipo ESTADO_CARGA y activa por defecto" time="0.006" classname="01CategoriasCpCat005CrearCategoriaEstadoCarga"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-005 · Crear categoría TIPO_OBJETO" id="183fdf88-83f5-48a8-acbb-4e4fbda0f981" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="01CategoriasCpCat005CrearCategoriaTipoObjeto"/>
+    <testcase name="HTTP 201" time="0.005" classname="01CategoriasCpCat005CrearCategoriaTipoObjeto"/>
+    <testcase name="Devuelve un id numérico generado" time="0.005" classname="01CategoriasCpCat005CrearCategoriaTipoObjeto"/>
+    <testcase name="Encabezado Location apunta al recurso" time="0.005" classname="01CategoriasCpCat005CrearCategoriaTipoObjeto"/>
+    <testcase name="Contiene propiedades obligatorias" time="0.005" classname="01CategoriasCpCat005CrearCategoriaTipoObjeto"/>
+    <testcase name="Tipo TIPO_OBJETO y activa por defecto" time="0.005" classname="01CategoriasCpCat005CrearCategoriaTipoObjeto"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-005 · Crear categoría UNIDAD_MEDIDA temporal" id="07957971-01fb-4f87-ac48-ecba913df88a" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.007">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.007" classname="01CategoriasCpCat005CrearCategoriaUnidadMedidaTemporal"/>
+    <testcase name="HTTP 201" time="0.007" classname="01CategoriasCpCat005CrearCategoriaUnidadMedidaTemporal"/>
+    <testcase name="Devuelve un id numérico generado" time="0.007" classname="01CategoriasCpCat005CrearCategoriaUnidadMedidaTemporal"/>
+    <testcase name="Encabezado Location apunta al recurso" time="0.007" classname="01CategoriasCpCat005CrearCategoriaUnidadMedidaTemporal"/>
+    <testcase name="Contiene propiedades obligatorias" time="0.007" classname="01CategoriasCpCat005CrearCategoriaUnidadMedidaTemporal"/>
+    <testcase name="Tipo UNIDAD_MEDIDA y activa por defecto" time="0.007" classname="01CategoriasCpCat005CrearCategoriaUnidadMedidaTemporal"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-001 · Listar categorías" id="bed766d6-542b-4ff4-9fed-f1378bb0a4bc" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="01CategoriasCpCat001ListarCategorias"/>
+    <testcase name="HTTP 200" time="0.004" classname="01CategoriasCpCat001ListarCategorias"/>
+    <testcase name="La respuesta es una lista JSON" time="0.004" classname="01CategoriasCpCat001ListarCategorias"/>
+    <testcase name="Contiene propiedades obligatorias" time="0.004" classname="01CategoriasCpCat001ListarCategorias"/>
+    <testcase name="Incluye la categoría creada" time="0.004" classname="01CategoriasCpCat001ListarCategorias"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-002 · Filtrar categorías por tipo VEHICULO" id="56220f8b-ba60-481c-8c5d-d5bc677d4242" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="01CategoriasCpCat002FiltrarCategoriasPorTipoVehiculo"/>
+    <testcase name="HTTP 200" time="0.005" classname="01CategoriasCpCat002FiltrarCategoriasPorTipoVehiculo"/>
+    <testcase name="La respuesta es una lista JSON" time="0.005" classname="01CategoriasCpCat002FiltrarCategoriasPorTipoVehiculo"/>
+    <testcase name="Todos los elementos son VEHICULO" time="0.005" classname="01CategoriasCpCat002FiltrarCategoriasPorTipoVehiculo"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-002 · Filtrar categorías por tipo TIPO_CARGA" id="155365b7-025a-4109-9b80-e778f1ec7489" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="01CategoriasCpCat002FiltrarCategoriasPorTipoTipoCarga"/>
+    <testcase name="HTTP 200" time="0.003" classname="01CategoriasCpCat002FiltrarCategoriasPorTipoTipoCarga"/>
+    <testcase name="La respuesta es una lista JSON" time="0.003" classname="01CategoriasCpCat002FiltrarCategoriasPorTipoTipoCarga"/>
+    <testcase name="Todos los elementos son TIPO_CARGA" time="0.003" classname="01CategoriasCpCat002FiltrarCategoriasPorTipoTipoCarga"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-002 · Filtrar categorías por tipo TIPO_ENTREGA" id="3a092607-b59d-4c91-a4d2-2c097e17c4b1" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="01CategoriasCpCat002FiltrarCategoriasPorTipoTipoEntrega"/>
+    <testcase name="HTTP 200" time="0.004" classname="01CategoriasCpCat002FiltrarCategoriasPorTipoTipoEntrega"/>
+    <testcase name="La respuesta es una lista JSON" time="0.004" classname="01CategoriasCpCat002FiltrarCategoriasPorTipoTipoEntrega"/>
+    <testcase name="Todos los elementos son TIPO_ENTREGA" time="0.004" classname="01CategoriasCpCat002FiltrarCategoriasPorTipoTipoEntrega"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-003 · Filtrar por tipo inexistente" id="1df6799e-393a-433a-92e7-810ffc4ca23c" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="01CategoriasCpCat003FiltrarPorTipoInexistente"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="01CategoriasCpCat003FiltrarPorTipoInexistente"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="01CategoriasCpCat003FiltrarPorTipoInexistente"/>
+    <testcase name="HTTP 400" time="0.004" classname="01CategoriasCpCat003FiltrarPorTipoInexistente"/>
+    <testcase name="Error de validación en 'tipoCategoria'" time="0.004" classname="01CategoriasCpCat003FiltrarPorTipoInexistente"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-004 · Filtrar categorías activas" id="0737f927-30d5-4146-9b28-7d6154cef554" timestamp="2026-10-14T16:20:48.791Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="01CategoriasCpCat004FiltrarCategoriasActivas"/>
+    <testcase name="HTTP 200" time="0.003" classname="01CategoriasCpCat004FiltrarCategoriasActivas"/>
+    <testcase name="Todas activas" time="0.003" classname="01CategoriasCpCat004FiltrarCategoriasActivas"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-006 · Consultar categoría por id" id="34988ae5-5c14-4a65-8bb0-bcb60921efc9" timestamp="2026-10-14T16:20:48.791Z" tests="3" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="01CategoriasCpCat006ConsultarCategoriaPorId"/>
+    <testcase name="HTTP 200" time="0.005" classname="01CategoriasCpCat006ConsultarCategoriaPorId"/>
+    <testcase name="Mismo id" time="0.005" classname="01CategoriasCpCat006ConsultarCategoriaPorId"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-007 · Consultar categoría inexistente" id="41fe680c-f1f6-48a8-ba58-43c13a87e371" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="01CategoriasCpCat007ConsultarCategoriaInexistente"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="01CategoriasCpCat007ConsultarCategoriaInexistente"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="01CategoriasCpCat007ConsultarCategoriaInexistente"/>
+    <testcase name="HTTP 404" time="0.003" classname="01CategoriasCpCat007ConsultarCategoriaInexistente"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-008 · Actualizar categoría" id="64af17cd-9007-4d28-bf50-31ea20556fe2" timestamp="2026-10-14T16:20:48.791Z" tests="3" failures="0" errors="0" time="0.006">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.006" classname="01CategoriasCpCat008ActualizarCategoria"/>
+    <testcase name="HTTP 200" time="0.006" classname="01CategoriasCpCat008ActualizarCategoria"/>
+    <testcase name="Nombre actualizado" time="0.006" classname="01CategoriasCpCat008ActualizarCategoria"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-009 · Crear categoría con campos obligatorios vacíos" id="5c169a3e-caab-4d1b-aa0b-733681e42008" timestamp="2026-10-14T16:20:48.791Z" tests="7" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="01CategoriasCpCat009CrearCategoriaConCamposObligatoriosVacios"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="01CategoriasCpCat009CrearCategoriaConCamposObligatoriosVacios"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="01CategoriasCpCat009CrearCategoriaConCamposObligatoriosVacios"/>
+    <testcase name="HTTP 400" time="0.002" classname="01CategoriasCpCat009CrearCategoriaConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'tipoCategoria'" time="0.002" classname="01CategoriasCpCat009CrearCategoriaConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'codigo'" time="0.002" classname="01CategoriasCpCat009CrearCategoriaConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'nombre'" time="0.002" classname="01CategoriasCpCat009CrearCategoriaConCamposObligatoriosVacios"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-010 · Crear categoría con tipo no permitido" id="6d297149-85b0-4815-ae3c-a1b136d00a06" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="01CategoriasCpCat010CrearCategoriaConTipoNoPermitido"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="01CategoriasCpCat010CrearCategoriaConTipoNoPermitido"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="01CategoriasCpCat010CrearCategoriaConTipoNoPermitido"/>
+    <testcase name="HTTP 400" time="0.002" classname="01CategoriasCpCat010CrearCategoriaConTipoNoPermitido"/>
+    <testcase name="Error de validación en 'tipoCategoria'" time="0.002" classname="01CategoriasCpCat010CrearCategoriaConTipoNoPermitido"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-011 · Código duplicado en el mismo tipo" id="b4b6fa33-1c10-460e-89c3-d251844ba9e7" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="01CategoriasCpCat011CodigoDuplicadoEnElMismoTipo"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="01CategoriasCpCat011CodigoDuplicadoEnElMismoTipo"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="01CategoriasCpCat011CodigoDuplicadoEnElMismoTipo"/>
+    <testcase name="HTTP 409" time="0.002" classname="01CategoriasCpCat011CodigoDuplicadoEnElMismoTipo"/>
+    <testcase name="El detalle menciona 'Ya existe'" time="0.002" classname="01CategoriasCpCat011CodigoDuplicadoEnElMismoTipo"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-012 · Mismo código en otro tipo de categoría" id="0328422e-6065-4420-b627-28719d4ea405" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.007">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.007" classname="01CategoriasCpCat012MismoCodigoEnOtroTipoDeCategoria"/>
+    <testcase name="HTTP 201" time="0.007" classname="01CategoriasCpCat012MismoCodigoEnOtroTipoDeCategoria"/>
+    <testcase name="Devuelve un id numérico generado" time="0.007" classname="01CategoriasCpCat012MismoCodigoEnOtroTipoDeCategoria"/>
+    <testcase name="Encabezado Location apunta al recurso" time="0.007" classname="01CategoriasCpCat012MismoCodigoEnOtroTipoDeCategoria"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-017 · Código con formato inválido" id="1d72c8f1-81c3-4477-95b7-52ecec3e316d" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="01CategoriasCpCat017CodigoConFormatoInvalido"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="01CategoriasCpCat017CodigoConFormatoInvalido"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="01CategoriasCpCat017CodigoConFormatoInvalido"/>
+    <testcase name="HTTP 400" time="0.002" classname="01CategoriasCpCat017CodigoConFormatoInvalido"/>
+    <testcase name="Error de validación en 'codigo'" time="0.002" classname="01CategoriasCpCat017CodigoConFormatoInvalido"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-016 · Eliminar categoría sin uso" id="cd10a6d6-7df7-44f1-a3e8-7e4b9198314b" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.007" classname="01CategoriasCpCat016EliminarCategoriaSinUso"/>
+    <testcase name="HTTP 204" time="0.007" classname="01CategoriasCpCat016EliminarCategoriaSinUso"/>
+  </testsuite>
+  <testsuite name="01 · Categorías / CP-CAT-016 · Verificar categoría eliminada" id="f9e34174-5d42-48b4-ad73-d2a196b5ae5e" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="01CategoriasCpCat016VerificarCategoriaEliminada"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="01CategoriasCpCat016VerificarCategoriaEliminada"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="01CategoriasCpCat016VerificarCategoriaEliminada"/>
+    <testcase name="HTTP 404" time="0.003" classname="01CategoriasCpCat016VerificarCategoriaEliminada"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-003 · Crear parámetro DECIMAL general" id="3425738e-191f-448d-a101-505aaecf9109" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.007">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.007" classname="02ParametrosCpPar003CrearParametroDecimalGeneral"/>
+    <testcase name="HTTP 201" time="0.007" classname="02ParametrosCpPar003CrearParametroDecimalGeneral"/>
+    <testcase name="Devuelve un id numérico generado" time="0.007" classname="02ParametrosCpPar003CrearParametroDecimalGeneral"/>
+    <testcase name="Encabezado Location apunta al recurso" time="0.007" classname="02ParametrosCpPar003CrearParametroDecimalGeneral"/>
+    <testcase name="Contiene propiedades obligatorias" time="0.007" classname="02ParametrosCpPar003CrearParametroDecimalGeneral"/>
+    <testcase name="Valor normalizado y ámbito GENERAL" time="0.007" classname="02ParametrosCpPar003CrearParametroDecimalGeneral"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-017 · Crear parámetro de capacidad asociado a un vehículo" id="cafa3901-7be7-4c7f-8670-837b1868f00a" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.007">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.007" classname="02ParametrosCpPar017CrearParametroDeCapacidadAsociadoAUnVehiculo"/>
+    <testcase name="HTTP 201" time="0.007" classname="02ParametrosCpPar017CrearParametroDeCapacidadAsociadoAUnVehiculo"/>
+    <testcase name="Devuelve un id numérico generado" time="0.007" classname="02ParametrosCpPar017CrearParametroDeCapacidadAsociadoAUnVehiculo"/>
+    <testcase name="Encabezado Location apunta al recurso" time="0.007" classname="02ParametrosCpPar017CrearParametroDeCapacidadAsociadoAUnVehiculo"/>
+    <testcase name="Ámbito CATEGORIA y tipo VEHICULO" time="0.007" classname="02ParametrosCpPar017CrearParametroDeCapacidadAsociadoAUnVehiculo"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-002 · Filtrar parámetros por categoría" id="280be7f1-93a7-48db-8d77-a24a06fd9183" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="02ParametrosCpPar002FiltrarParametrosPorCategoria"/>
+    <testcase name="HTTP 200" time="0.003" classname="02ParametrosCpPar002FiltrarParametrosPorCategoria"/>
+    <testcase name="La respuesta es una lista JSON" time="0.003" classname="02ParametrosCpPar002FiltrarParametrosPorCategoria"/>
+    <testcase name="Todos pertenecen a la categoría y están activos" time="0.003" classname="02ParametrosCpPar002FiltrarParametrosPorCategoria"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-004 · Consultar parámetro por id" id="dcc97e27-7f60-41cc-a274-9c52b3c532b1" timestamp="2026-10-14T16:20:48.791Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="02ParametrosCpPar004ConsultarParametroPorId"/>
+    <testcase name="HTTP 200" time="0.003" classname="02ParametrosCpPar004ConsultarParametroPorId"/>
+    <testcase name="Mismo id" time="0.003" classname="02ParametrosCpPar004ConsultarParametroPorId"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-005 · Consultar parámetro inexistente" id="5a6ec114-33f7-49c4-9c89-cfaef851a7e7" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="02ParametrosCpPar005ConsultarParametroInexistente"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="02ParametrosCpPar005ConsultarParametroInexistente"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="02ParametrosCpPar005ConsultarParametroInexistente"/>
+    <testcase name="HTTP 404" time="0.004" classname="02ParametrosCpPar005ConsultarParametroInexistente"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-006 · Actualizar parámetro" id="0a3b3031-94f2-49a7-833b-59ffb3161d99" timestamp="2026-10-14T16:20:48.791Z" tests="3" failures="0" errors="0" time="0.007">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.007" classname="02ParametrosCpPar006ActualizarParametro"/>
+    <testcase name="HTTP 200" time="0.007" classname="02ParametrosCpPar006ActualizarParametro"/>
+    <testcase name="Valor actualizado" time="0.007" classname="02ParametrosCpPar006ActualizarParametro"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-007 · Valor 'abc' incompatible con ENTERO" id="31eb6086-962a-4228-9775-d83eb16de6b1" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="02ParametrosCpPar007ValorAbcIncompatibleConEntero"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="02ParametrosCpPar007ValorAbcIncompatibleConEntero"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="02ParametrosCpPar007ValorAbcIncompatibleConEntero"/>
+    <testcase name="HTTP 400" time="0.003" classname="02ParametrosCpPar007ValorAbcIncompatibleConEntero"/>
+    <testcase name="Error de validación en 'valor'" time="0.003" classname="02ParametrosCpPar007ValorAbcIncompatibleConEntero"/>
+    <testcase name="El mensaje menciona el tipo ENTERO" time="0.003" classname="02ParametrosCpPar007ValorAbcIncompatibleConEntero"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-007 · Valor '12,5' incompatible con DECIMAL" id="e8ecf0ed-6dfe-48b4-8191-3581ec3ec048" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="02ParametrosCpPar007Valor125IncompatibleConDecimal"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="02ParametrosCpPar007Valor125IncompatibleConDecimal"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="02ParametrosCpPar007Valor125IncompatibleConDecimal"/>
+    <testcase name="HTTP 400" time="0.002" classname="02ParametrosCpPar007Valor125IncompatibleConDecimal"/>
+    <testcase name="Error de validación en 'valor'" time="0.002" classname="02ParametrosCpPar007Valor125IncompatibleConDecimal"/>
+    <testcase name="El mensaje menciona el tipo DECIMAL" time="0.002" classname="02ParametrosCpPar007Valor125IncompatibleConDecimal"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-007 · Valor 'si' incompatible con BOOLEANO" id="3bedcf23-db40-4f19-bd64-394448f836a1" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="02ParametrosCpPar007ValorSiIncompatibleConBooleano"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="02ParametrosCpPar007ValorSiIncompatibleConBooleano"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="02ParametrosCpPar007ValorSiIncompatibleConBooleano"/>
+    <testcase name="HTTP 400" time="0.003" classname="02ParametrosCpPar007ValorSiIncompatibleConBooleano"/>
+    <testcase name="Error de validación en 'valor'" time="0.003" classname="02ParametrosCpPar007ValorSiIncompatibleConBooleano"/>
+    <testcase name="El mensaje menciona el tipo BOOLEANO" time="0.003" classname="02ParametrosCpPar007ValorSiIncompatibleConBooleano"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-007 · Valor '31/12/2026' incompatible con FECHA" id="d509945d-a936-465f-bf61-740e06e056d4" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="02ParametrosCpPar007Valor31122026IncompatibleConFecha"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="02ParametrosCpPar007Valor31122026IncompatibleConFecha"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="02ParametrosCpPar007Valor31122026IncompatibleConFecha"/>
+    <testcase name="HTTP 400" time="0.004" classname="02ParametrosCpPar007Valor31122026IncompatibleConFecha"/>
+    <testcase name="Error de validación en 'valor'" time="0.004" classname="02ParametrosCpPar007Valor31122026IncompatibleConFecha"/>
+    <testcase name="El mensaje menciona el tipo FECHA" time="0.004" classname="02ParametrosCpPar007Valor31122026IncompatibleConFecha"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-008 · Tipo de dato no permitido" id="8fe70471-1cba-4128-84a5-6f9d90228fd8" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="02ParametrosCpPar008TipoDeDatoNoPermitido"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="02ParametrosCpPar008TipoDeDatoNoPermitido"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="02ParametrosCpPar008TipoDeDatoNoPermitido"/>
+    <testcase name="HTTP 400" time="0.003" classname="02ParametrosCpPar008TipoDeDatoNoPermitido"/>
+    <testcase name="Error de validación en 'tipoDato'" time="0.003" classname="02ParametrosCpPar008TipoDeDatoNoPermitido"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-009 · Parámetro con campos obligatorios vacíos" id="f8eddaf1-21c6-4f13-b980-e6493c7946fc" timestamp="2026-10-14T16:20:48.791Z" tests="8" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="02ParametrosCpPar009ParametroConCamposObligatoriosVacios"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="02ParametrosCpPar009ParametroConCamposObligatoriosVacios"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="02ParametrosCpPar009ParametroConCamposObligatoriosVacios"/>
+    <testcase name="HTTP 400" time="0.002" classname="02ParametrosCpPar009ParametroConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'codigo'" time="0.002" classname="02ParametrosCpPar009ParametroConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'nombre'" time="0.002" classname="02ParametrosCpPar009ParametroConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'tipoDato'" time="0.002" classname="02ParametrosCpPar009ParametroConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'valor'" time="0.002" classname="02ParametrosCpPar009ParametroConCamposObligatoriosVacios"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-010 · Código de parámetro duplicado" id="e67ef76c-cc1f-421a-b5aa-75c8adcbf3c6" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="02ParametrosCpPar010CodigoDeParametroDuplicado"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="02ParametrosCpPar010CodigoDeParametroDuplicado"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="02ParametrosCpPar010CodigoDeParametroDuplicado"/>
+    <testcase name="HTTP 409" time="0.004" classname="02ParametrosCpPar010CodigoDeParametroDuplicado"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-011 · Eliminar parámetro obligatorio" id="d9e5dd82-5e5a-4189-8950-0a8eabc48ec5" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="02ParametrosCpPar011EliminarParametroObligatorio"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="02ParametrosCpPar011EliminarParametroObligatorio"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="02ParametrosCpPar011EliminarParametroObligatorio"/>
+    <testcase name="HTTP 409" time="0.004" classname="02ParametrosCpPar011EliminarParametroObligatorio"/>
+    <testcase name="El detalle menciona 'obligatorio'" time="0.004" classname="02ParametrosCpPar011EliminarParametroObligatorio"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-012 · Desactivar parámetro obligatorio" id="bf3ebdc7-f178-4627-9cb7-a956f40c94cd" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="02ParametrosCpPar012DesactivarParametroObligatorio"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="02ParametrosCpPar012DesactivarParametroObligatorio"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="02ParametrosCpPar012DesactivarParametroObligatorio"/>
+    <testcase name="HTTP 409" time="0.003" classname="02ParametrosCpPar012DesactivarParametroObligatorio"/>
+    <testcase name="El detalle menciona 'obligatorio'" time="0.003" classname="02ParametrosCpPar012DesactivarParametroObligatorio"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-013 · Parámetro asociado a categoría inexistente" id="e3cb4dec-6ec8-4900-87b4-7e7771098170" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="02ParametrosCpPar013ParametroAsociadoACategoriaInexistente"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="02ParametrosCpPar013ParametroAsociadoACategoriaInexistente"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="02ParametrosCpPar013ParametroAsociadoACategoriaInexistente"/>
+    <testcase name="HTTP 400" time="0.003" classname="02ParametrosCpPar013ParametroAsociadoACategoriaInexistente"/>
+    <testcase name="Error de validación en 'categoriaId'" time="0.003" classname="02ParametrosCpPar013ParametroAsociadoACategoriaInexistente"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-014 · Capacidad asociada a una categoría que no es VEHICULO" id="e74225b3-bfe3-4718-95b2-11d66c23dcf8" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="02ParametrosCpPar014CapacidadAsociadaAUnaCategoriaQueNoEsVehiculo"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="02ParametrosCpPar014CapacidadAsociadaAUnaCategoriaQueNoEsVehiculo"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="02ParametrosCpPar014CapacidadAsociadaAUnaCategoriaQueNoEsVehiculo"/>
+    <testcase name="HTTP 400" time="0.003" classname="02ParametrosCpPar014CapacidadAsociadaAUnaCategoriaQueNoEsVehiculo"/>
+    <testcase name="Error de validación en 'categoriaId'" time="0.003" classname="02ParametrosCpPar014CapacidadAsociadaAUnaCategoriaQueNoEsVehiculo"/>
+  </testsuite>
+  <testsuite name="02 · Parámetros / CP-PAR-015 · Parámetro de límite con valor cero" id="42d58ab7-59d2-4555-a2ee-dc17ba50d471" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="02ParametrosCpPar015ParametroDeLimiteConValorCero"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="02ParametrosCpPar015ParametroDeLimiteConValorCero"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="02ParametrosCpPar015ParametroDeLimiteConValorCero"/>
+    <testcase name="HTTP 400" time="0.004" classname="02ParametrosCpPar015ParametroDeLimiteConValorCero"/>
+    <testcase name="Error de validación en 'valor'" time="0.004" classname="02ParametrosCpPar015ParametroDeLimiteConValorCero"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-002 · Crear carga válida (estado por defecto)" id="ee807121-666d-427f-bf7e-776376ee1b82" timestamp="2026-10-14T16:20:48.791Z" tests="7" failures="0" errors="0" time="0.048">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.048" classname="03CargasCpCar002CrearCargaValidaEstadoPorDefecto"/>
+    <testcase name="HTTP 201" time="0.048" classname="03CargasCpCar002CrearCargaValidaEstadoPorDefecto"/>
+    <testcase name="Devuelve un id numérico generado" time="0.048" classname="03CargasCpCar002CrearCargaValidaEstadoPorDefecto"/>
+    <testcase name="Encabezado Location apunta al recurso" time="0.048" classname="03CargasCpCar002CrearCargaValidaEstadoPorDefecto"/>
+    <testcase name="Contiene propiedades obligatorias" time="0.048" classname="03CargasCpCar002CrearCargaValidaEstadoPorDefecto"/>
+    <testcase name="Estado inicial PENDIENTE y sin objetos" time="0.048" classname="03CargasCpCar002CrearCargaValidaEstadoPorDefecto"/>
+    <testcase name="Tipos de datos correctos" time="0.048" classname="03CargasCpCar002CrearCargaValidaEstadoPorDefecto"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-002 · Crear segunda carga (para eliminar)" id="5b96b6de-9869-4592-bb78-cd575650d5c8" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.008">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.008" classname="03CargasCpCar002CrearSegundaCargaParaEliminar"/>
+    <testcase name="HTTP 201" time="0.008" classname="03CargasCpCar002CrearSegundaCargaParaEliminar"/>
+    <testcase name="Devuelve un id numérico generado" time="0.008" classname="03CargasCpCar002CrearSegundaCargaParaEliminar"/>
+    <testcase name="Encabezado Location apunta al recurso" time="0.008" classname="03CargasCpCar002CrearSegundaCargaParaEliminar"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-001 · Listar cargas" id="83169293-a89c-436a-a198-ba687b7b3a57" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="03CargasCpCar001ListarCargas"/>
+    <testcase name="HTTP 200" time="0.004" classname="03CargasCpCar001ListarCargas"/>
+    <testcase name="La respuesta es una lista JSON" time="0.004" classname="03CargasCpCar001ListarCargas"/>
+    <testcase name="Incluye la carga creada" time="0.004" classname="03CargasCpCar001ListarCargas"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-003 · Consultar carga por id" id="05c79358-4fb9-4c1d-b786-6ae6a26ff9b6" timestamp="2026-10-14T16:20:48.791Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="03CargasCpCar003ConsultarCargaPorId"/>
+    <testcase name="HTTP 200" time="0.003" classname="03CargasCpCar003ConsultarCargaPorId"/>
+    <testcase name="Incluye nombres de categorías" time="0.003" classname="03CargasCpCar003ConsultarCargaPorId"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-004 · Consultar carga inexistente" id="b1379d04-4f4a-4344-a87c-296acbb867e2" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="03CargasCpCar004ConsultarCargaInexistente"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="03CargasCpCar004ConsultarCargaInexistente"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="03CargasCpCar004ConsultarCargaInexistente"/>
+    <testcase name="HTTP 404" time="0.004" classname="03CargasCpCar004ConsultarCargaInexistente"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-005 · Actualizar carga (estado y destino)" id="649d332c-00c5-4ba1-ae0c-9a1e09ab5060" timestamp="2026-10-14T16:20:48.791Z" tests="3" failures="0" errors="0" time="0.007">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.007" classname="03CargasCpCar005ActualizarCargaEstadoYDestino"/>
+    <testcase name="HTTP 200" time="0.007" classname="03CargasCpCar005ActualizarCargaEstadoYDestino"/>
+    <testcase name="Destino y estado actualizados" time="0.007" classname="03CargasCpCar005ActualizarCargaEstadoYDestino"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-006 · Crear carga con campos obligatorios vacíos" id="4c75bb1c-e857-4a10-9042-8fb82fdef030" timestamp="2026-10-14T16:20:48.791Z" tests="11" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="03CargasCpCar006CrearCargaConCamposObligatoriosVacios"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="03CargasCpCar006CrearCargaConCamposObligatoriosVacios"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="03CargasCpCar006CrearCargaConCamposObligatoriosVacios"/>
+    <testcase name="HTTP 400" time="0.003" classname="03CargasCpCar006CrearCargaConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'codigo'" time="0.003" classname="03CargasCpCar006CrearCargaConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'descripcion'" time="0.003" classname="03CargasCpCar006CrearCargaConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'origen'" time="0.003" classname="03CargasCpCar006CrearCargaConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'destino'" time="0.003" classname="03CargasCpCar006CrearCargaConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'pesoTotalKg'" time="0.003" classname="03CargasCpCar006CrearCargaConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'tipoCargaId'" time="0.003" classname="03CargasCpCar006CrearCargaConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'tipoEntregaId'" time="0.003" classname="03CargasCpCar006CrearCargaConCamposObligatoriosVacios"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-007 · Peso total negativo" id="377b1518-09ad-4e64-90fc-5d11215c3acf" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="03CargasCpCar007PesoTotalNegativo"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="03CargasCpCar007PesoTotalNegativo"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="03CargasCpCar007PesoTotalNegativo"/>
+    <testcase name="HTTP 400" time="0.004" classname="03CargasCpCar007PesoTotalNegativo"/>
+    <testcase name="Error de validación en 'pesoTotalKg'" time="0.004" classname="03CargasCpCar007PesoTotalNegativo"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-007 · Peso total cero (valor límite)" id="051e093f-7675-44bb-a7dc-91ea3d18246a" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="03CargasCpCar007PesoTotalCeroValorLimite"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="03CargasCpCar007PesoTotalCeroValorLimite"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="03CargasCpCar007PesoTotalCeroValorLimite"/>
+    <testcase name="HTTP 400" time="0.004" classname="03CargasCpCar007PesoTotalCeroValorLimite"/>
+    <testcase name="Error de validación en 'pesoTotalKg'" time="0.004" classname="03CargasCpCar007PesoTotalCeroValorLimite"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-008 · Volumen negativo" id="bdc4d751-1bdd-4c2b-b868-e8d6e994ad5f" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="03CargasCpCar008VolumenNegativo"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="03CargasCpCar008VolumenNegativo"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="03CargasCpCar008VolumenNegativo"/>
+    <testcase name="HTTP 400" time="0.003" classname="03CargasCpCar008VolumenNegativo"/>
+    <testcase name="Error de validación en 'volumenTotalM3'" time="0.003" classname="03CargasCpCar008VolumenNegativo"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-009 · Origen igual al destino" id="b7c63e6d-9b92-4ff8-8fe3-7d0e7d366a39" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="03CargasCpCar009OrigenIgualAlDestino"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="03CargasCpCar009OrigenIgualAlDestino"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="03CargasCpCar009OrigenIgualAlDestino"/>
+    <testcase name="HTTP 400" time="0.004" classname="03CargasCpCar009OrigenIgualAlDestino"/>
+    <testcase name="Error de validación en 'destino'" time="0.004" classname="03CargasCpCar009OrigenIgualAlDestino"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-010 · Código de carga duplicado" id="e5d1a2e3-008e-47b5-9eb1-2d2663739001" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.026">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.026" classname="03CargasCpCar010CodigoDeCargaDuplicado"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.026" classname="03CargasCpCar010CodigoDeCargaDuplicado"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.026" classname="03CargasCpCar010CodigoDeCargaDuplicado"/>
+    <testcase name="HTTP 409" time="0.026" classname="03CargasCpCar010CodigoDeCargaDuplicado"/>
+    <testcase name="El detalle menciona el código" time="0.026" classname="03CargasCpCar010CodigoDeCargaDuplicado"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-011 · Categoría VEHICULO usada como TIPO_CARGA" id="73447ddc-2ebc-4838-92b3-7f865c1dd10a" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="03CargasCpCar011CategoriaVehiculoUsadaComoTipoCarga"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="03CargasCpCar011CategoriaVehiculoUsadaComoTipoCarga"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="03CargasCpCar011CategoriaVehiculoUsadaComoTipoCarga"/>
+    <testcase name="HTTP 400" time="0.004" classname="03CargasCpCar011CategoriaVehiculoUsadaComoTipoCarga"/>
+    <testcase name="Error de validación en 'tipoCargaId'" time="0.004" classname="03CargasCpCar011CategoriaVehiculoUsadaComoTipoCarga"/>
+    <testcase name="El mensaje explica el tipo incorrecto" time="0.004" classname="03CargasCpCar011CategoriaVehiculoUsadaComoTipoCarga"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-012 · Categoría TIPO_CARGA usada como vehículo" id="0f7a991a-fd80-4cf0-a55b-8afff09d5b74" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="03CargasCpCar012CategoriaTipoCargaUsadaComoVehiculo"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.005" classname="03CargasCpCar012CategoriaTipoCargaUsadaComoVehiculo"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.005" classname="03CargasCpCar012CategoriaTipoCargaUsadaComoVehiculo"/>
+    <testcase name="HTTP 400" time="0.005" classname="03CargasCpCar012CategoriaTipoCargaUsadaComoVehiculo"/>
+    <testcase name="Error de validación en 'tipoVehiculoId'" time="0.005" classname="03CargasCpCar012CategoriaTipoCargaUsadaComoVehiculo"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-012 · Categoría ESTADO_CARGA usada como tipo de entrega" id="4126beed-a706-460b-ac7f-0c244dc0d24c" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="03CargasCpCar012CategoriaEstadoCargaUsadaComoTipoDeEntrega"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="03CargasCpCar012CategoriaEstadoCargaUsadaComoTipoDeEntrega"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="03CargasCpCar012CategoriaEstadoCargaUsadaComoTipoDeEntrega"/>
+    <testcase name="HTTP 400" time="0.004" classname="03CargasCpCar012CategoriaEstadoCargaUsadaComoTipoDeEntrega"/>
+    <testcase name="Error de validación en 'tipoEntregaId'" time="0.004" classname="03CargasCpCar012CategoriaEstadoCargaUsadaComoTipoDeEntrega"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-013 · Categoría inexistente" id="51de0132-68aa-40cf-94ff-2621c3036e50" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="03CargasCpCar013CategoriaInexistente"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.005" classname="03CargasCpCar013CategoriaInexistente"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.005" classname="03CargasCpCar013CategoriaInexistente"/>
+    <testcase name="HTTP 400" time="0.005" classname="03CargasCpCar013CategoriaInexistente"/>
+    <testcase name="Error de validación en 'tipoEntregaId'" time="0.005" classname="03CargasCpCar013CategoriaInexistente"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-015 · Peso que supera PESO_MAXIMO_CARGA_KG" id="2a1c48e3-3872-4d6b-8c71-5ac887c71662" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="03CargasCpCar015PesoQueSuperaPesoMaximoCargaKg"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.005" classname="03CargasCpCar015PesoQueSuperaPesoMaximoCargaKg"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.005" classname="03CargasCpCar015PesoQueSuperaPesoMaximoCargaKg"/>
+    <testcase name="HTTP 400" time="0.005" classname="03CargasCpCar015PesoQueSuperaPesoMaximoCargaKg"/>
+    <testcase name="Error de validación en 'pesoTotalKg'" time="0.005" classname="03CargasCpCar015PesoQueSuperaPesoMaximoCargaKg"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-016 · Peso que supera la capacidad del vehículo" id="876680d8-932f-4173-97ea-a008786a28d9" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="03CargasCpCar016PesoQueSuperaLaCapacidadDelVehiculo"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="03CargasCpCar016PesoQueSuperaLaCapacidadDelVehiculo"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="03CargasCpCar016PesoQueSuperaLaCapacidadDelVehiculo"/>
+    <testcase name="HTTP 400" time="0.004" classname="03CargasCpCar016PesoQueSuperaLaCapacidadDelVehiculo"/>
+    <testcase name="Error de validación en 'pesoTotalKg'" time="0.004" classname="03CargasCpCar016PesoQueSuperaLaCapacidadDelVehiculo"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-017 · Volumen que supera VOLUMEN_MAXIMO_CARGA_M3" id="5bbd5ba7-685e-4dc7-8ad4-acec70c2428f" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="03CargasCpCar017VolumenQueSuperaVolumenMaximoCargaM3"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="03CargasCpCar017VolumenQueSuperaVolumenMaximoCargaM3"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="03CargasCpCar017VolumenQueSuperaVolumenMaximoCargaM3"/>
+    <testcase name="HTTP 400" time="0.003" classname="03CargasCpCar017VolumenQueSuperaVolumenMaximoCargaM3"/>
+    <testcase name="Error de validación en 'volumenTotalM3'" time="0.003" classname="03CargasCpCar017VolumenQueSuperaVolumenMaximoCargaM3"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-018 · Tipo de dato incorrecto en el JSON" id="f1b0ce51-b52d-41b7-bccd-000b70a91560" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="03CargasCpCar018TipoDeDatoIncorrectoEnElJson"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="03CargasCpCar018TipoDeDatoIncorrectoEnElJson"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="03CargasCpCar018TipoDeDatoIncorrectoEnElJson"/>
+    <testcase name="HTTP 400" time="0.002" classname="03CargasCpCar018TipoDeDatoIncorrectoEnElJson"/>
+    <testcase name="Error de validación en 'pesoTotalKg'" time="0.002" classname="03CargasCpCar018TipoDeDatoIncorrectoEnElJson"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-019 · JSON mal formado" id="47fc2a69-766c-4d9f-b505-0ec995465f81" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="03CargasCpCar019JsonMalFormado"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="03CargasCpCar019JsonMalFormado"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="03CargasCpCar019JsonMalFormado"/>
+    <testcase name="HTTP 400" time="0.003" classname="03CargasCpCar019JsonMalFormado"/>
+    <testcase name="Informa errores" time="0.003" classname="03CargasCpCar019JsonMalFormado"/>
+  </testsuite>
+  <testsuite name="03 · Cargas / CP-CAR-020 · Actualizar carga inexistente" id="020cd4e0-bf7b-4b87-a374-d0dc6a59c643" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="03CargasCpCar020ActualizarCargaInexistente"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="03CargasCpCar020ActualizarCargaInexistente"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="03CargasCpCar020ActualizarCargaInexistente"/>
+    <testcase name="HTTP 404" time="0.002" classname="03CargasCpCar020ActualizarCargaInexistente"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-002 · Crear objeto válido" id="dc27e34b-2c2c-408b-a204-18f6e0c2dbcd" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.006">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.006" classname="04ObjetosCpObj002CrearObjetoValido"/>
+    <testcase name="HTTP 201" time="0.006" classname="04ObjetosCpObj002CrearObjetoValido"/>
+    <testcase name="Devuelve un id numérico generado" time="0.006" classname="04ObjetosCpObj002CrearObjetoValido"/>
+    <testcase name="Encabezado Location apunta al recurso" time="0.006" classname="04ObjetosCpObj002CrearObjetoValido"/>
+    <testcase name="Contiene propiedades obligatorias" time="0.006" classname="04ObjetosCpObj002CrearObjetoValido"/>
+    <testcase name="Peso total calculado y carga correcta" time="0.006" classname="04ObjetosCpObj002CrearObjetoValido"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-001 · Listar objetos" id="ba691184-01d1-43de-8165-df698302dad3" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="04ObjetosCpObj001ListarObjetos"/>
+    <testcase name="HTTP 200" time="0.003" classname="04ObjetosCpObj001ListarObjetos"/>
+    <testcase name="La respuesta es una lista JSON" time="0.003" classname="04ObjetosCpObj001ListarObjetos"/>
+    <testcase name="Incluye el objeto creado" time="0.003" classname="04ObjetosCpObj001ListarObjetos"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-003 · Consultar objeto por id" id="f022b2d7-9e6e-4810-8cea-d7a43b429ab1" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="04ObjetosCpObj003ConsultarObjetoPorId"/>
+    <testcase name="HTTP 200" time="0.003" classname="04ObjetosCpObj003ConsultarObjetoPorId"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-004 · Consultar objeto inexistente" id="e1316ecb-83f0-4a02-8464-1899033e22cc" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="04ObjetosCpObj004ConsultarObjetoInexistente"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="04ObjetosCpObj004ConsultarObjetoInexistente"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="04ObjetosCpObj004ConsultarObjetoInexistente"/>
+    <testcase name="HTTP 404" time="0.003" classname="04ObjetosCpObj004ConsultarObjetoInexistente"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-005 · Objetos de una carga" id="1e27057f-0178-464d-bb41-5d4b32aafc7c" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="04ObjetosCpObj005ObjetosDeUnaCarga"/>
+    <testcase name="HTTP 200" time="0.003" classname="04ObjetosCpObj005ObjetosDeUnaCarga"/>
+    <testcase name="La respuesta es una lista JSON" time="0.003" classname="04ObjetosCpObj005ObjetosDeUnaCarga"/>
+    <testcase name="Todos pertenecen a la carga" time="0.003" classname="04ObjetosCpObj005ObjetosDeUnaCarga"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-005 · Filtrar objetos por cargaId" id="08bc24cb-c022-4cc6-aa00-5a3ca8bd0534" timestamp="2026-10-14T16:20:48.791Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="04ObjetosCpObj005FiltrarObjetosPorCargaId"/>
+    <testcase name="HTTP 200" time="0.002" classname="04ObjetosCpObj005FiltrarObjetosPorCargaId"/>
+    <testcase name="Lista vacía" time="0.002" classname="04ObjetosCpObj005FiltrarObjetosPorCargaId"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-006 · Objetos de una carga inexistente" id="6647ab75-3114-4954-8792-dadaf1cdf5c5" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="04ObjetosCpObj006ObjetosDeUnaCargaInexistente"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="04ObjetosCpObj006ObjetosDeUnaCargaInexistente"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="04ObjetosCpObj006ObjetosDeUnaCargaInexistente"/>
+    <testcase name="HTTP 404" time="0.002" classname="04ObjetosCpObj006ObjetosDeUnaCargaInexistente"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-007 · Actualizar objeto" id="264938b4-010b-45ef-a79e-7a262757aa10" timestamp="2026-10-14T16:20:48.791Z" tests="3" failures="0" errors="0" time="0.006">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.006" classname="04ObjetosCpObj007ActualizarObjeto"/>
+    <testcase name="HTTP 200" time="0.006" classname="04ObjetosCpObj007ActualizarObjeto"/>
+    <testcase name="Cantidad y peso actualizados" time="0.006" classname="04ObjetosCpObj007ActualizarObjeto"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-002 · La carga refleja sus objetos" id="ff078aa2-2d6c-486f-8d9b-b4bbb2d9a2bc" timestamp="2026-10-14T16:20:48.791Z" tests="3" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="04ObjetosCpObj002LaCargaReflejaSusObjetos"/>
+    <testcase name="HTTP 200" time="0.004" classname="04ObjetosCpObj002LaCargaReflejaSusObjetos"/>
+    <testcase name="Resumen de objetos coherente" time="0.004" classname="04ObjetosCpObj002LaCargaReflejaSusObjetos"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-008 · Objeto vinculado a una carga inexistente" id="61eb8278-7442-4fd8-bb04-653c1ea59ba9" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="04ObjetosCpObj008ObjetoVinculadoAUnaCargaInexistente"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="04ObjetosCpObj008ObjetoVinculadoAUnaCargaInexistente"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="04ObjetosCpObj008ObjetoVinculadoAUnaCargaInexistente"/>
+    <testcase name="HTTP 400" time="0.003" classname="04ObjetosCpObj008ObjetoVinculadoAUnaCargaInexistente"/>
+    <testcase name="Error de validación en 'cargaId'" time="0.003" classname="04ObjetosCpObj008ObjetoVinculadoAUnaCargaInexistente"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-009 · Cantidad cero" id="cb67b6eb-c214-40c0-a1b6-a608cc00c4ae" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="04ObjetosCpObj009CantidadCero"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="04ObjetosCpObj009CantidadCero"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="04ObjetosCpObj009CantidadCero"/>
+    <testcase name="HTTP 400" time="0.004" classname="04ObjetosCpObj009CantidadCero"/>
+    <testcase name="Error de validación en 'cantidad'" time="0.004" classname="04ObjetosCpObj009CantidadCero"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-010 · Peso unitario negativo" id="6d099c57-d297-490e-9a30-0f439c47123a" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="04ObjetosCpObj010PesoUnitarioNegativo"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="04ObjetosCpObj010PesoUnitarioNegativo"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="04ObjetosCpObj010PesoUnitarioNegativo"/>
+    <testcase name="HTTP 400" time="0.002" classname="04ObjetosCpObj010PesoUnitarioNegativo"/>
+    <testcase name="Error de validación en 'pesoUnitarioKg'" time="0.002" classname="04ObjetosCpObj010PesoUnitarioNegativo"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-011 · Objeto con campos obligatorios vacíos" id="59b9168a-8313-47a4-b4e3-25757556c06d" timestamp="2026-10-14T16:20:48.791Z" tests="8" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="04ObjetosCpObj011ObjetoConCamposObligatoriosVacios"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="04ObjetosCpObj011ObjetoConCamposObligatoriosVacios"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="04ObjetosCpObj011ObjetoConCamposObligatoriosVacios"/>
+    <testcase name="HTTP 400" time="0.002" classname="04ObjetosCpObj011ObjetoConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'cargaId'" time="0.002" classname="04ObjetosCpObj011ObjetoConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'nombre'" time="0.002" classname="04ObjetosCpObj011ObjetoConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'cantidad'" time="0.002" classname="04ObjetosCpObj011ObjetoConCamposObligatoriosVacios"/>
+    <testcase name="Error de validación en 'pesoUnitarioKg'" time="0.002" classname="04ObjetosCpObj011ObjetoConCamposObligatoriosVacios"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-012 · Categoría VEHICULO usada como TIPO_OBJETO" id="41147691-6c00-46e7-90a3-da4127e27a85" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="04ObjetosCpObj012CategoriaVehiculoUsadaComoTipoObjeto"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="04ObjetosCpObj012CategoriaVehiculoUsadaComoTipoObjeto"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="04ObjetosCpObj012CategoriaVehiculoUsadaComoTipoObjeto"/>
+    <testcase name="HTTP 400" time="0.004" classname="04ObjetosCpObj012CategoriaVehiculoUsadaComoTipoObjeto"/>
+    <testcase name="Error de validación en 'categoriaId'" time="0.004" classname="04ObjetosCpObj012CategoriaVehiculoUsadaComoTipoObjeto"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-013 · Objetos que superan el peso declarado de la carga" id="8c4446bb-7d3a-4356-b082-1eb6a4cba49b" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="04ObjetosCpObj013ObjetosQueSuperanElPesoDeclaradoDeLaCarga"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="04ObjetosCpObj013ObjetosQueSuperanElPesoDeclaradoDeLaCarga"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="04ObjetosCpObj013ObjetosQueSuperanElPesoDeclaradoDeLaCarga"/>
+    <testcase name="HTTP 409" time="0.002" classname="04ObjetosCpObj013ObjetosQueSuperanElPesoDeclaradoDeLaCarga"/>
+    <testcase name="El detalle menciona 'peso total declarado'" time="0.002" classname="04ObjetosCpObj013ObjetosQueSuperanElPesoDeclaradoDeLaCarga"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-014 · Cantidad con tipo de dato incorrecto" id="1492a26d-463a-4573-a1e4-d4cce3cf8dfe" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="04ObjetosCpObj014CantidadConTipoDeDatoIncorrecto"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="04ObjetosCpObj014CantidadConTipoDeDatoIncorrecto"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="04ObjetosCpObj014CantidadConTipoDeDatoIncorrecto"/>
+    <testcase name="HTTP 400" time="0.002" classname="04ObjetosCpObj014CantidadConTipoDeDatoIncorrecto"/>
+    <testcase name="Error de validación en 'cantidad'" time="0.002" classname="04ObjetosCpObj014CantidadConTipoDeDatoIncorrecto"/>
+  </testsuite>
+  <testsuite name="04 · Objetos / CP-OBJ-016 · Mover objeto a una carga sin capacidad" id="69e89bfd-bd17-4ea6-94d5-b62c62434d5d" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="04ObjetosCpObj016MoverObjetoAUnaCargaSinCapacidad"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="04ObjetosCpObj016MoverObjetoAUnaCargaSinCapacidad"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="04ObjetosCpObj016MoverObjetoAUnaCargaSinCapacidad"/>
+    <testcase name="HTTP 409" time="0.003" classname="04ObjetosCpObj016MoverObjetoAUnaCargaSinCapacidad"/>
+  </testsuite>
+  <testsuite name="05 · Integridad y relaciones / CP-CAR-022 · Eliminar carga con objetos" id="d614bc3f-d5ff-41fa-bda5-63c049e4640f" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="05IntegridadYRelacionesCpCar022EliminarCargaConObjetos"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="05IntegridadYRelacionesCpCar022EliminarCargaConObjetos"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="05IntegridadYRelacionesCpCar022EliminarCargaConObjetos"/>
+    <testcase name="HTTP 409" time="0.002" classname="05IntegridadYRelacionesCpCar022EliminarCargaConObjetos"/>
+    <testcase name="El detalle menciona 'objeto'" time="0.002" classname="05IntegridadYRelacionesCpCar022EliminarCargaConObjetos"/>
+  </testsuite>
+  <testsuite name="05 · Integridad y relaciones / CP-CAR-023 · Reducir peso por debajo del peso de los objetos" id="af572122-202a-40ee-8bd1-b73c520a13ad" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="05IntegridadYRelacionesCpCar023ReducirPesoPorDebajoDelPesoDeLosObjetos"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="05IntegridadYRelacionesCpCar023ReducirPesoPorDebajoDelPesoDeLosObjetos"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="05IntegridadYRelacionesCpCar023ReducirPesoPorDebajoDelPesoDeLosObjetos"/>
+    <testcase name="HTTP 409" time="0.004" classname="05IntegridadYRelacionesCpCar023ReducirPesoPorDebajoDelPesoDeLosObjetos"/>
+  </testsuite>
+  <testsuite name="05 · Integridad y relaciones / CP-CAT-013 · Eliminar categoría en uso" id="5a957eb9-33ce-450a-b144-eb688f070d56" timestamp="2026-10-14T16:20:48.791Z" tests="5" failures="0" errors="0" time="0.002">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.002" classname="05IntegridadYRelacionesCpCat013EliminarCategoriaEnUso"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.002" classname="05IntegridadYRelacionesCpCat013EliminarCategoriaEnUso"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.002" classname="05IntegridadYRelacionesCpCat013EliminarCategoriaEnUso"/>
+    <testcase name="HTTP 409" time="0.002" classname="05IntegridadYRelacionesCpCat013EliminarCategoriaEnUso"/>
+    <testcase name="El detalle menciona 'Desactívela'" time="0.002" classname="05IntegridadYRelacionesCpCat013EliminarCategoriaEnUso"/>
+  </testsuite>
+  <testsuite name="05 · Integridad y relaciones / CP-CAT-015 · Cambiar el tipo de una categoría en uso" id="697e49d5-2732-4ab6-85b4-4e2c8d58d28b" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="05IntegridadYRelacionesCpCat015CambiarElTipoDeUnaCategoriaEnUso"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="05IntegridadYRelacionesCpCat015CambiarElTipoDeUnaCategoriaEnUso"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="05IntegridadYRelacionesCpCat015CambiarElTipoDeUnaCategoriaEnUso"/>
+    <testcase name="HTTP 409" time="0.003" classname="05IntegridadYRelacionesCpCat015CambiarElTipoDeUnaCategoriaEnUso"/>
+  </testsuite>
+  <testsuite name="05 · Integridad y relaciones / CP-CAT-014 · Desactivar categoría en uso" id="570c2d06-58da-474e-99f0-6471c66ef8fd" timestamp="2026-10-14T16:20:48.791Z" tests="3" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="05IntegridadYRelacionesCpCat014DesactivarCategoriaEnUso"/>
+    <testcase name="HTTP 200" time="0.005" classname="05IntegridadYRelacionesCpCat014DesactivarCategoriaEnUso"/>
+    <testcase name="Categoría inactiva" time="0.005" classname="05IntegridadYRelacionesCpCat014DesactivarCategoriaEnUso"/>
+  </testsuite>
+  <testsuite name="05 · Integridad y relaciones / CP-CAR-014 · Nueva carga con categoría inactiva" id="de6e7057-4045-4fdd-b65a-05759a1c2497" timestamp="2026-10-14T16:20:48.791Z" tests="6" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="05IntegridadYRelacionesCpCar014NuevaCargaConCategoriaInactiva"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="05IntegridadYRelacionesCpCar014NuevaCargaConCategoriaInactiva"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="05IntegridadYRelacionesCpCar014NuevaCargaConCategoriaInactiva"/>
+    <testcase name="HTTP 400" time="0.003" classname="05IntegridadYRelacionesCpCar014NuevaCargaConCategoriaInactiva"/>
+    <testcase name="Error de validación en 'tipoCargaId'" time="0.003" classname="05IntegridadYRelacionesCpCar014NuevaCargaConCategoriaInactiva"/>
+    <testcase name="El mensaje indica que está inactiva" time="0.003" classname="05IntegridadYRelacionesCpCar014NuevaCargaConCategoriaInactiva"/>
+  </testsuite>
+  <testsuite name="05 · Integridad y relaciones / CP-CAR-025 · Actualizar carga conservando la categoría inactiva" id="a12b98ca-8a59-444b-af7d-68311dc745e6" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.006" classname="05IntegridadYRelacionesCpCar025ActualizarCargaConservandoLaCategoriaInactiva"/>
+    <testcase name="HTTP 200" time="0.006" classname="05IntegridadYRelacionesCpCar025ActualizarCargaConservandoLaCategoriaInactiva"/>
+  </testsuite>
+  <testsuite name="05 · Integridad y relaciones / S-01 · Reactivar categoría (preparación de limpieza)" id="b07256ed-4b9b-4c24-ac42-1ce2d38261df" timestamp="2026-10-14T16:20:48.791Z" tests="3" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="05IntegridadYRelacionesS01ReactivarCategoriaPreparacionDeLimpieza"/>
+    <testcase name="HTTP 200" time="0.005" classname="05IntegridadYRelacionesS01ReactivarCategoriaPreparacionDeLimpieza"/>
+    <testcase name="Categoría activa" time="0.005" classname="05IntegridadYRelacionesS01ReactivarCategoriaPreparacionDeLimpieza"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-OBJ-015 · Eliminar objeto" id="1eb8516d-4c8f-4fce-9e1f-f95bcc4749bf" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="06EliminacionYLimpiezaCpObj015EliminarObjeto"/>
+    <testcase name="HTTP 204" time="0.005" classname="06EliminacionYLimpiezaCpObj015EliminarObjeto"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-OBJ-015 · Verificar objeto eliminado" id="4d8210ea-21f9-4a69-815d-4d58bf414de3" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="06EliminacionYLimpiezaCpObj015VerificarObjetoEliminado"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="06EliminacionYLimpiezaCpObj015VerificarObjetoEliminado"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="06EliminacionYLimpiezaCpObj015VerificarObjetoEliminado"/>
+    <testcase name="HTTP 404" time="0.003" classname="06EliminacionYLimpiezaCpObj015VerificarObjetoEliminado"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-CAR-021 · Eliminar carga sin objetos" id="be5745f1-39be-4980-9284-0c78e2d3734e" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="06EliminacionYLimpiezaCpCar021EliminarCargaSinObjetos"/>
+    <testcase name="HTTP 204" time="0.004" classname="06EliminacionYLimpiezaCpCar021EliminarCargaSinObjetos"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-CAR-021 · Verificar carga eliminada" id="179bfa5b-fb09-4d19-b6b1-0f012682928a" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="06EliminacionYLimpiezaCpCar021VerificarCargaEliminada"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.004" classname="06EliminacionYLimpiezaCpCar021VerificarCargaEliminada"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.004" classname="06EliminacionYLimpiezaCpCar021VerificarCargaEliminada"/>
+    <testcase name="HTTP 404" time="0.004" classname="06EliminacionYLimpiezaCpCar021VerificarCargaEliminada"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-INT-004 · Eliminar segunda carga" id="8615fd2a-b5c0-4a2b-8c7b-9a98a162f082" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.006" classname="06EliminacionYLimpiezaCpInt004EliminarSegundaCarga"/>
+    <testcase name="HTTP 204" time="0.006" classname="06EliminacionYLimpiezaCpInt004EliminarSegundaCarga"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-CAR-024 · Eliminar carga inexistente" id="77edef43-ea60-434f-8947-931b657aa7bf" timestamp="2026-10-14T16:20:48.791Z" tests="4" failures="0" errors="0" time="0.003">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.003" classname="06EliminacionYLimpiezaCpCar024EliminarCargaInexistente"/>
+    <testcase name="[General] Error en formato ProblemDetails (application/problem+json)" time="0.003" classname="06EliminacionYLimpiezaCpCar024EliminarCargaInexistente"/>
+    <testcase name="[General] La respuesta no expone detalles internos" time="0.003" classname="06EliminacionYLimpiezaCpCar024EliminarCargaInexistente"/>
+    <testcase name="HTTP 404" time="0.003" classname="06EliminacionYLimpiezaCpCar024EliminarCargaInexistente"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-PAR-016 · Eliminar parámetro no obligatorio" id="5ceba420-29c0-48b2-8f07-51d4b7ffc789" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="06EliminacionYLimpiezaCpPar016EliminarParametroNoObligatorio"/>
+    <testcase name="HTTP 204" time="0.004" classname="06EliminacionYLimpiezaCpPar016EliminarParametroNoObligatorio"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-PAR-016 · Eliminar parámetro de capacidad" id="5d9c28a8-ffdb-4ecc-af8b-f0a5830b3cda" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.006" classname="06EliminacionYLimpiezaCpPar016EliminarParametroDeCapacidad"/>
+    <testcase name="HTTP 204" time="0.006" classname="06EliminacionYLimpiezaCpPar016EliminarParametroDeCapacidad"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-INT-004 · Eliminar categoría TIPO_CARGA" id="cc0fa549-5779-40c5-80ed-3c9c11a14bcb" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.004">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.004" classname="06EliminacionYLimpiezaCpInt004EliminarCategoriaTipoCarga"/>
+    <testcase name="HTTP 204" time="0.004" classname="06EliminacionYLimpiezaCpInt004EliminarCategoriaTipoCarga"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-INT-004 · Eliminar categoría VEHICULO" id="5e584d28-1d6a-4225-ac85-c50018714f78" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="06EliminacionYLimpiezaCpInt004EliminarCategoriaVehiculo"/>
+    <testcase name="HTTP 204" time="0.005" classname="06EliminacionYLimpiezaCpInt004EliminarCategoriaVehiculo"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-INT-004 · Eliminar categoría TIPO_ENTREGA" id="6affd345-2bfc-4c15-8ad0-72f5f4e27d50" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="06EliminacionYLimpiezaCpInt004EliminarCategoriaTipoEntrega"/>
+    <testcase name="HTTP 204" time="0.005" classname="06EliminacionYLimpiezaCpInt004EliminarCategoriaTipoEntrega"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-INT-004 · Eliminar categoría ESTADO_CARGA" id="f5019b52-95e7-4d69-b221-548eeb22e627" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="06EliminacionYLimpiezaCpInt004EliminarCategoriaEstadoCarga"/>
+    <testcase name="HTTP 204" time="0.005" classname="06EliminacionYLimpiezaCpInt004EliminarCategoriaEstadoCarga"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-INT-004 · Eliminar categoría TIPO_OBJETO" id="78379e85-e1a3-4dd8-97f5-6fb5de54dfbc" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="06EliminacionYLimpiezaCpInt004EliminarCategoriaTipoObjeto"/>
+    <testcase name="HTTP 204" time="0.005" classname="06EliminacionYLimpiezaCpInt004EliminarCategoriaTipoObjeto"/>
+  </testsuite>
+  <testsuite name="06 · Eliminación y limpieza / CP-INT-004 · Eliminar categoría TIPO_OBJETO (mismo código)" id="343ab154-6d5b-4b15-aacd-d135e8976909" timestamp="2026-10-14T16:20:48.791Z" tests="2" failures="0" errors="0" time="0.005">
+    <testcase name="[General] Tiempo de respuesta menor a 3000 ms" time="0.005" classname="06EliminacionYLimpiezaCpInt004EliminarCategoriaTipoObjetoMismoCodigo"/>
+    <testcase name="HTTP 204" time="0.005" classname="06EliminacionYLimpiezaCpInt004EliminarCategoriaTipoObjetoMismoCodigo"/>
+  </testsuite>
+</testsuites>

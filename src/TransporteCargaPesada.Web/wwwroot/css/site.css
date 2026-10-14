@@ -1,0 +1,43 @@
+html {
+  font-size: 15px;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: #f5f6f8;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+.table .acciones {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.tarjeta-indicador .valor {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: .2rem;
+}
+
+.form-label .opcional {
+  font-weight: 400;
+  color: #6c757d;
+  font-size: .85em;
+}
+
+.btn:focus, .btn:active:focus, .form-control:focus, .form-select:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}

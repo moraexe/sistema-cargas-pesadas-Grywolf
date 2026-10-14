@@ -1,0 +1,796 @@
+(node:33196) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+newman
+
+Transporte de Carga Pesada · API REST
+
+□ 00 · Preparación
+└ P-01 · Tipos de categoría permitidos [CP-CAT-018]
+  GET http://localhost:5080/api/categorias/tipos [200 OK, 507B, 31ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  La respuesta es una lista JSON
+  √  Incluye los seis tipos centralizados
+
+└ P-02 · Leer parámetros de límite [CP-PAR-001]
+  GET http://localhost:5080/api/parametros [200 OK, 3.35kB, 7ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  La respuesta es una lista JSON
+  √  Existen los parámetros de límite obligatorios
+  √  Hay parámetros GENERAL y CATEGORIA
+
+□ 01 · Categorías
+└ CP-CAT-005 · Crear categoría (código en minúsculas se normaliza)
+  POST http://localhost:5080/api/categorias [201 Created, 406B, 7ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 201
+  √  Devuelve un id numérico generado
+  √  Encabezado Location apunta al recurso
+  √  Código y tipo normalizados a mayúsculas
+  √  Tipos de datos correctos
+
+└ CP-CAT-005 · Crear categoría VEHICULO
+  POST http://localhost:5080/api/categorias [201 Created, 405B, 7ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 201
+  √  Devuelve un id numérico generado
+  √  Encabezado Location apunta al recurso
+  √  Contiene propiedades obligatorias
+  √  Tipo VEHICULO y activa por defecto
+
+└ CP-CAT-005 · Crear categoría TIPO_ENTREGA
+  POST http://localhost:5080/api/categorias [201 Created, 408B, 6ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 201
+  √  Devuelve un id numérico generado
+  √  Encabezado Location apunta al recurso
+  √  Contiene propiedades obligatorias
+  √  Tipo TIPO_ENTREGA y activa por defecto
+
+└ CP-CAT-005 · Crear categoría ESTADO_CARGA
+  POST http://localhost:5080/api/categorias [201 Created, 407B, 6ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 201
+  √  Devuelve un id numérico generado
+  √  Encabezado Location apunta al recurso
+  √  Contiene propiedades obligatorias
+  √  Tipo ESTADO_CARGA y activa por defecto
+
+└ CP-CAT-005 · Crear categoría TIPO_OBJETO
+  POST http://localhost:5080/api/categorias [201 Created, 406B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 201
+  √  Devuelve un id numérico generado
+  √  Encabezado Location apunta al recurso
+  √  Contiene propiedades obligatorias
+  √  Tipo TIPO_OBJETO y activa por defecto
+
+└ CP-CAT-005 · Crear categoría UNIDAD_MEDIDA temporal
+  POST http://localhost:5080/api/categorias [201 Created, 408B, 7ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 201
+  √  Devuelve un id numérico generado
+  √  Encabezado Location apunta al recurso
+  √  Contiene propiedades obligatorias
+  √  Tipo UNIDAD_MEDIDA y activa por defecto
+
+└ CP-CAT-001 · Listar categorías
+  GET http://localhost:5080/api/categorias [200 OK, 4.94kB, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  La respuesta es una lista JSON
+  √  Contiene propiedades obligatorias
+  √  Incluye la categoría creada
+
+└ CP-CAT-002 · Filtrar categorías por tipo VEHICULO
+  GET http://localhost:5080/api/categorias?tipoCategoria=VEHICULO [200 OK, 964B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  La respuesta es una lista JSON
+  √  Todos los elementos son VEHICULO
+
+└ CP-CAT-002 · Filtrar categorías por tipo TIPO_CARGA
+  GET http://localhost:5080/api/categorias?tipoCategoria=TIPO_CARGA [200 OK, 976B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  La respuesta es una lista JSON
+  √  Todos los elementos son TIPO_CARGA
+
+└ CP-CAT-002 · Filtrar categorías por tipo TIPO_ENTREGA
+  GET http://localhost:5080/api/categorias?tipoCategoria=TIPO_ENTREGA [200 OK, 756B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  La respuesta es una lista JSON
+  √  Todos los elementos son TIPO_ENTREGA
+
+└ CP-CAT-003 · Filtrar por tipo inexistente
+  GET http://localhost:5080/api/categorias?tipoCategoria=AVION [400 Bad Request, 525B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'tipoCategoria'
+
+└ CP-CAT-004 · Filtrar categorías activas
+  GET http://localhost:5080/api/categorias?activo=true [200 OK, 4.94kB, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  Todas activas
+
+└ CP-CAT-006 · Consultar categoría por id
+  GET http://localhost:5080/api/categorias/27 [200 OK, 349B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  Mismo id
+
+└ CP-CAT-007 · Consultar categoría inexistente
+  GET http://localhost:5080/api/categorias/999999999 [404 Not Found, 391B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 404
+
+└ CP-CAT-008 · Actualizar categoría
+  PUT http://localhost:5080/api/categorias/31 [200 OK, 343B, 6ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  Nombre actualizado
+
+└ CP-CAT-009 · Crear categoría con campos obligatorios vacíos
+  POST http://localhost:5080/api/categorias [400 Bad Request, 511B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'tipoCategoria'
+  √  Error de validación en 'codigo'
+  √  Error de validación en 'nombre'
+
+└ CP-CAT-010 · Crear categoría con tipo no permitido
+  POST http://localhost:5080/api/categorias [400 Bad Request, 525B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'tipoCategoria'
+
+└ CP-CAT-011 · Código duplicado en el mismo tipo
+  POST http://localhost:5080/api/categorias [409 Conflict, 448B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 409
+  √  El detalle menciona 'Ya existe'
+
+└ CP-CAT-012 · Mismo código en otro tipo de categoría
+  POST http://localhost:5080/api/categorias [201 Created, 416B, 7ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 201
+  √  Devuelve un id numérico generado
+  √  Encabezado Location apunta al recurso
+
+└ CP-CAT-017 · Código con formato inválido
+  POST http://localhost:5080/api/categorias [400 Bad Request, 540B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'codigo'
+
+└ CP-CAT-016 · Eliminar categoría sin uso
+  DELETE http://localhost:5080/api/categorias/31 [204 No Content, 81B, 7ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 204
+
+└ CP-CAT-016 · Verificar categoría eliminada
+  GET http://localhost:5080/api/categorias/31 [404 Not Found, 384B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 404
+
+□ 02 · Parámetros
+└ CP-PAR-003 · Crear parámetro DECIMAL general
+  POST http://localhost:5080/api/parametros [201 Created, 558B, 7ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 201
+  √  Devuelve un id numérico generado
+  √  Encabezado Location apunta al recurso
+  √  Contiene propiedades obligatorias
+  √  Valor normalizado y ámbito GENERAL
+
+└ CP-PAR-017 · Crear parámetro de capacidad asociado a un vehículo
+  POST http://localhost:5080/api/parametros [201 Created, 582B, 7ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 201
+  √  Devuelve un id numérico generado
+  √  Encabezado Location apunta al recurso
+  √  Ámbito CATEGORIA y tipo VEHICULO
+
+└ CP-PAR-002 · Filtrar parámetros por categoría
+  GET http://localhost:5080/api/parametros?categoriaId=27&activo=true [200 OK, 528B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  La respuesta es una lista JSON
+  √  Todos pertenecen a la categoría y están activos
+
+└ CP-PAR-004 · Consultar parámetro por id
+  GET http://localhost:5080/api/parametros/11 [200 OK, 502B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  Mismo id
+
+└ CP-PAR-005 · Consultar parámetro inexistente
+  GET http://localhost:5080/api/parametros/999999999 [404 Not Found, 391B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 404
+
+└ CP-PAR-006 · Actualizar parámetro
+  PUT http://localhost:5080/api/parametros/11 [200 OK, 499B, 7ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  Valor actualizado
+
+└ CP-PAR-007 · Valor 'abc' incompatible con ENTERO
+  POST http://localhost:5080/api/parametros [400 Bad Request, 442B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'valor'
+  √  El mensaje menciona el tipo ENTERO
+
+└ CP-PAR-007 · Valor '12,5' incompatible con DECIMAL
+  POST http://localhost:5080/api/parametros [400 Bad Request, 472B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'valor'
+  √  El mensaje menciona el tipo DECIMAL
+
+└ CP-PAR-007 · Valor 'si' incompatible con BOOLEANO
+  POST http://localhost:5080/api/parametros [400 Bad Request, 443B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'valor'
+  √  El mensaje menciona el tipo BOOLEANO
+
+└ CP-PAR-007 · Valor '31/12/2026' incompatible con FECHA
+  POST http://localhost:5080/api/parametros [400 Bad Request, 461B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'valor'
+  √  El mensaje menciona el tipo FECHA
+
+└ CP-PAR-008 · Tipo de dato no permitido
+  POST http://localhost:5080/api/parametros [400 Bad Request, 478B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'tipoDato'
+
+└ CP-PAR-009 · Parámetro con campos obligatorios vacíos
+  POST http://localhost:5080/api/parametros [400 Bad Request, 544B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'codigo'
+  √  Error de validación en 'nombre'
+  √  Error de validación en 'tipoDato'
+  √  Error de validación en 'valor'
+
+└ CP-PAR-010 · Código de parámetro duplicado
+  POST http://localhost:5080/api/parametros [409 Conflict, 432B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 409
+
+└ CP-PAR-011 · Eliminar parámetro obligatorio
+  DELETE http://localhost:5080/api/parametros/1 [409 Conflict, 444B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 409
+  √  El detalle menciona 'obligatorio'
+
+└ CP-PAR-012 · Desactivar parámetro obligatorio
+  PUT http://localhost:5080/api/parametros/1 [409 Conflict, 446B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 409
+  √  El detalle menciona 'obligatorio'
+
+└ CP-PAR-013 · Parámetro asociado a categoría inexistente
+  POST http://localhost:5080/api/parametros [400 Bad Request, 423B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'categoriaId'
+
+└ CP-PAR-014 · Capacidad asociada a una categoría que no es VEHICULO
+  POST http://localhost:5080/api/parametros [400 Bad Request, 510B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'categoriaId'
+
+└ CP-PAR-015 · Parámetro de límite con valor cero
+  PUT http://localhost:5080/api/parametros/1 [400 Bad Request, 459B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'valor'
+
+□ 03 · Cargas
+└ CP-CAR-002 · Crear carga válida (estado por defecto)
+  POST http://localhost:5080/api/cargas [201 Created, 726B, 48ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 201
+  √  Devuelve un id numérico generado
+  √  Encabezado Location apunta al recurso
+  √  Contiene propiedades obligatorias
+  √  Estado inicial PENDIENTE y sin objetos
+  √  Tipos de datos correctos
+
+└ CP-CAR-002 · Crear segunda carga (para eliminar)
+  POST http://localhost:5080/api/cargas [201 Created, 715B, 8ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 201
+  √  Devuelve un id numérico generado
+  √  Encabezado Location apunta al recurso
+
+└ CP-CAR-001 · Listar cargas
+  GET http://localhost:5080/api/cargas [200 OK, 2.3kB, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  La respuesta es una lista JSON
+  √  Incluye la carga creada
+
+└ CP-CAR-003 · Consultar carga por id
+  GET http://localhost:5080/api/cargas/5 [200 OK, 675B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  Incluye nombres de categorías
+
+└ CP-CAR-004 · Consultar carga inexistente
+  GET http://localhost:5080/api/cargas/999999999 [404 Not Found, 386B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 404
+
+└ CP-CAR-005 · Actualizar carga (estado y destino)
+  PUT http://localhost:5080/api/cargas/5 [200 OK, 685B, 7ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  Destino y estado actualizados
+
+└ CP-CAR-006 · Crear carga con campos obligatorios vacíos
+  POST http://localhost:5080/api/cargas [400 Bad Request, 723B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'codigo'
+  √  Error de validación en 'descripcion'
+  √  Error de validación en 'origen'
+  √  Error de validación en 'destino'
+  √  Error de validación en 'pesoTotalKg'
+  √  Error de validación en 'tipoCargaId'
+  √  Error de validación en 'tipoEntregaId'
+
+└ CP-CAR-007 · Peso total negativo
+  POST http://localhost:5080/api/cargas [400 Bad Request, 424B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'pesoTotalKg'
+
+└ CP-CAR-007 · Peso total cero (valor límite)
+  POST http://localhost:5080/api/cargas [400 Bad Request, 426B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'pesoTotalKg'
+
+└ CP-CAR-008 · Volumen negativo
+  POST http://localhost:5080/api/cargas [400 Bad Request, 430B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'volumenTotalM3'
+
+└ CP-CAR-009 · Origen igual al destino
+  POST http://localhost:5080/api/cargas [400 Bad Request, 417B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'destino'
+
+└ CP-CAR-010 · Código de carga duplicado
+  POST http://localhost:5080/api/cargas [409 Conflict, 419B, 26ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 409
+  √  El detalle menciona el código
+
+└ CP-CAR-011 · Categoría VEHICULO usada como TIPO_CARGA
+  POST http://localhost:5080/api/cargas [400 Bad Request, 470B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'tipoCargaId'
+  √  El mensaje explica el tipo incorrecto
+
+└ CP-CAR-012 · Categoría TIPO_CARGA usada como vehículo
+  POST http://localhost:5080/api/cargas [400 Bad Request, 475B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'tipoVehiculoId'
+
+└ CP-CAR-012 · Categoría ESTADO_CARGA usada como tipo de entrega
+  POST http://localhost:5080/api/cargas [400 Bad Request, 478B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'tipoEntregaId'
+
+└ CP-CAR-013 · Categoría inexistente
+  POST http://localhost:5080/api/cargas [400 Bad Request, 425B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'tipoEntregaId'
+
+└ CP-CAR-015 · Peso que supera PESO_MAXIMO_CARGA_KG
+  POST http://localhost:5080/api/cargas [400 Bad Request, 485B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'pesoTotalKg'
+
+└ CP-CAR-016 · Peso que supera la capacidad del vehículo
+  POST http://localhost:5080/api/cargas [400 Bad Request, 519B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'pesoTotalKg'
+
+└ CP-CAR-017 · Volumen que supera VOLUMEN_MAXIMO_CARGA_M3
+  POST http://localhost:5080/api/cargas [400 Bad Request, 488B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'volumenTotalM3'
+
+└ CP-CAR-018 · Tipo de dato incorrecto en el JSON
+  POST http://localhost:5080/api/cargas [400 Bad Request, 465B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'pesoTotalKg'
+
+└ CP-CAR-019 · JSON mal formado
+  POST http://localhost:5080/api/cargas [400 Bad Request, 465B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Informa errores
+
+└ CP-CAR-020 · Actualizar carga inexistente
+  PUT http://localhost:5080/api/cargas/999999999 [404 Not Found, 386B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 404
+
+□ 04 · Objetos
+└ CP-OBJ-002 · Crear objeto válido
+  POST http://localhost:5080/api/objetos [201 Created, 472B, 6ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 201
+  √  Devuelve un id numérico generado
+  √  Encabezado Location apunta al recurso
+  √  Contiene propiedades obligatorias
+  √  Peso total calculado y carga correcta
+
+└ CP-OBJ-001 · Listar objetos
+  GET http://localhost:5080/api/objetos [200 OK, 1.22kB, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  La respuesta es una lista JSON
+  √  Incluye el objeto creado
+
+└ CP-OBJ-003 · Consultar objeto por id
+  GET http://localhost:5080/api/objetos/5 [200 OK, 420B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+
+└ CP-OBJ-004 · Consultar objeto inexistente
+  GET http://localhost:5080/api/objetos/999999999 [404 Not Found, 387B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 404
+
+└ CP-OBJ-005 · Objetos de una carga
+  GET http://localhost:5080/api/cargas/5/objetos [200 OK, 422B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  La respuesta es una lista JSON
+  √  Todos pertenecen a la carga
+
+└ CP-OBJ-005 · Filtrar objetos por cargaId
+  GET http://localhost:5080/api/objetos?cargaId=6 [200 OK, 150B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  Lista vacía
+
+└ CP-OBJ-006 · Objetos de una carga inexistente
+  GET http://localhost:5080/api/cargas/999999999/objetos [404 Not Found, 386B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 404
+
+└ CP-OBJ-007 · Actualizar objeto
+  PUT http://localhost:5080/api/objetos/5 [200 OK, 430B, 6ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  Cantidad y peso actualizados
+
+└ CP-OBJ-002 · La carga refleja sus objetos
+  GET http://localhost:5080/api/cargas/5 [200 OK, 690B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  Resumen de objetos coherente
+
+└ CP-OBJ-008 · Objeto vinculado a una carga inexistente
+  POST http://localhost:5080/api/objetos [400 Bad Request, 414B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'cargaId'
+
+└ CP-OBJ-009 · Cantidad cero
+  POST http://localhost:5080/api/objetos [400 Bad Request, 420B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'cantidad'
+
+└ CP-OBJ-010 · Peso unitario negativo
+  POST http://localhost:5080/api/objetos [400 Bad Request, 430B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'pesoUnitarioKg'
+
+└ CP-OBJ-011 · Objeto con campos obligatorios vacíos
+  POST http://localhost:5080/api/objetos [400 Bad Request, 564B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'cargaId'
+  √  Error de validación en 'nombre'
+  √  Error de validación en 'cantidad'
+  √  Error de validación en 'pesoUnitarioKg'
+
+└ CP-OBJ-012 · Categoría VEHICULO usada como TIPO_OBJETO
+  POST http://localhost:5080/api/objetos [400 Bad Request, 471B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'categoriaId'
+
+└ CP-OBJ-013 · Objetos que superan el peso declarado de la carga
+  POST http://localhost:5080/api/objetos [409 Conflict, 500B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 409
+  √  El detalle menciona 'peso total declarado'
+
+└ CP-OBJ-014 · Cantidad con tipo de dato incorrecto
+  POST http://localhost:5080/api/objetos [400 Bad Request, 462B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'cantidad'
+
+└ CP-OBJ-016 · Mover objeto a una carga sin capacidad
+  PUT http://localhost:5080/api/objetos/5 [409 Conflict, 502B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 409
+
+□ 05 · Integridad y relaciones
+└ CP-CAR-022 · Eliminar carga con objetos
+  DELETE http://localhost:5080/api/cargas/5 [409 Conflict, 474B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 409
+  √  El detalle menciona 'objeto'
+
+└ CP-CAR-023 · Reducir peso por debajo del peso de los objetos
+  PUT http://localhost:5080/api/cargas/5 [409 Conflict, 454B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 409
+
+└ CP-CAT-013 · Eliminar categoría en uso
+  DELETE http://localhost:5080/api/categorias/26 [409 Conflict, 525B, 2ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 409
+  √  El detalle menciona 'Desactívela'
+
+└ CP-CAT-015 · Cambiar el tipo de una categoría en uso
+  PUT http://localhost:5080/api/categorias/26 [409 Conflict, 498B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 409
+
+└ CP-CAT-014 · Desactivar categoría en uso
+  PUT http://localhost:5080/api/categorias/26 [200 OK, 321B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  Categoría inactiva
+
+└ CP-CAR-014 · Nueva carga con categoría inactiva
+  POST http://localhost:5080/api/cargas [400 Bad Request, 454B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 400
+  √  Error de validación en 'tipoCargaId'
+  √  El mensaje indica que está inactiva
+
+└ CP-CAR-025 · Actualizar carga conservando la categoría inactiva
+  PUT http://localhost:5080/api/cargas/5 [200 OK, 694B, 6ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+
+└ S-01 · Reactivar categoría (preparación de limpieza)
+  PUT http://localhost:5080/api/categorias/26 [200 OK, 320B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 200
+  √  Categoría activa
+
+□ 06 · Eliminación y limpieza
+└ CP-OBJ-015 · Eliminar objeto
+  DELETE http://localhost:5080/api/objetos/5 [204 No Content, 81B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 204
+
+└ CP-OBJ-015 · Verificar objeto eliminado
+  GET http://localhost:5080/api/objetos/5 [404 Not Found, 379B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 404
+
+└ CP-CAR-021 · Eliminar carga sin objetos
+  DELETE http://localhost:5080/api/cargas/5 [204 No Content, 81B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 204
+
+└ CP-CAR-021 · Verificar carga eliminada
+  GET http://localhost:5080/api/cargas/5 [404 Not Found, 378B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 404
+
+└ CP-INT-004 · Eliminar segunda carga
+  DELETE http://localhost:5080/api/cargas/6 [204 No Content, 81B, 6ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 204
+
+└ CP-CAR-024 · Eliminar carga inexistente
+  DELETE http://localhost:5080/api/cargas/6 [404 Not Found, 378B, 3ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  [General] Error en formato ProblemDetails (application/problem+json)
+  √  [General] La respuesta no expone detalles internos
+  √  HTTP 404
+
+└ CP-PAR-016 · Eliminar parámetro no obligatorio
+  DELETE http://localhost:5080/api/parametros/11 [204 No Content, 81B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 204
+
+└ CP-PAR-016 · Eliminar parámetro de capacidad
+  DELETE http://localhost:5080/api/parametros/12 [204 No Content, 81B, 6ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 204
+
+└ CP-INT-004 · Eliminar categoría TIPO_CARGA
+  DELETE http://localhost:5080/api/categorias/26 [204 No Content, 81B, 4ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 204
+
+└ CP-INT-004 · Eliminar categoría VEHICULO
+  DELETE http://localhost:5080/api/categorias/27 [204 No Content, 81B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 204
+
+└ CP-INT-004 · Eliminar categoría TIPO_ENTREGA
+  DELETE http://localhost:5080/api/categorias/28 [204 No Content, 81B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 204
+
+└ CP-INT-004 · Eliminar categoría ESTADO_CARGA
+  DELETE http://localhost:5080/api/categorias/29 [204 No Content, 81B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 204
+
+└ CP-INT-004 · Eliminar categoría TIPO_OBJETO
+  DELETE http://localhost:5080/api/categorias/30 [204 No Content, 81B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 204
+
+└ CP-INT-004 · Eliminar categoría TIPO_OBJETO (mismo código)
+  DELETE http://localhost:5080/api/categorias/32 [204 No Content, 81B, 5ms]
+  √  [General] Tiempo de respuesta menor a 3000 ms
+  √  HTTP 204
+
+┌─────────────────────────┬─────────────────┬─────────────────┐
+│                         │        executed │          failed │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│              iterations │               1 │               0 │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│                requests │             103 │               0 │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│            test-scripts │             206 │               0 │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│      prerequest-scripts │               1 │               0 │
+├─────────────────────────┼─────────────────┼─────────────────┤
+│              assertions │             455 │               0 │
+├─────────────────────────┴─────────────────┴─────────────────┤
+│ total run duration: 7.5s                                    │
+├─────────────────────────────────────────────────────────────┤
+│ total data received: 43.1kB (approx)                        │
+├─────────────────────────────────────────────────────────────┤
+│ average response time: 4ms [min: 2ms, max: 48ms, s.d.: 5ms] │
+└─────────────────────────────────────────────────────────────┘

@@ -1,0 +1,75 @@
+@page
+@{
+    ViewData["Title"] = "Categorías";
+}
+
+<h1 class="h3 mb-3">Categorías <small class="text-muted fs-6">catálogo genérico tipado</small></h1>
+<div id="mensajes"></div>
+
+<div class="row g-3">
+    <div class="col-lg-4">
+        <div class="card"><div class="card-body">
+            <h2 class="h5" id="tituloFormulario">Registrar categoría</h2>
+            <form id="formCategoria" novalidate>
+                <input type="hidden" id="categoriaId" data-ignorar />
+                <div class="mb-2">
+                    <label class="form-label" for="tipoCategoria">Tipo de categoría</label>
+                    <select class="form-select" id="tipoCategoria" name="tipoCategoria"></select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label" for="codigo">Código</label>
+                    <input class="form-control" id="codigo" name="codigo" maxlength="50" placeholder="VOLQUETA" />
+                    <div class="form-text">Único dentro del tipo. Letras, dígitos y guion bajo.</div>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label" for="nombre">Nombre</label>
+                    <input class="form-control" id="nombre" name="nombre" maxlength="100" />
+                </div>
+                <div class="mb-2">
+                    <label class="form-label" for="descripcion">Descripción <span class="opcional">opcional</span></label>
+                    <textarea class="form-control" id="descripcion" name="descripcion" rows="2" maxlength="300"></textarea>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="activo" name="activo" data-tipo="bool" checked />
+                    <label class="form-check-label" for="activo">Activa</label>
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary" id="btnGuardar">Registrar</button>
+                    <button type="button" class="btn btn-outline-secondary d-none" id="btnCancelar">Cancelar edición</button>
+                </div>
+            </form>
+            <hr />
+            <p class="small text-muted mb-0">
+                <strong>Política de eliminación:</strong> una categoría usada por cargas, objetos o parámetros no se elimina
+                (respuesta 409); debe desactivarse. Las categorías inactivas no se ofrecen para nuevos registros, pero los
+                registros existentes las conservan.
+            </p>
+        </div></div>
+    </div>
+
+    <div class="col-lg-8">
+        <div class="card"><div class="card-body">
+            <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-2">
+                <h2 class="h5 mb-0">Categorías registradas</h2>
+                <div class="d-flex gap-2">
+                    <select class="form-select form-select-sm" id="filtroTipo" aria-label="Filtrar por tipo"></select>
+                    <select class="form-select form-select-sm" id="filtroActivo" aria-label="Filtrar por estado">
+                        <option value="">Todas</option>
+                        <option value="true">Activas</option>
+                        <option value="false">Inactivas</option>
+                    </select>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover table-sm">
+                    <thead><tr><th>Tipo</th><th>Código</th><th>Nombre</th><th>Estado</th><th></th></tr></thead>
+                    <tbody id="tablaCategorias"></tbody>
+                </table>
+            </div>
+        </div></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/pages/categorias.js" asp-append-version="true"></script>
+}

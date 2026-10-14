@@ -1,0 +1,82 @@
+@page
+@{
+    ViewData["Title"] = "Objetos";
+}
+
+<h1 class="h3 mb-3">Objetos <small class="text-muted fs-6">mercancías que forman parte de una carga</small></h1>
+<div id="mensajes"></div>
+
+<div class="row g-3">
+    <div class="col-lg-4">
+        <div class="card"><div class="card-body">
+            <h2 class="h5" id="tituloFormulario">Registrar objeto</h2>
+            <form id="formObjeto" novalidate>
+                <input type="hidden" id="objetoId" data-ignorar />
+                <div class="mb-2">
+                    <label class="form-label" for="cargaId">Carga</label>
+                    <select class="form-select" id="cargaId" name="cargaId" data-tipo="id"></select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label" for="nombre">Nombre</label>
+                    <input class="form-control" id="nombre" name="nombre" maxlength="100" placeholder="Excavadora CAT 320" />
+                </div>
+                <div class="mb-2">
+                    <label class="form-label" for="descripcion">Descripción <span class="opcional">opcional</span></label>
+                    <input class="form-control" id="descripcion" name="descripcion" maxlength="300" />
+                </div>
+                <div class="row g-2 mb-2">
+                    <div class="col-4">
+                        <label class="form-label" for="cantidad">Cantidad</label>
+                        <input class="form-control" id="cantidad" name="cantidad" data-tipo="numero" type="number" step="1" />
+                    </div>
+                    <div class="col-8">
+                        <label class="form-label" for="pesoUnitarioKg">Peso unitario (kg)</label>
+                        <input class="form-control" id="pesoUnitarioKg" name="pesoUnitarioKg" data-tipo="numero" type="number" step="any" />
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label" for="volumenUnitarioM3">Volumen unitario (m³) <span class="opcional">opcional</span></label>
+                    <input class="form-control" id="volumenUnitarioM3" name="volumenUnitarioM3" data-tipo="numero" type="number" step="any" />
+                </div>
+                <div class="mb-2">
+                    <label class="form-label" for="categoriaId">Tipo de objeto <span class="opcional">opcional</span></label>
+                    <select class="form-select" id="categoriaId" name="categoriaId" data-tipo="id"></select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="observaciones">Observaciones <span class="opcional">opcional</span></label>
+                    <textarea class="form-control" id="observaciones" name="observaciones" rows="2" maxlength="500"></textarea>
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary" id="btnGuardar">Registrar</button>
+                    <button type="button" class="btn btn-outline-secondary d-none" id="btnCancelar">Cancelar edición</button>
+                </div>
+            </form>
+        </div></div>
+    </div>
+
+    <div class="col-lg-8">
+        <div class="card"><div class="card-body">
+            <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-2">
+                <h2 class="h5 mb-0">Objetos registrados</h2>
+                <div class="d-flex gap-2 align-items-center">
+                    <label class="small text-muted" for="filtroCarga">Carga</label>
+                    <select class="form-select form-select-sm" id="filtroCarga" style="min-width: 14rem"></select>
+                </div>
+            </div>
+            <div id="resumenCarga" class="small mb-2"></div>
+            <div class="table-responsive">
+                <table class="table table-hover table-sm">
+                    <thead>
+                        <tr><th>Carga</th><th>Objeto</th><th class="text-end">Cantidad</th><th class="text-end">Peso unit. (kg)</th>
+                            <th class="text-end">Peso total (kg)</th><th class="text-end">Vol. unit. (m³)</th><th>Tipo</th><th></th></tr>
+                    </thead>
+                    <tbody id="tablaObjetos"></tbody>
+                </table>
+            </div>
+        </div></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/pages/objetos.js" asp-append-version="true"></script>
+}

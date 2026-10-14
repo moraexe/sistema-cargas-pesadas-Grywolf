@@ -1,0 +1,55 @@
+{
+  "fecha": "2026-10-14T16:30:44.866Z",
+  "navegador": "msedge.exe",
+  "baseUrl": "http://localhost:5080",
+  "resultados": [
+    {
+      "id": "CP-UI-001",
+      "nombre": "La página de inicio muestra los indicadores leídos desde la API",
+      "estado": "Aprobado",
+      "evidencia": "ui/CP-UI-001-inicio.png"
+    },
+    {
+      "id": "CP-UI-002",
+      "nombre": "Filtrar categorías por tipo VEHICULO en la interfaz",
+      "estado": "Aprobado",
+      "evidencia": "ui/CP-UI-002-filtro-categorias.png"
+    },
+    {
+      "id": "CP-UI-003",
+      "nombre": "El formulario de carga solo ofrece categorías del tipo correcto",
+      "estado": "Aprobado",
+      "evidencia": "ui/CP-UI-003-formulario-carga.png"
+    },
+    {
+      "id": "CP-UI-004",
+      "nombre": "Enviar el formulario de carga vacío muestra los errores de validación de la API",
+      "estado": "Aprobado",
+      "evidencia": "ui/CP-UI-004-validacion-carga.png"
+    },
+    {
+      "id": "CP-UI-005",
+      "nombre": "Registrar una carga desde el formulario",
+      "estado": "Aprobado",
+      "evidencia": "ui/CP-UI-005-registro-carga.png"
+    },
+    {
+      "id": "CP-UI-006",
+      "nombre": "Agregar un objeto que supera el peso declarado muestra el conflicto 409",
+      "estado": "Aprobado",
+      "evidencia": "ui/CP-UI-006-objeto-supera-peso.png"
+    },
+    {
+      "id": "CP-UI-007",
+      "nombre": "Eliminar desde la interfaz una carga con objetos muestra el conflicto 409",
+      "estado": "Aprobado",
+      "evidencia": "ui/CP-UI-007-eliminar-carga-con-objetos.png"
+    },
+    {
+      "id": "CP-UI-008",
+      "nombre": "La página de parámetros muestra ámbito y parámetros obligatorios",
+      "estado": "Aprobado",
+      "evidencia": "ui/CP-UI-008-parametros.png"
+    }
+  ]
+}

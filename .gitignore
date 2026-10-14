@@ -1,0 +1,7 @@
+bin/
+obj/
+.vs/
+*.user
+TestResults/
+src/TransporteCargaPesada.Web/App_Data/*.db*
+node_modules/

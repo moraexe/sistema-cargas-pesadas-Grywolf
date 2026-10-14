@@ -1,0 +1,854 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="72293b75-4743-49d5-99ff-cd32ae783cd5" name="User@DESKTOP-Q0DQ4E0 2026-10-14 11:15:53" runUser="DESKTOP-Q0DQ4E0\User" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-14T11:15:53.1700204-05:00" queuing="2026-10-14T11:15:53.1700208-05:00" start="2026-10-14T11:15:43.2826516-05:00" finish="2026-10-14T11:15:54.7598661-05:00" />
+  <TestSettings name="default" id="2273a6e7-5e22-4635-b76c-7bd645086fb5">
+    <Deployment runDeploymentRoot="User_DESKTOP-Q0DQ4E0_2026-10-14_11_15_53" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="c09a0ac3-5a51-4871-910f-71865163d956" testId="e8797ae8-226a-6237-ae79-7a0c91639677" testName="CP-PAR-010 Código de parámetro duplicado devuelve 409" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0034933" startTime="2026-10-14T11:15:53.4936986-05:00" endTime="2026-10-14T11:15:53.4973131-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c09a0ac3-5a51-4871-910f-71865163d956" />
+    <UnitTestResult executionId="d865bf66-5f00-4aac-a88b-3687b88f592a" testId="61771608-7a2a-052e-66e4-088478f267d5" testName="CP-CAT-002 Filtrar por tipo devuelve solo categorías de ese tipo(tipo: &quot;tipo_carga&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0277651" startTime="2026-10-14T11:15:53.2322077-05:00" endTime="2026-10-14T11:15:53.2602491-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d865bf66-5f00-4aac-a88b-3687b88f592a" />
+    <UnitTestResult executionId="750170bb-c1db-41bf-948e-aa82fadd595f" testId="f5cd9d1a-eed8-ae0b-0938-c673c886a833" testName="CP-CAR-017 Volumen que supera VOLUMEN_MAXIMO_CARGA_M3 devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0186067" startTime="2026-10-14T11:15:53.9221302-05:00" endTime="2026-10-14T11:15:53.9411347-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="750170bb-c1db-41bf-948e-aa82fadd595f" />
+    <UnitTestResult executionId="d1ea930e-1389-4d0a-9da6-be1a99fe5a6e" testId="aa0a39e2-9ade-bd67-47ec-dc7e08e55849" testName="CP-PAR-003 Crear parámetro con valor compatible con su tipo devuelve 201 y valor normalizado(tipoDato: &quot;BOOLEANO&quot;, valor: &quot;TRUE&quot;, esperado: &quot;true&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0079068" startTime="2026-10-14T11:15:53.3381546-05:00" endTime="2026-10-14T11:15:53.3458590-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d1ea930e-1389-4d0a-9da6-be1a99fe5a6e" />
+    <UnitTestResult executionId="a380216f-89ac-48da-8e41-7c2023c30510" testId="8e32f465-e9f3-e52b-d7ff-c04ca0553b8a" testName="CP-PAR-002 Filtrar parámetros por categoría y por estado activo" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0851372" startTime="2026-10-14T11:15:53.5316132-05:00" endTime="2026-10-14T11:15:53.6172412-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a380216f-89ac-48da-8e41-7c2023c30510" />
+    <UnitTestResult executionId="75349db3-999c-46f3-b87e-62e87d93418b" testId="75288bd8-6f39-81ef-8812-d4bea5a8a5fe" testName="CP-OBJ-009 Cantidad cero o negativa devuelve 400(cantidad: 0)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0265905" startTime="2026-10-14T11:15:53.6671244-05:00" endTime="2026-10-14T11:15:53.6939839-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="75349db3-999c-46f3-b87e-62e87d93418b" />
+    <UnitTestResult executionId="21e294bf-a3de-4ab3-becd-7466835bf88c" testId="10680f4d-68f9-1702-4ceb-6055173669c5" testName="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;FECHA&quot;, valor: &quot;31/12/2026&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0077788" startTime="2026-10-14T11:15:53.1524242-05:00" endTime="2026-10-14T11:15:53.1526429-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21e294bf-a3de-4ab3-becd-7466835bf88c" />
+    <UnitTestResult executionId="687576db-e874-4b18-9d05-b65d4525edca" testId="9d23ea78-fe10-a91e-b395-48ac37234346" testName="CP-CAR-023 Reducir el peso de la carga por debajo del peso de sus objetos devuelve 409" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0380483" startTime="2026-10-14T11:15:53.7659686-05:00" endTime="2026-10-14T11:15:53.8035387-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="687576db-e874-4b18-9d05-b65d4525edca" />
+    <UnitTestResult executionId="5b089d90-a991-4add-b6c7-3aa86cf2bb27" testId="d6829fca-d4e9-d9e8-15a8-d27924a8bde1" testName="CP-OBJ-003 Consultar objeto por id devuelve 200" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0289369" startTime="2026-10-14T11:15:53.7331426-05:00" endTime="2026-10-14T11:15:53.7621852-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5b089d90-a991-4add-b6c7-3aa86cf2bb27" />
+    <UnitTestResult executionId="e529ffe2-59ab-496f-9382-54eec8431b0e" testId="41b62ce7-13ff-3cee-4e8a-c451c48e280f" testName="CP-OBJ-015 Eliminar objeto devuelve 204 y luego 404" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0837436" startTime="2026-10-14T11:15:53.5506456-05:00" endTime="2026-10-14T11:15:53.6348169-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e529ffe2-59ab-496f-9382-54eec8431b0e" />
+    <UnitTestResult executionId="7eb56a54-9a26-404f-99da-999ab6e59993" testId="7bb16c67-d18a-8250-fd38-51402bb998e4" testName="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;DECIMAL&quot;, valor: &quot;doce&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0103386" startTime="2026-10-14T11:15:53.1520968-05:00" endTime="2026-10-14T11:15:53.1522078-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7eb56a54-9a26-404f-99da-999ab6e59993" />
+    <UnitTestResult executionId="4f42290e-6910-4013-bde0-12d82c6b40b9" testId="5f4967fc-4eb6-1631-130c-418195fe6314" testName="CP-OBJ-013 Objetos que superan el peso declarado de la carga devuelven 409" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0214710" startTime="2026-10-14T11:15:53.7624080-05:00" endTime="2026-10-14T11:15:53.7840473-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f42290e-6910-4013-bde0-12d82c6b40b9" />
+    <UnitTestResult executionId="07efc8cb-d7a2-4b30-a799-d9500f62ef77" testId="91b68f81-ad42-d022-9e77-29dabcc8c70c" testName="CP-CAR-013 Carga con categoría inexistente devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0107338" startTime="2026-10-14T11:15:54.0586240-05:00" endTime="2026-10-14T11:15:54.0680982-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="07efc8cb-d7a2-4b30-a799-d9500f62ef77" />
+    <UnitTestResult executionId="1f60f2a2-7ff7-43ff-9910-99b9b506a7f6" testId="587e8437-cea8-dc68-bfdb-86f7b068b928" testName="CP-PAR-011 Eliminar parámetro obligatorio devuelve 409" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0093738" startTime="2026-10-14T11:15:53.6274017-05:00" endTime="2026-10-14T11:15:53.6371427-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1f60f2a2-7ff7-43ff-9910-99b9b506a7f6" />
+    <UnitTestResult executionId="68264fc9-6d52-481f-bd1d-b5ce60a2348e" testId="e52710e7-c504-03ae-4e9b-e44ca95e9bf8" testName="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;ENTERO&quot;, valor: &quot;12.5&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0035186" startTime="2026-10-14T11:15:53.1563173-05:00" endTime="2026-10-14T11:15:53.1600488-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="68264fc9-6d52-481f-bd1d-b5ce60a2348e" />
+    <UnitTestResult executionId="c852b24d-139e-4a8c-9a8e-cb66113aa7a5" testId="a8f5ece3-b040-5c38-64ee-1c88f81cad03" testName="CP-CAT-014 Desactivar categoría en uso devuelve 200 y conserva la carga" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0416744" startTime="2026-10-14T11:15:53.5085946-05:00" endTime="2026-10-14T11:15:53.5503003-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c852b24d-139e-4a8c-9a8e-cb66113aa7a5" />
+    <UnitTestResult executionId="32b5b300-8060-4b3a-919c-6fdb4096dda4" testId="c8ee5982-3824-cf8b-5114-feac4d1ce620" testName="CP-OBJ-001 Listar objetos devuelve 200 y una lista" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0279449" startTime="2026-10-14T11:15:53.9562524-05:00" endTime="2026-10-14T11:15:53.9845140-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="32b5b300-8060-4b3a-919c-6fdb4096dda4" />
+    <UnitTestResult executionId="7b10c7fd-3187-4707-91e0-ffa96653d81f" testId="3288f321-ec7f-db45-58f3-e7e96811fa80" testName="CP-CAT-001 Listar categorías devuelve 200 y una lista" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0195937" startTime="2026-10-14T11:15:53.4275511-05:00" endTime="2026-10-14T11:15:53.4475369-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7b10c7fd-3187-4707-91e0-ffa96653d81f" />
+    <UnitTestResult executionId="eb4cca7e-22d9-4e62-b34f-ebeb6f60378f" testId="be19bde0-06cf-d568-938f-e970d65405cc" testName="CP-OBJ-014 Cantidad con tipo de dato incorrecto (decimal o texto) devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0141754" startTime="2026-10-14T11:15:53.8843875-05:00" endTime="2026-10-14T11:15:53.8988689-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eb4cca7e-22d9-4e62-b34f-ebeb6f60378f" />
+    <UnitTestResult executionId="adf9f57e-e4ed-4f10-aad0-d3f88fc32550" testId="788e37ea-8feb-db69-f7d2-c8a5e4f6fe8c" testName="CP-CAR-018 Tipo de dato incorrecto en el JSON devuelve 400 sin detalles internos" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0054630" startTime="2026-10-14T11:15:53.3440638-05:00" endTime="2026-10-14T11:15:53.3498146-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="adf9f57e-e4ed-4f10-aad0-d3f88fc32550" />
+    <UnitTestResult executionId="8f5dcb2b-bf56-427e-b9a5-b8e68004f968" testId="1264ce88-623f-7f72-cf8d-657a1ef29971" testName="CP-CAT-017 Código de categoría con formato inválido devuelve 400(codigo: &quot;1ABC&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0025710" startTime="2026-10-14T11:15:53.4196996-05:00" endTime="2026-10-14T11:15:53.4225581-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f5dcb2b-bf56-427e-b9a5-b8e68004f968" />
+    <UnitTestResult executionId="5bdfd8e8-e1e0-42fa-878f-93394fc1aa61" testId="c2a1d70e-8efc-e6ea-4e08-f8d0bf111d98" testName="CP-CAR-019 JSON mal formado o cuerpo vacío devuelve 400(json: &quot;{\&quot;codigo\&quot;: \&quot;T-MAL\&quot;, \&quot;descripcion\&quot;: &quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0213765" startTime="2026-10-14T11:15:53.1491656-05:00" endTime="2026-10-14T11:15:53.1525054-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5bdfd8e8-e1e0-42fa-878f-93394fc1aa61" />
+    <UnitTestResult executionId="62928c80-35f6-4581-87d3-cc03e39a8fc8" testId="5d8d5f20-877f-4924-d99b-3e5de59e8d25" testName="CP-PAR-004 Consultar parámetro por id devuelve 200" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0084814" startTime="2026-10-14T11:15:53.5235368-05:00" endTime="2026-10-14T11:15:53.5313465-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="62928c80-35f6-4581-87d3-cc03e39a8fc8" />
+    <UnitTestResult executionId="6b6800da-a955-4ca2-82be-ef007818c3bd" testId="fd1fa314-5103-0bfa-ea32-a3a593269b78" testName="CP-OBJ-012 Objeto con categoría de tipo incorrecto (VEHICULO) devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0245602" startTime="2026-10-14T11:15:53.8990573-05:00" endTime="2026-10-14T11:15:53.9238531-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b6800da-a955-4ca2-82be-ef007818c3bd" />
+    <UnitTestResult executionId="163d1dff-c0cf-4d9a-acf3-6ae58ef6f3de" testId="203c319b-3941-d334-dcd7-6909bf3ab913" testName="CP-CAR-012 Categoría de tipo incorrecto en vehículo, entrega o estado devuelve 400(campo: &quot;tipoVehiculoId&quot;, tipo: &quot;TIPO_CARGA&quot;, codigo: &quot;GENERAL&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0133070" startTime="2026-10-14T11:15:53.8325426-05:00" endTime="2026-10-14T11:15:53.8461343-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="163d1dff-c0cf-4d9a-acf3-6ae58ef6f3de" />
+    <UnitTestResult executionId="4ab86c47-8a2d-4b4c-bbdd-8ea7291dbb08" testId="18c8a379-f971-2b8f-56c9-63946730b65f" testName="CP-PAR-013 Parámetro asociado a una categoría inexistente devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0092608" startTime="2026-10-14T11:15:53.6174892-05:00" endTime="2026-10-14T11:15:53.6271303-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4ab86c47-8a2d-4b4c-bbdd-8ea7291dbb08" />
+    <UnitTestResult executionId="caa42c30-ec00-4a1e-892b-dc94936bc620" testId="6e22d3d7-7d14-794b-2b98-d989ba34d3ea" testName="CP-CAR-024 Eliminar carga inexistente devuelve 404" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0311223" startTime="2026-10-14T11:15:53.3501010-05:00" endTime="2026-10-14T11:15:53.3814328-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="caa42c30-ec00-4a1e-892b-dc94936bc620" />
+    <UnitTestResult executionId="1f6f1f37-ba92-4402-9b76-0a676afbecea" testId="b59eedfc-de2e-5a98-b98e-91d89e4dd045" testName="CP-CAR-007 Peso total negativo o cero devuelve 400(peso: -1)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.1697091" startTime="2026-10-14T11:15:53.1536237-05:00" endTime="2026-10-14T11:15:53.3198362-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1f6f1f37-ba92-4402-9b76-0a676afbecea" />
+    <UnitTestResult executionId="f314605e-becb-463e-a5ca-8fedadc41e77" testId="55a1f307-75c7-dc5d-6291-c70e55d6aeb3" testName="CP-PAR-003 Crear parámetro con valor compatible con su tipo devuelve 201 y valor normalizado(tipoDato: &quot;TEXTO&quot;, valor: &quot;Valor libre&quot;, esperado: &quot;Valor libre&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0074015" startTime="2026-10-14T11:15:53.3295798-05:00" endTime="2026-10-14T11:15:53.3372864-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f314605e-becb-463e-a5ca-8fedadc41e77" />
+    <UnitTestResult executionId="7635ba4e-5638-4d32-9eee-17fac072f837" testId="72df4c92-e19b-f45a-3936-5af647816cda" testName="CP-CAT-017 Código de categoría con formato inválido devuelve 400(codigo: &quot;CON-GUION&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0021778" startTime="2026-10-14T11:15:53.4135462-05:00" endTime="2026-10-14T11:15:53.4160076-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7635ba4e-5638-4d32-9eee-17fac072f837" />
+    <UnitTestResult executionId="b7e9bc83-d04d-4bd0-a644-c8a710e6ef68" testId="79dfdca9-86f3-7082-4cc1-aedfa137df03" testName="CP-PAR-005 Consultar parámetro inexistente devuelve 404" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0038629" startTime="2026-10-14T11:15:53.4199332-05:00" endTime="2026-10-14T11:15:53.4241318-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7e9bc83-d04d-4bd0-a644-c8a710e6ef68" />
+    <UnitTestResult executionId="3974d120-0f24-4917-8b32-0d0c2ec79079" testId="c3d5c906-c230-169e-9a6a-1b6169721775" testName="CP-CAT-006 Consultar categoría por id devuelve 200" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0135404" startTime="2026-10-14T11:15:53.4939299-05:00" endTime="2026-10-14T11:15:53.5082798-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3974d120-0f24-4917-8b32-0d0c2ec79079" />
+    <UnitTestResult executionId="86e0f8bf-0f9d-408a-bbbf-2543867d60a5" testId="2af958bb-64f8-f39f-caae-fd7b1c01e878" testName="CP-CAT-018 Consultar los tipos de categoría permitidos devuelve la lista centralizada" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0235029" startTime="2026-10-14T11:15:53.2807314-05:00" endTime="2026-10-14T11:15:53.3045168-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="86e0f8bf-0f9d-408a-bbbf-2543867d60a5" />
+    <UnitTestResult executionId="e75eb244-61c0-4d75-a5a3-512d3a2856eb" testId="0c0a71b3-bb5e-9e12-4ec1-bad4be01810b" testName="CP-CAT-003 Filtrar por tipo inexistente devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0036058" startTime="2026-10-14T11:15:53.6783707-05:00" endTime="2026-10-14T11:15:53.6821637-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e75eb244-61c0-4d75-a5a3-512d3a2856eb" />
+    <UnitTestResult executionId="602e416a-bbb5-438a-95fb-55aeef7080fd" testId="311657c3-917b-e76d-bb2a-0c4fbd65e745" testName="CP-INT-004 Flujo completo: categoría → carga → objetos → eliminación ordenada respetando dependencias" computerName="DESKTOP-Q0DQ4E0" duration="00:00:05.9001251" startTime="2026-10-14T11:15:47.7329716-05:00" endTime="2026-10-14T11:15:53.6086663-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="602e416a-bbb5-438a-95fb-55aeef7080fd" />
+    <UnitTestResult executionId="ea50ac8e-2c84-4ca5-b68d-9ec798ee51ef" testId="4605571c-c1b2-256d-6aa7-68a166de477d" testName="CP-CAR-002 Crear carga válida devuelve 201, Location y estado PENDIENTE por defecto" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0127517" startTime="2026-10-14T11:15:54.0168179-05:00" endTime="2026-10-14T11:15:54.0298697-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ea50ac8e-2c84-4ca5-b68d-9ec798ee51ef" />
+    <UnitTestResult executionId="09742a16-2b50-440d-8484-add50d81f34d" testId="1e7103bc-f020-9be4-6776-37eede9bef6d" testName="CP-INT-005 Un error inesperado devuelve 500 sin exponer excepciones ni cadenas de conexión" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.2004851" startTime="2026-10-14T11:15:54.3988625-05:00" endTime="2026-10-14T11:15:54.5995184-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="09742a16-2b50-440d-8484-add50d81f34d" />
+    <UnitTestResult executionId="3d33c3bb-b9bd-48fa-b5f1-f167abdef8a3" testId="0e5c440c-e534-e6b7-b6b9-f2a5e484e4b7" testName="CP-PAR-016 Eliminar parámetro no obligatorio devuelve 204 y luego 404" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0316494" startTime="2026-10-14T11:15:53.3877932-05:00" endTime="2026-10-14T11:15:53.4197533-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d33c3bb-b9bd-48fa-b5f1-f167abdef8a3" />
+    <UnitTestResult executionId="e2678585-a744-44ff-aca2-2c6d18861071" testId="746f1c65-7677-dc63-cd10-00f0ca7cf078" testName="CP-PAR-009 Parámetro con campos obligatorios vacíos devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0063328" startTime="2026-10-14T11:15:53.3479550-05:00" endTime="2026-10-14T11:15:53.3611432-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e2678585-a744-44ff-aca2-2c6d18861071" />
+    <UnitTestResult executionId="edc1cc8d-6969-4f52-8c89-fac38f7315fe" testId="b9480959-0682-ad73-54e9-d3cad0321864" testName="CP-OBJ-010 Peso o volumen unitario negativos devuelven 400(campo: &quot;volumenUnitarioM3&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0185191" startTime="2026-10-14T11:15:53.7004385-05:00" endTime="2026-10-14T11:15:53.7192279-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="edc1cc8d-6969-4f52-8c89-fac38f7315fe" />
+    <UnitTestResult executionId="f7e5d62f-d251-4357-b7a0-14453263730f" testId="b010de24-435f-e49a-e4e5-8cf09d744f5f" testName="CP-CAR-010 Código de carga duplicado devuelve 409" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0144929" startTime="2026-10-14T11:15:53.8037331-05:00" endTime="2026-10-14T11:15:53.8184762-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f7e5d62f-d251-4357-b7a0-14453263730f" />
+    <UnitTestResult executionId="d0317be1-519d-4a09-a60b-0781cd93823b" testId="d438cf91-f704-600e-65c8-2ead9f2c0d08" testName="CP-OBJ-009 Cantidad cero o negativa devuelve 400(cantidad: -3)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0312014" startTime="2026-10-14T11:15:53.6351661-05:00" endTime="2026-10-14T11:15:53.6668783-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d0317be1-519d-4a09-a60b-0781cd93823b" />
+    <UnitTestResult executionId="5cdd579d-fd3a-4918-a483-afef361f6362" testId="f7c510a3-ab0c-d582-1977-69d42cd1c769" testName="CP-PAR-006 Actualizar parámetro devuelve 200 y actualiza FechaActualizacion" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0379406" startTime="2026-10-14T11:15:53.4243431-05:00" endTime="2026-10-14T11:15:53.4627840-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5cdd579d-fd3a-4918-a483-afef361f6362" />
+    <UnitTestResult executionId="1a738ead-dbbb-4bd6-8ffa-a79213ebe02b" testId="08befc51-b0c9-ea2f-1263-1a38072d2ba1" testName="CP-CAR-009 Origen y destino inválidos devuelven 400(origen: &quot;Cali&quot;, destino: &quot;  &quot;, campo: &quot;destino&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0114226" startTime="2026-10-14T11:15:53.7067918-05:00" endTime="2026-10-14T11:15:53.7185164-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1a738ead-dbbb-4bd6-8ffa-a79213ebe02b" />
+    <UnitTestResult executionId="1f82b8f9-f243-45a3-8d5f-eeb1fd58a371" testId="c82ba3dc-f999-91bd-c895-b0035f568ab6" testName="CP-CAR-020 Actualizar carga inexistente devuelve 404" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0130715" startTime="2026-10-14T11:15:53.4940779-05:00" endTime="2026-10-14T11:15:53.5079103-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1f82b8f9-f243-45a3-8d5f-eeb1fd58a371" />
+    <UnitTestResult executionId="844063d7-264b-480a-9aad-bcffd1156d2b" testId="a06ef9dc-3774-d581-066b-0d5423db584a" testName="CP-OBJ-016 Mover un objeto a una carga sin capacidad disponible devuelve 409" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0316419" startTime="2026-10-14T11:15:53.9240374-05:00" endTime="2026-10-14T11:15:53.9559783-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="844063d7-264b-480a-9aad-bcffd1156d2b" />
+    <UnitTestResult executionId="84fd777c-e562-4370-87b0-3e14fddcd1f8" testId="59e6ca68-70e1-90da-f640-721a2c8ac6e7" testName="CP-CAR-007 Peso total negativo o cero devuelve 400(peso: -0.01)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0093148" startTime="2026-10-14T11:15:53.3200653-05:00" endTime="2026-10-14T11:15:53.3296488-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="84fd777c-e562-4370-87b0-3e14fddcd1f8" />
+    <UnitTestResult executionId="5ef54d9f-f052-429f-a50d-d9b85d971015" testId="bd67a713-1b6f-270d-a633-72eee854d6d5" testName="CP-CAR-004 Consultar carga inexistente devuelve 404" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0036877" startTime="2026-10-14T11:15:53.6727530-05:00" endTime="2026-10-14T11:15:53.6766935-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5ef54d9f-f052-429f-a50d-d9b85d971015" />
+    <UnitTestResult executionId="afc69578-03d9-4b88-a66d-2f278e302fa8" testId="5f6f1833-3f4f-c6ec-3897-b8c750e01699" testName="CP-CAT-002 Filtrar por tipo devuelve solo categorías de ese tipo(tipo: &quot;VEHICULO&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0037969" startTime="2026-10-14T11:15:53.2605090-05:00" endTime="2026-10-14T11:15:53.2647905-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="afc69578-03d9-4b88-a66d-2f278e302fa8" />
+    <UnitTestResult executionId="0e9c63eb-aed8-4419-905b-c3e496edac0c" testId="cb203969-c33c-b074-f093-cf8445bc89c4" testName="CP-INT-006 Las pruebas usan una base de datos SQLite distinta de la base de la aplicación" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0821808" startTime="2026-10-14T11:15:54.5996759-05:00" endTime="2026-10-14T11:15:54.6821182-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e9c63eb-aed8-4419-905b-c3e496edac0c" />
+    <UnitTestResult executionId="aca5c75f-93ec-4b19-8c97-1a16f8d4854f" testId="effc9996-9499-1baa-7b6c-42d44c09a679" testName="CP-PAR-003 Crear parámetro con valor compatible con su tipo devuelve 201 y valor normalizado(tipoDato: &quot;FECHA&quot;, valor: &quot;2026-12-31&quot;, esperado: &quot;2026-12-31&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0052717" startTime="2026-10-14T11:15:53.3237921-05:00" endTime="2026-10-14T11:15:53.3293571-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aca5c75f-93ec-4b19-8c97-1a16f8d4854f" />
+    <UnitTestResult executionId="96c55c46-eef7-49fa-9c6a-c3bc6972d7ab" testId="2a84dc91-650e-aff2-b48a-52792344dec7" testName="CP-CAT-004 Filtrar por estado activo devuelve solo categorías con ese estado" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0184794" startTime="2026-10-14T11:15:53.4747101-05:00" endTime="2026-10-14T11:15:53.4937677-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="96c55c46-eef7-49fa-9c6a-c3bc6972d7ab" />
+    <UnitTestResult executionId="bf09ae7d-eb02-42d4-bffc-d7e006270e77" testId="c211b46b-c5ee-9cc0-d19d-10358da55c12" testName="CP-OBJ-006 Consultar objetos de una carga inexistente devuelve 404" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0033902" startTime="2026-10-14T11:15:53.8806805-05:00" endTime="2026-10-14T11:15:53.8842550-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf09ae7d-eb02-42d4-bffc-d7e006270e77" />
+    <UnitTestResult executionId="55659d1e-f321-4d34-8dfb-bd4981e42a11" testId="49fa4209-28ef-eea0-fdae-11d2ca21164e" testName="CP-CAR-012 Categoría de tipo incorrecto en vehículo, entrega o estado devuelve 400(campo: &quot;estadoId&quot;, tipo: &quot;TIPO_ENTREGA&quot;, codigo: &quot;DIRECTA&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0117599" startTime="2026-10-14T11:15:53.8464640-05:00" endTime="2026-10-14T11:15:53.8584611-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="55659d1e-f321-4d34-8dfb-bd4981e42a11" />
+    <UnitTestResult executionId="b2025087-7056-4ba5-a600-c3d7d7f269ba" testId="d8f619ed-4caa-6447-fe98-3faf096d2d94" testName="CP-INT-003 SQLite rechaza pesos negativos y cantidades en cero (restricciones CHECK)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.1836075" startTime="2026-10-14T11:15:54.2150214-05:00" endTime="2026-10-14T11:15:54.3986212-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b2025087-7056-4ba5-a600-c3d7d7f269ba" />
+    <UnitTestResult executionId="be2113bd-a014-4a2d-8e39-a66d656e6eef" testId="a70c42eb-7fe5-68cb-129e-b341c98133e0" testName="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;BOOLEANO&quot;, valor: &quot;si&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0034876" startTime="2026-10-14T11:15:53.1527215-05:00" endTime="2026-10-14T11:15:53.1527653-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="be2113bd-a014-4a2d-8e39-a66d656e6eef" />
+    <UnitTestResult executionId="2aa1c2d2-831d-4bf4-9b2a-0ef04b473a00" testId="45593c58-f5fe-b08b-5512-45e784f5dd9e" testName="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;FECHA&quot;, valor: &quot;2026-02-30&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0037502" startTime="2026-10-14T11:15:53.1559954-05:00" endTime="2026-10-14T11:15:53.1560906-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2aa1c2d2-831d-4bf4-9b2a-0ef04b473a00" />
+    <UnitTestResult executionId="8bdba708-1d5c-4a81-977d-c26de012bab4" testId="5bdbb5e6-12f2-1fa3-65d8-22206f52f234" testName="CP-CAT-002 Filtrar por tipo devuelve solo categorías de ese tipo(tipo: &quot;TIPO_ENTREGA&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0068274" startTime="2026-10-14T11:15:53.2243637-05:00" endTime="2026-10-14T11:15:53.2318351-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8bdba708-1d5c-4a81-977d-c26de012bab4" />
+    <UnitTestResult executionId="87ed02e4-b0ce-4333-9891-c0d7c51a36d2" testId="2c109b0d-e6a8-e199-7663-9c7af7caa888" testName="CP-CAT-016 Eliminar categoría sin uso devuelve 204 y luego 404" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.1052564" startTime="2026-10-14T11:15:53.3073418-05:00" endTime="2026-10-14T11:15:53.4103220-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="87ed02e4-b0ce-4333-9891-c0d7c51a36d2" />
+    <UnitTestResult executionId="c6511aaa-024f-45ce-ae85-076599db6d63" testId="cde29903-e929-0eaf-38a0-79fe2416eef2" testName="CP-CAR-022 Eliminar carga con objetos devuelve 409 y conserva carga y objetos" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0376219" startTime="2026-10-14T11:15:53.8841130-05:00" endTime="2026-10-14T11:15:53.9219308-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6511aaa-024f-45ce-ae85-076599db6d63" />
+    <UnitTestResult executionId="2f648f2a-9b1a-4563-8f71-8e387f9397d1" testId="b1dc92d1-b0d4-d70d-ff34-496856d9dd6b" testName="CP-INT-002 SQLite impide borrar una categoría referenciada (clave foránea Restrict)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.3698607" startTime="2026-10-14T11:15:53.6100601-05:00" endTime="2026-10-14T11:15:53.9792322-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2f648f2a-9b1a-4563-8f71-8e387f9397d1" />
+    <UnitTestResult executionId="3a510adf-e1c5-42e5-81b9-a752ce4f39ab" testId="e4730232-9a9b-c0b0-c849-9225e18a5a75" testName="CP-OBJ-004 Consultar objeto inexistente devuelve 404" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0034851" startTime="2026-10-14T11:15:53.8768059-05:00" endTime="2026-10-14T11:15:53.8804866-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3a510adf-e1c5-42e5-81b9-a752ce4f39ab" />
+    <UnitTestResult executionId="25258a8d-30d4-4578-ab22-fe0b311b8037" testId="0b245598-fd8e-e6a7-10e1-9b2710eaf8e8" testName="CP-CAR-016 Peso que supera la capacidad del vehículo (CAPACIDAD_KG_*) devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0496947" startTime="2026-10-14T11:15:53.9599953-05:00" endTime="2026-10-14T11:15:54.0098516-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="25258a8d-30d4-4578-ab22-fe0b311b8037" />
+    <UnitTestResult executionId="77e98ca9-82fb-420f-8316-ffd08d043f69" testId="24f945be-130a-314b-3199-33d5e99439cf" testName="CP-PAR-001 Listar parámetros devuelve 200 con parámetros generales y por categoría" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0260533" startTime="2026-10-14T11:15:53.3614390-05:00" endTime="2026-10-14T11:15:53.3875739-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77e98ca9-82fb-420f-8316-ffd08d043f69" />
+    <UnitTestResult executionId="fec5c9da-eceb-49ce-bbf1-2605cc537864" testId="d075b83f-b52c-ebd1-12e2-0eb62a5dbccb" testName="CP-CAR-009 Origen y destino inválidos devuelven 400(origen: &quot;Bogotá&quot;, destino: &quot;bogotá&quot;, campo: &quot;destino&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0217857" startTime="2026-10-14T11:15:53.6769400-05:00" endTime="2026-10-14T11:15:53.6990232-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fec5c9da-eceb-49ce-bbf1-2605cc537864" />
+    <UnitTestResult executionId="02842499-f075-401b-86d6-37c06a7545bc" testId="8300001a-750a-c47c-564b-2d33e54f7a18" testName="CP-CAR-012 Categoría de tipo incorrecto en vehículo, entrega o estado devuelve 400(campo: &quot;tipoEntregaId&quot;, tipo: &quot;ESTADO_CARGA&quot;, codigo: &quot;PENDIENTE&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0132542" startTime="2026-10-14T11:15:53.8186319-05:00" endTime="2026-10-14T11:15:53.8323001-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="02842499-f075-401b-86d6-37c06a7545bc" />
+    <UnitTestResult executionId="7d21ec7a-9f6c-4a04-a242-1e2349dd51dc" testId="af72b77b-927d-6ad3-d5b3-07939b5e08f5" testName="CP-CAR-015 Peso que supera PESO_MAXIMO_CARGA_KG devuelve 400; igual al límite devuelve 201" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0265016" startTime="2026-10-14T11:15:54.0300878-05:00" endTime="2026-10-14T11:15:54.0569855-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d21ec7a-9f6c-4a04-a242-1e2349dd51dc" />
+    <UnitTestResult executionId="28383e46-d85a-41c0-a45e-5cdaf75756c1" testId="9bf03a0a-9353-b947-f592-0e7b0a6047c3" testName="CP-OBJ-008 Objeto vinculado a una carga inexistente devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0059186" startTime="2026-10-14T11:15:53.6954549-05:00" endTime="2026-10-14T11:15:53.7003071-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28383e46-d85a-41c0-a45e-5cdaf75756c1" />
+    <UnitTestResult executionId="7ea87731-9515-483d-a579-e732f4075c5f" testId="ead5eeab-f3c5-d7c2-2eef-ee5db39a8fb1" testName="CP-PAR-015 Parámetro de límite con valor menor o igual a cero devuelve 400(valor: &quot;-100&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0132803" startTime="2026-10-14T11:15:53.4985756-05:00" endTime="2026-10-14T11:15:53.5110360-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7ea87731-9515-483d-a579-e732f4075c5f" />
+    <UnitTestResult executionId="b2c49a37-fd09-4409-9376-3651bcac536b" testId="4d137a87-9111-3db5-f783-9138ed6745ff" testName="CP-CAR-009 Origen y destino inválidos devuelven 400(origen: &quot;AB&quot;, destino: &quot;Cali&quot;, campo: &quot;origen&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0071775" startTime="2026-10-14T11:15:53.6991900-05:00" endTime="2026-10-14T11:15:53.7066377-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b2c49a37-fd09-4409-9376-3651bcac536b" />
+    <UnitTestResult executionId="59d29c49-0287-4f60-9666-601d9bd032c3" testId="5cf92263-b757-3769-86fc-e8945ca9b0e3" testName="CP-CAT-012 El mismo código en otro tipo de categoría se permite (201)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0090724" startTime="2026-10-14T11:15:53.6689182-05:00" endTime="2026-10-14T11:15:53.6781212-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="59d29c49-0287-4f60-9666-601d9bd032c3" />
+    <UnitTestResult executionId="df2de5b7-f7e8-49ce-a98e-35cecb5c1e08" testId="9cf56b44-a0d1-8a4f-68ba-4138918499da" testName="CP-OBJ-002 Crear objeto válido devuelve 201 con peso total calculado" computerName="DESKTOP-Q0DQ4E0" duration="00:00:05.8039846" startTime="2026-10-14T11:15:47.7329172-05:00" endTime="2026-10-14T11:15:53.5089577-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="df2de5b7-f7e8-49ce-a98e-35cecb5c1e08" />
+    <UnitTestResult executionId="5bb5cf68-a1b9-4bde-80f6-cce9f5ee22ee" testId="1ad4f2b4-131a-5430-2b7b-70c6e30a4a9b" testName="CP-CAR-011 Categoría VEHICULO usada como TIPO_CARGA devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0301036" startTime="2026-10-14T11:15:53.6437812-05:00" endTime="2026-10-14T11:15:53.6725653-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5bb5cf68-a1b9-4bde-80f6-cce9f5ee22ee" />
+    <UnitTestResult executionId="efd00859-584c-4ed4-8321-b8c64e83ca44" testId="805ede5e-596e-948e-e549-a7251312729f" testName="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;ENTERO&quot;, valor: &quot;abc&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:05.4182879" startTime="2026-10-14T11:15:47.7329474-05:00" endTime="2026-10-14T11:15:53.1514549-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="efd00859-584c-4ed4-8321-b8c64e83ca44" />
+    <UnitTestResult executionId="054b42c3-100c-4328-94c5-5f64c2e792a0" testId="949321ce-7eac-fca8-bae4-8d5d56061d5a" testName="CP-CAR-001 Listar cargas devuelve 200 y una lista" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0680288" startTime="2026-10-14T11:15:53.5085628-05:00" endTime="2026-10-14T11:15:53.5765627-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="054b42c3-100c-4328-94c5-5f64c2e792a0" />
+    <UnitTestResult executionId="ac9a0a61-477e-461d-bad6-91886a083f33" testId="642f3d52-2e73-c4c0-67ef-6cd3ff8ff161" testName="CP-PAR-003 Crear parámetro con valor compatible con su tipo devuelve 201 y valor normalizado(tipoDato: &quot;ENTERO&quot;, valor: &quot;42&quot;, esperado: &quot;42&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.1554358" startTime="2026-10-14T11:15:53.1604838-05:00" endTime="2026-10-14T11:15:53.3161522-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac9a0a61-477e-461d-bad6-91886a083f33" />
+    <UnitTestResult executionId="9d24031e-33b1-43b1-8dcf-03c9fef00558" testId="147e75ee-2c64-1258-86ac-2af8677a2600" testName="CP-PAR-015 Parámetro de límite con valor menor o igual a cero devuelve 400(valor: &quot;0&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0047838" startTime="2026-10-14T11:15:53.5111985-05:00" endTime="2026-10-14T11:15:53.5162298-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9d24031e-33b1-43b1-8dcf-03c9fef00558" />
+    <UnitTestResult executionId="e88ee780-a2c3-4b7a-b14f-97189e4ccd7a" testId="215e1fa9-da19-4dc0-182a-fab2e7b001c8" testName="CP-CAT-017 Código de categoría con formato inválido devuelve 400(codigo: &quot;X&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0029665" startTime="2026-10-14T11:15:53.4174587-05:00" endTime="2026-10-14T11:15:53.4195201-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e88ee780-a2c3-4b7a-b14f-97189e4ccd7a" />
+    <UnitTestResult executionId="03f33a24-85c1-44ce-99c3-402d41a706dd" testId="3b34483c-423f-1d2d-c680-ff7c31f11a90" testName="CP-PAR-014 Capacidad de vehículo asociada a una categoría que no es VEHICULO devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0056405" startTime="2026-10-14T11:15:53.5164367-05:00" endTime="2026-10-14T11:15:53.5223619-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03f33a24-85c1-44ce-99c3-402d41a706dd" />
+    <UnitTestResult executionId="e75c3609-8cfc-4634-8fa7-26c7d2c2b541" testId="7ecb5b19-8b02-a513-be57-1446d8bbf6ae" testName="CP-CAT-005 Crear categoría válida devuelve 201, Location y código en mayúsculas" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0144804" startTime="2026-10-14T11:15:53.2657496-05:00" endTime="2026-10-14T11:15:53.2804520-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e75c3609-8cfc-4634-8fa7-26c7d2c2b541" />
+    <UnitTestResult executionId="73eec907-d177-49cd-a8ea-dd9e0696813c" testId="c0efab08-7347-7f9f-6a74-66e196fb9212" testName="CP-CAT-017 Código de categoría con formato inválido devuelve 400(codigo: &quot;CON ESPACIO&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0026787" startTime="2026-10-14T11:15:53.4105726-05:00" endTime="2026-10-14T11:15:53.4133793-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="73eec907-d177-49cd-a8ea-dd9e0696813c" />
+    <UnitTestResult executionId="f3aaf3da-4562-47ef-bc1c-267a11cbbc75" testId="74dc5d54-f343-961f-0a27-f3c7c8d8cf20" testName="CP-CAR-005 Actualizar carga (estado EN_TRANSITO y vehículo) devuelve 200" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0461442" startTime="2026-10-14T11:15:53.7187225-05:00" endTime="2026-10-14T11:15:53.7650387-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f3aaf3da-4562-47ef-bc1c-267a11cbbc75" />
+    <UnitTestResult executionId="2815d44c-64d0-4b51-b37c-d3ccdd8d909f" testId="2386df24-ca17-ef84-feed-5793d6069759" testName="CP-PAR-003 Crear parámetro con valor compatible con su tipo devuelve 201 y valor normalizado(tipoDato: &quot;DECIMAL&quot;, valor: &quot; 1500.50 &quot;, esperado: &quot;1500.50&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0068423" startTime="2026-10-14T11:15:53.3163609-05:00" endTime="2026-10-14T11:15:53.3234942-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2815d44c-64d0-4b51-b37c-d3ccdd8d909f" />
+    <UnitTestResult executionId="d9f0a4db-c3c1-4b31-822b-00a984a6b22e" testId="dc2943b3-a052-8ccc-b6ac-4254a40a03f6" testName="CP-CAT-008 Actualizar categoría devuelve 200 con los nuevos datos" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0176124" startTime="2026-10-14T11:15:53.4478185-05:00" endTime="2026-10-14T11:15:53.4656755-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d9f0a4db-c3c1-4b31-822b-00a984a6b22e" />
+    <UnitTestResult executionId="f9af51ea-f5b7-4911-880e-bdc734fb5359" testId="95380023-730d-65ed-e4a2-481798b2252b" testName="CP-CAT-007 Consultar categoría inexistente devuelve 404" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0039921" startTime="2026-10-14T11:15:53.4668538-05:00" endTime="2026-10-14T11:15:53.4700998-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f9af51ea-f5b7-4911-880e-bdc734fb5359" />
+    <UnitTestResult executionId="a0ee2d68-36de-4432-af0a-4d93bfef6a61" testId="0e2d81c7-02b1-5ef7-f67c-66d95013ac91" testName="CP-CAT-002 Filtrar por tipo devuelve solo categorías de ese tipo(tipo: &quot;TIPO_CARGA&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.1028883" startTime="2026-10-14T11:15:53.1513263-05:00" endTime="2026-10-14T11:15:53.2241454-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a0ee2d68-36de-4432-af0a-4d93bfef6a61" />
+    <UnitTestResult executionId="e794c248-6d1c-4a5f-9f98-d5b31b5c7224" testId="9a3f8164-30a0-9cc0-ca50-6dc74e6524ad" testName="CP-CAR-006 Crear carga con campos obligatorios vacíos devuelve 400 con cada campo" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0063895" startTime="2026-10-14T11:15:54.0100484-05:00" endTime="2026-10-14T11:15:54.0166227-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e794c248-6d1c-4a5f-9f98-d5b31b5c7224" />
+    <UnitTestResult executionId="c7d8b5f4-6233-48a6-8f15-dfdcb795a7c1" testId="8545b55f-231c-17d8-ba7d-50cc2a3f70dc" testName="CP-INT-001 Los datos persisten en SQLite después de reiniciar la aplicación" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.2349787" startTime="2026-10-14T11:15:53.9796635-05:00" endTime="2026-10-14T11:15:54.2145891-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7d8b5f4-6233-48a6-8f15-dfdcb795a7c1" />
+    <UnitTestResult executionId="fa4ac4da-3ce4-4e48-a564-674a34df5014" testId="223ad461-0ae2-930c-9436-fb74f07dfe5d" testName="CP-CAT-011 Código duplicado en el mismo tipo devuelve 409" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0042837" startTime="2026-10-14T11:15:53.4227658-05:00" endTime="2026-10-14T11:15:53.4273481-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fa4ac4da-3ce4-4e48-a564-674a34df5014" />
+    <UnitTestResult executionId="77ae7ee9-9b98-4bb9-bfa6-90cf91951e95" testId="9df3642b-f955-3b8c-ec0c-9cd1c6fa2bb6" testName="CP-OBJ-011 Objeto con campos obligatorios vacíos devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0076319" startTime="2026-10-14T11:15:53.7842269-05:00" endTime="2026-10-14T11:15:53.7922280-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77ae7ee9-9b98-4bb9-bfa6-90cf91951e95" />
+    <UnitTestResult executionId="5670a4ca-6433-4a15-b0ea-067f69d566fe" testId="2417646d-e72d-101f-4be7-e22fb0c3609e" testName="CP-CAR-014 Carga nueva con categoría inactiva devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0178580" startTime="2026-10-14T11:15:53.9429849-05:00" endTime="2026-10-14T11:15:53.9596618-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5670a4ca-6433-4a15-b0ea-067f69d566fe" />
+    <UnitTestResult executionId="858f4a17-c824-4fd4-b915-1de23f6daee4" testId="0564ff7b-cef0-c176-bdaf-29cfbfb71c56" testName="CP-OBJ-010 Peso o volumen unitario negativos devuelven 400(campo: &quot;pesoUnitarioKg&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0131379" startTime="2026-10-14T11:15:53.7193343-05:00" endTime="2026-10-14T11:15:53.7328509-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="858f4a17-c824-4fd4-b915-1de23f6daee4" />
+    <UnitTestResult executionId="075d39f9-5c6b-4656-a12a-650e48711fc0" testId="a21d30fe-5abb-4a08-fcaf-33345c99d622" testName="CP-CAR-008 Volumen negativo devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0098107" startTime="2026-10-14T11:15:53.8587278-05:00" endTime="2026-10-14T11:15:53.8687463-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="075d39f9-5c6b-4656-a12a-650e48711fc0" />
+    <UnitTestResult executionId="dbd70774-f7b1-4b9c-8268-42250495f0cb" testId="cbda17e2-1bd7-d99b-699d-9792d599cab5" testName="CP-OBJ-007 Actualizar objeto devuelve 200 con los nuevos datos" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0405588" startTime="2026-10-14T11:15:53.5090963-05:00" endTime="2026-10-14T11:15:53.5501140-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dbd70774-f7b1-4b9c-8268-42250495f0cb" />
+    <UnitTestResult executionId="9642a3c4-90db-433d-8c10-00215d295a15" testId="cd34a1a8-5592-ab36-c659-605369f8cb84" testName="CP-CAT-015 Cambiar el tipo de una categoría en uso devuelve 409" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0527787" startTime="2026-10-14T11:15:53.6154546-05:00" endTime="2026-10-14T11:15:53.6686478-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9642a3c4-90db-433d-8c10-00215d295a15" />
+    <UnitTestResult executionId="c06b0d48-aefd-415c-92ca-c460cec17b70" testId="6ac7d014-b1b4-1784-772e-905a76abf749" testName="CP-CAR-003 Consultar carga por id devuelve 200 con sus clasificaciones" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0146012" startTime="2026-10-14T11:15:53.8699615-05:00" endTime="2026-10-14T11:15:53.8838380-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c06b0d48-aefd-415c-92ca-c460cec17b70" />
+    <UnitTestResult executionId="5661b56b-921c-4939-9c80-974c82675453" testId="27f25b62-438a-12fd-422d-227a90ea1608" testName="CP-CAT-009 Crear categoría con campos obligatorios vacíos devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:05.4095635" startTime="2026-10-14T11:15:47.7328484-05:00" endTime="2026-10-14T11:15:53.1243465-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5661b56b-921c-4939-9c80-974c82675453" />
+    <UnitTestResult executionId="e5588855-618d-4a34-869f-f5d6dea9532b" testId="9e760115-f4ff-5675-e038-18e5e6ff3a92" testName="CP-PAR-008 Tipo de dato no permitido devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0048008" startTime="2026-10-14T11:15:53.6375425-05:00" endTime="2026-10-14T11:15:53.6438793-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e5588855-618d-4a34-869f-f5d6dea9532b" />
+    <UnitTestResult executionId="97c21d2f-8472-410a-a7b8-f5606b518588" testId="563cc86f-c475-c113-a223-88dd99aee8ec" testName="CP-CAT-010 Crear categoría con tipo no permitido devuelve 400" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0040086" startTime="2026-10-14T11:15:53.4705418-05:00" endTime="2026-10-14T11:15:53.4745218-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="97c21d2f-8472-410a-a7b8-f5606b518588" />
+    <UnitTestResult executionId="3b0b4cdf-73ee-494d-9e30-acd3ea0f9dbd" testId="57225a69-fca0-d4d1-8dc7-8718c282ad05" testName="CP-CAT-013 Eliminar categoría en uso devuelve 409 y no la elimina" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0639048" startTime="2026-10-14T11:15:53.5505693-05:00" endTime="2026-10-14T11:15:53.6151484-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3b0b4cdf-73ee-494d-9e30-acd3ea0f9dbd" />
+    <UnitTestResult executionId="66da24ca-2d78-47b6-87aa-d092820ed3bd" testId="3a8c5e85-3c18-d307-0b53-930eeb13e795" testName="CP-CAR-021 Eliminar carga sin objetos devuelve 204 y luego 404" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0649598" startTime="2026-10-14T11:15:53.5767606-05:00" endTime="2026-10-14T11:15:53.6420054-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66da24ca-2d78-47b6-87aa-d092820ed3bd" />
+    <UnitTestResult executionId="5d41b0bd-2299-4a6d-8399-8a5cd929ef96" testId="34d3f420-f7ae-104d-9e2a-94cd1aa48724" testName="CP-OBJ-005 Consultar los objetos de una carga devuelve solo los de esa carga" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0840046" startTime="2026-10-14T11:15:53.7924441-05:00" endTime="2026-10-14T11:15:53.8766093-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5d41b0bd-2299-4a6d-8399-8a5cd929ef96" />
+    <UnitTestResult executionId="ac965025-be56-4b7c-8798-83a66a28aba6" testId="f052d822-e31d-6782-42df-9c738084057f" testName="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;DECIMAL&quot;, valor: &quot;12,5&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0030496" startTime="2026-10-14T11:15:53.1530205-05:00" endTime="2026-10-14T11:15:53.1536776-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac965025-be56-4b7c-8798-83a66a28aba6" />
+    <UnitTestResult executionId="888dd5a7-55d6-48ba-bfad-9478ce7fa9e1" testId="d31bf984-7820-f634-e949-f6ea82a4cf6f" testName="CP-CAR-025 Actualizar carga conserva una categoría que fue desactivada después de asignarla" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.1120487" startTime="2026-10-14T11:15:53.3818265-05:00" endTime="2026-10-14T11:15:53.4939725-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="888dd5a7-55d6-48ba-bfad-9478ce7fa9e1" />
+    <UnitTestResult executionId="14014d70-aea6-4fd5-aaf4-77e5c13eaf2d" testId="ed05b2e2-a87f-2485-ba89-98e81bd25c4f" testName="CP-CAR-019 JSON mal formado o cuerpo vacío devuelve 400(json: &quot;&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:05.4068666" startTime="2026-10-14T11:15:47.7309512-05:00" endTime="2026-10-14T11:15:53.1175642-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14014d70-aea6-4fd5-aaf4-77e5c13eaf2d" />
+    <UnitTestResult executionId="e8b73b02-f451-42b5-9790-989a4f91f3b7" testId="05667b34-99e1-729f-8b36-46d251cd8c54" testName="CP-PAR-012 Desactivar o cambiar el tipo de un parámetro obligatorio devuelve 409" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0093675" startTime="2026-10-14T11:15:53.4837023-05:00" endTime="2026-10-14T11:15:53.4934229-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e8b73b02-f451-42b5-9790-989a4f91f3b7" />
+    <UnitTestResult executionId="1dfc9a10-1266-4956-bb8b-79341e453094" testId="b0aa7388-433e-bb61-0ec0-02e0652e309c" testName="CP-CAR-007 Peso total negativo o cero devuelve 400(peso: 0)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0137017" startTime="2026-10-14T11:15:53.3297559-05:00" endTime="2026-10-14T11:15:53.3437853-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1dfc9a10-1266-4956-bb8b-79341e453094" />
+    <UnitTestResult executionId="e162b3dd-a788-4313-b76a-24da8a103dae" testId="feae0d3c-e6e4-cdf5-cda5-a9af6caba7f2" testName="CP-CAR-019 JSON mal formado o cuerpo vacío devuelve 400(json: &quot;esto no es json&quot;)" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0079908" startTime="2026-10-14T11:15:53.1526012-05:00" endTime="2026-10-14T11:15:53.1531069-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e162b3dd-a788-4313-b76a-24da8a103dae" />
+    <UnitTestResult executionId="e1aa3036-0a2c-408f-a43d-0be72a531960" testId="61ba2868-32a2-d9ba-6590-b69418196d79" testName="CP-PAR-017 Crear parámetro asociado a una categoría devuelve ámbito CATEGORIA" computerName="DESKTOP-Q0DQ4E0" duration="00:00:00.0202953" startTime="2026-10-14T11:15:53.4630765-05:00" endTime="2026-10-14T11:15:53.4834846-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e1aa3036-0a2c-408f-a43d-0be72a531960" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="CP-CAR-017 Volumen que supera VOLUMEN_MAXIMO_CARGA_M3 devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="f5cd9d1a-eed8-ae0b-0938-c673c886a833">
+      <Execution id="750170bb-c1db-41bf-948e-aa82fadd595f" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="VolumenMaximoConfigurable" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-016 Peso que supera la capacidad del vehículo (CAPACIDAD_KG_*) devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="0b245598-fd8e-e6a7-10e1-9b2710eaf8e8">
+      <Execution id="25258a8d-30d4-4578-ab22-fe0b311b8037" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="CapacidadVehiculo" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-002 Crear carga válida devuelve 201, Location y estado PENDIENTE por defecto" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="4605571c-c1b2-256d-6aa7-68a166de477d">
+      <Execution id="ea50ac8e-2c84-4ca5-b68d-9ec798ee51ef" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="CrearCarga" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-017 Código de categoría con formato inválido devuelve 400(codigo: &quot;CON-GUION&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="72df4c92-e19b-f45a-3936-5af647816cda">
+      <Execution id="7635ba4e-5638-4d32-9eee-17fac072f837" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="CodigoFormatoInvalido" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-005 Actualizar carga (estado EN_TRANSITO y vehículo) devuelve 200" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="74dc5d54-f343-961f-0a27-f3c7c8d8cf20">
+      <Execution id="f3aaf3da-4562-47ef-bc1c-267a11cbbc75" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="ActualizarCarga" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;FECHA&quot;, valor: &quot;31/12/2026&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="10680f4d-68f9-1702-4ceb-6055173669c5">
+      <Execution id="21e294bf-a3de-4ab3-becd-7466835bf88c" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="ValorIncompatible" />
+    </UnitTest>
+    <UnitTest name="CP-INT-006 Las pruebas usan una base de datos SQLite distinta de la base de la aplicación" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="cb203969-c33c-b074-f093-cf8445bc89c4">
+      <Execution id="0e9c63eb-aed8-4419-905b-c3e496edac0c" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.IntegracionTests" name="BaseDeDatosSeparada" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-013 Carga con categoría inexistente devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="91b68f81-ad42-d022-9e77-29dabcc8c70c">
+      <Execution id="07efc8cb-d7a2-4b30-a799-d9500f62ef77" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="CategoriaInexistente" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-019 JSON mal formado o cuerpo vacío devuelve 400(json: &quot;esto no es json&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="feae0d3c-e6e4-cdf5-cda5-a9af6caba7f2">
+      <Execution id="e162b3dd-a788-4313-b76a-24da8a103dae" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="JsonMalFormado" />
+    </UnitTest>
+    <UnitTest name="CP-INT-001 Los datos persisten en SQLite después de reiniciar la aplicación" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="8545b55f-231c-17d8-ba7d-50cc2a3f70dc">
+      <Execution id="c7d8b5f4-6233-48a6-8f15-dfdcb795a7c1" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.IntegracionTests" name="PersistenciaTrasReinicio" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-006 Actualizar parámetro devuelve 200 y actualiza FechaActualizacion" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="f7c510a3-ab0c-d582-1977-69d42cd1c769">
+      <Execution id="5cdd579d-fd3a-4918-a483-afef361f6362" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="ActualizarParametro" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-002 Filtrar por tipo devuelve solo categorías de ese tipo(tipo: &quot;tipo_carga&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="61771608-7a2a-052e-66e4-088478f267d5">
+      <Execution id="d865bf66-5f00-4aac-a88b-3687b88f592a" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="FiltrarPorTipo" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;ENTERO&quot;, valor: &quot;12.5&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="e52710e7-c504-03ae-4e9b-e44ca95e9bf8">
+      <Execution id="68264fc9-6d52-481f-bd1d-b5ce60a2348e" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="ValorIncompatible" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-011 Objeto con campos obligatorios vacíos devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="9df3642b-f955-3b8c-ec0c-9cd1c6fa2bb6">
+      <Execution id="77ae7ee9-9b98-4bb9-bfa6-90cf91951e95" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="CamposObligatoriosVacios" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-012 Objeto con categoría de tipo incorrecto (VEHICULO) devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="fd1fa314-5103-0bfa-ea32-a3a593269b78">
+      <Execution id="6b6800da-a955-4ca2-82be-ef007818c3bd" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="CategoriaTipoIncorrecto" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-007 Actualizar objeto devuelve 200 con los nuevos datos" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="cbda17e2-1bd7-d99b-699d-9792d599cab5">
+      <Execution id="dbd70774-f7b1-4b9c-8268-42250495f0cb" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="ActualizarObjeto" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-010 Código de parámetro duplicado devuelve 409" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="e8797ae8-226a-6237-ae79-7a0c91639677">
+      <Execution id="c09a0ac3-5a51-4871-910f-71865163d956" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="CodigoDuplicado" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-007 Peso total negativo o cero devuelve 400(peso: -1)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="b59eedfc-de2e-5a98-b98e-91d89e4dd045">
+      <Execution id="1f6f1f37-ba92-4402-9b76-0a676afbecea" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="PesoNoPositivo" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-020 Actualizar carga inexistente devuelve 404" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="c82ba3dc-f999-91bd-c895-b0035f568ab6">
+      <Execution id="1f82b8f9-f243-45a3-8d5f-eeb1fd58a371" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="ActualizarInexistente" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-005 Crear categoría válida devuelve 201, Location y código en mayúsculas" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="7ecb5b19-8b02-a513-be57-1446d8bbf6ae">
+      <Execution id="e75c3609-8cfc-4634-8fa7-26c7d2c2b541" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="CrearCategoria" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-014 Capacidad de vehículo asociada a una categoría que no es VEHICULO devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="3b34483c-423f-1d2d-c680-ff7c31f11a90">
+      <Execution id="03f33a24-85c1-44ce-99c3-402d41a706dd" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="CapacidadConCategoriaIncorrecta" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;DECIMAL&quot;, valor: &quot;12,5&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="f052d822-e31d-6782-42df-9c738084057f">
+      <Execution id="ac965025-be56-4b7c-8798-83a66a28aba6" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="ValorIncompatible" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-012 Desactivar o cambiar el tipo de un parámetro obligatorio devuelve 409" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="05667b34-99e1-729f-8b36-46d251cd8c54">
+      <Execution id="e8b73b02-f451-42b5-9790-989a4f91f3b7" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="ModificarObligatorio" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-001 Listar objetos devuelve 200 y una lista" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="c8ee5982-3824-cf8b-5114-feac4d1ce620">
+      <Execution id="32b5b300-8060-4b3a-919c-6fdb4096dda4" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="ListarObjetos" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-015 Parámetro de límite con valor menor o igual a cero devuelve 400(valor: &quot;-100&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="ead5eeab-f3c5-d7c2-2eef-ee5db39a8fb1">
+      <Execution id="7ea87731-9515-483d-a579-e732f4075c5f" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="LimiteNoPositivo" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-015 Peso que supera PESO_MAXIMO_CARGA_KG devuelve 400; igual al límite devuelve 201" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="af72b77b-927d-6ad3-d5b3-07939b5e08f5">
+      <Execution id="7d21ec7a-9f6c-4a04-a242-1e2349dd51dc" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="PesoMaximoConfigurable" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-006 Crear carga con campos obligatorios vacíos devuelve 400 con cada campo" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="9a3f8164-30a0-9cc0-ca50-6dc74e6524ad">
+      <Execution id="e794c248-6d1c-4a5f-9f98-d5b31b5c7224" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="CamposObligatoriosVacios" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-014 Carga nueva con categoría inactiva devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="2417646d-e72d-101f-4be7-e22fb0c3609e">
+      <Execution id="5670a4ca-6433-4a15-b0ea-067f69d566fe" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="CategoriaInactiva" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-010 Código de carga duplicado devuelve 409" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="b010de24-435f-e49a-e4e5-8cf09d744f5f">
+      <Execution id="f7e5d62f-d251-4357-b7a0-14453263730f" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="CodigoDuplicado" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-003 Crear parámetro con valor compatible con su tipo devuelve 201 y valor normalizado(tipoDato: &quot;DECIMAL&quot;, valor: &quot; 1500.50 &quot;, esperado: &quot;1500.50&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="2386df24-ca17-ef84-feed-5793d6069759">
+      <Execution id="2815d44c-64d0-4b51-b37c-d3ccdd8d909f" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="CrearParametroValido" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-019 JSON mal formado o cuerpo vacío devuelve 400(json: &quot;{\&quot;codigo\&quot;: \&quot;T-MAL\&quot;, \&quot;descripcion\&quot;: &quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="c2a1d70e-8efc-e6ea-4e08-f8d0bf111d98">
+      <Execution id="5bdfd8e8-e1e0-42fa-878f-93394fc1aa61" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="JsonMalFormado" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-009 Origen y destino inválidos devuelven 400(origen: &quot;AB&quot;, destino: &quot;Cali&quot;, campo: &quot;origen&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="4d137a87-9111-3db5-f783-9138ed6745ff">
+      <Execution id="b2c49a37-fd09-4409-9376-3651bcac536b" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="OrigenDestinoInvalidos" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-007 Consultar categoría inexistente devuelve 404" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="95380023-730d-65ed-e4a2-481798b2252b">
+      <Execution id="f9af51ea-f5b7-4911-880e-bdc734fb5359" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="ConsultarInexistente" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-015 Eliminar objeto devuelve 204 y luego 404" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="41b62ce7-13ff-3cee-4e8a-c451c48e280f">
+      <Execution id="e529ffe2-59ab-496f-9382-54eec8431b0e" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="EliminarObjeto" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-015 Parámetro de límite con valor menor o igual a cero devuelve 400(valor: &quot;0&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="147e75ee-2c64-1258-86ac-2af8677a2600">
+      <Execution id="9d24031e-33b1-43b1-8dcf-03c9fef00558" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="LimiteNoPositivo" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-008 Volumen negativo devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="a21d30fe-5abb-4a08-fcaf-33345c99d622">
+      <Execution id="075d39f9-5c6b-4656-a12a-650e48711fc0" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="VolumenNegativo" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-013 Parámetro asociado a una categoría inexistente devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="18c8a379-f971-2b8f-56c9-63946730b65f">
+      <Execution id="4ab86c47-8a2d-4b4c-bbdd-8ea7291dbb08" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="CategoriaInexistente" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-001 Listar parámetros devuelve 200 con parámetros generales y por categoría" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="24f945be-130a-314b-3199-33d5e99439cf">
+      <Execution id="77e98ca9-82fb-420f-8316-ffd08d043f69" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="ListarParametros" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-009 Cantidad cero o negativa devuelve 400(cantidad: 0)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="75288bd8-6f39-81ef-8812-d4bea5a8a5fe">
+      <Execution id="75349db3-999c-46f3-b87e-62e87d93418b" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="CantidadNoPositiva" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-003 Crear parámetro con valor compatible con su tipo devuelve 201 y valor normalizado(tipoDato: &quot;BOOLEANO&quot;, valor: &quot;TRUE&quot;, esperado: &quot;true&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="aa0a39e2-9ade-bd67-47ec-dc7e08e55849">
+      <Execution id="d1ea930e-1389-4d0a-9da6-be1a99fe5a6e" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="CrearParametroValido" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-005 Consultar parámetro inexistente devuelve 404" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="79dfdca9-86f3-7082-4cc1-aedfa137df03">
+      <Execution id="b7e9bc83-d04d-4bd0-a644-c8a710e6ef68" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="ConsultarInexistente" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-003 Consultar objeto por id devuelve 200" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="d6829fca-d4e9-d9e8-15a8-d27924a8bde1">
+      <Execution id="5b089d90-a991-4add-b6c7-3aa86cf2bb27" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="ConsultarPorId" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-015 Cambiar el tipo de una categoría en uso devuelve 409" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="cd34a1a8-5592-ab36-c659-605369f8cb84">
+      <Execution id="9642a3c4-90db-433d-8c10-00215d295a15" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="CambiarTipoCategoriaEnUso" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-023 Reducir el peso de la carga por debajo del peso de sus objetos devuelve 409" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="9d23ea78-fe10-a91e-b395-48ac37234346">
+      <Execution id="687576db-e874-4b18-9d05-b65d4525edca" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="ReducirPesoBajoObjetos" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-009 Cantidad cero o negativa devuelve 400(cantidad: -3)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="d438cf91-f704-600e-65c8-2ead9f2c0d08">
+      <Execution id="d0317be1-519d-4a09-a60b-0781cd93823b" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="CantidadNoPositiva" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-001 Listar cargas devuelve 200 y una lista" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="949321ce-7eac-fca8-bae4-8d5d56061d5a">
+      <Execution id="054b42c3-100c-4328-94c5-5f64c2e792a0" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="ListarCargas" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-008 Actualizar categoría devuelve 200 con los nuevos datos" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="dc2943b3-a052-8ccc-b6ac-4254a40a03f6">
+      <Execution id="d9f0a4db-c3c1-4b31-822b-00a984a6b22e" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="ActualizarCategoria" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;FECHA&quot;, valor: &quot;2026-02-30&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="45593c58-f5fe-b08b-5512-45e784f5dd9e">
+      <Execution id="2aa1c2d2-831d-4bf4-9b2a-0ef04b473a00" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="ValorIncompatible" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-012 Categoría de tipo incorrecto en vehículo, entrega o estado devuelve 400(campo: &quot;tipoEntregaId&quot;, tipo: &quot;ESTADO_CARGA&quot;, codigo: &quot;PENDIENTE&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="8300001a-750a-c47c-564b-2d33e54f7a18">
+      <Execution id="02842499-f075-401b-86d6-37c06a7545bc" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="CategoriaTipoIncorrecto" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-010 Crear categoría con tipo no permitido devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="563cc86f-c475-c113-a223-88dd99aee8ec">
+      <Execution id="97c21d2f-8472-410a-a7b8-f5606b518588" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="CrearConTipoInvalido" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-006 Consultar objetos de una carga inexistente devuelve 404" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="c211b46b-c5ee-9cc0-d19d-10358da55c12">
+      <Execution id="bf09ae7d-eb02-42d4-bffc-d7e006270e77" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="ObjetosDeCargaInexistente" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-024 Eliminar carga inexistente devuelve 404" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="6e22d3d7-7d14-794b-2b98-d989ba34d3ea">
+      <Execution id="caa42c30-ec00-4a1e-892b-dc94936bc620" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="EliminarInexistente" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-002 Crear objeto válido devuelve 201 con peso total calculado" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="9cf56b44-a0d1-8a4f-68ba-4138918499da">
+      <Execution id="df2de5b7-f7e8-49ce-a98e-35cecb5c1e08" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="CrearObjeto" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-004 Consultar parámetro por id devuelve 200" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="5d8d5f20-877f-4924-d99b-3e5de59e8d25">
+      <Execution id="62928c80-35f6-4581-87d3-cc03e39a8fc8" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="ConsultarPorId" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-003 Crear parámetro con valor compatible con su tipo devuelve 201 y valor normalizado(tipoDato: &quot;FECHA&quot;, valor: &quot;2026-12-31&quot;, esperado: &quot;2026-12-31&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="effc9996-9499-1baa-7b6c-42d44c09a679">
+      <Execution id="aca5c75f-93ec-4b19-8c97-1a16f8d4854f" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="CrearParametroValido" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-013 Eliminar categoría en uso devuelve 409 y no la elimina" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="57225a69-fca0-d4d1-8dc7-8718c282ad05">
+      <Execution id="3b0b4cdf-73ee-494d-9e30-acd3ea0f9dbd" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="EliminarCategoriaEnUso" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-018 Tipo de dato incorrecto en el JSON devuelve 400 sin detalles internos" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="788e37ea-8feb-db69-f7d2-c8a5e4f6fe8c">
+      <Execution id="adf9f57e-e4ed-4f10-aad0-d3f88fc32550" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="TipoDatoIncorrecto" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-007 Peso total negativo o cero devuelve 400(peso: -0.01)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="59e6ca68-70e1-90da-f640-721a2c8ac6e7">
+      <Execution id="84fd777c-e562-4370-87b0-3e14fddcd1f8" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="PesoNoPositivo" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-004 Consultar objeto inexistente devuelve 404" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="e4730232-9a9b-c0b0-c849-9225e18a5a75">
+      <Execution id="3a510adf-e1c5-42e5-81b9-a752ce4f39ab" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="ConsultarInexistente" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-002 Filtrar por tipo devuelve solo categorías de ese tipo(tipo: &quot;TIPO_ENTREGA&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="5bdbb5e6-12f2-1fa3-65d8-22206f52f234">
+      <Execution id="8bdba708-1d5c-4a81-977d-c26de012bab4" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="FiltrarPorTipo" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-010 Peso o volumen unitario negativos devuelven 400(campo: &quot;pesoUnitarioKg&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="0564ff7b-cef0-c176-bdaf-29cfbfb71c56">
+      <Execution id="858f4a17-c824-4fd4-b915-1de23f6daee4" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="ValoresFisicosNegativos" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-003 Filtrar por tipo inexistente devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="0c0a71b3-bb5e-9e12-4ec1-bad4be01810b">
+      <Execution id="e75eb244-61c0-4d75-a5a3-512d3a2856eb" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="FiltrarPorTipoInvalido" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-019 JSON mal formado o cuerpo vacío devuelve 400(json: &quot;&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="ed05b2e2-a87f-2485-ba89-98e81bd25c4f">
+      <Execution id="14014d70-aea6-4fd5-aaf4-77e5c13eaf2d" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="JsonMalFormado" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-016 Eliminar categoría sin uso devuelve 204 y luego 404" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="2c109b0d-e6a8-e199-7663-9c7af7caa888">
+      <Execution id="87ed02e4-b0ce-4333-9891-c0d7c51a36d2" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="EliminarCategoriaSinUso" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-007 Peso total negativo o cero devuelve 400(peso: 0)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="b0aa7388-433e-bb61-0ec0-02e0652e309c">
+      <Execution id="1dfc9a10-1266-4956-bb8b-79341e453094" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="PesoNoPositivo" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-017 Código de categoría con formato inválido devuelve 400(codigo: &quot;1ABC&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="1264ce88-623f-7f72-cf8d-657a1ef29971">
+      <Execution id="8f5dcb2b-bf56-427e-b9a5-b8e68004f968" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="CodigoFormatoInvalido" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-017 Crear parámetro asociado a una categoría devuelve ámbito CATEGORIA" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="61ba2868-32a2-d9ba-6590-b69418196d79">
+      <Execution id="e1aa3036-0a2c-408f-a43d-0be72a531960" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="CrearParametroDeCategoria" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-011 Código duplicado en el mismo tipo devuelve 409" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="223ad461-0ae2-930c-9436-fb74f07dfe5d">
+      <Execution id="fa4ac4da-3ce4-4e48-a564-674a34df5014" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="CodigoDuplicadoMismoTipo" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-002 Filtrar por tipo devuelve solo categorías de ese tipo(tipo: &quot;TIPO_CARGA&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="0e2d81c7-02b1-5ef7-f67c-66d95013ac91">
+      <Execution id="a0ee2d68-36de-4432-af0a-4d93bfef6a61" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="FiltrarPorTipo" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-003 Crear parámetro con valor compatible con su tipo devuelve 201 y valor normalizado(tipoDato: &quot;ENTERO&quot;, valor: &quot;42&quot;, esperado: &quot;42&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="642f3d52-2e73-c4c0-67ef-6cd3ff8ff161">
+      <Execution id="ac9a0a61-477e-461d-bad6-91886a083f33" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="CrearParametroValido" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-004 Filtrar por estado activo devuelve solo categorías con ese estado" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="2a84dc91-650e-aff2-b48a-52792344dec7">
+      <Execution id="96c55c46-eef7-49fa-9c6a-c3bc6972d7ab" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="FiltrarPorActivo" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-025 Actualizar carga conserva una categoría que fue desactivada después de asignarla" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="d31bf984-7820-f634-e949-f6ea82a4cf6f">
+      <Execution id="888dd5a7-55d6-48ba-bfad-9478ce7fa9e1" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="ConservaCategoriaInactivaAsignada" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-022 Eliminar carga con objetos devuelve 409 y conserva carga y objetos" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="cde29903-e929-0eaf-38a0-79fe2416eef2">
+      <Execution id="c6511aaa-024f-45ce-ae85-076599db6d63" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="EliminarConObjetos" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-018 Consultar los tipos de categoría permitidos devuelve la lista centralizada" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="2af958bb-64f8-f39f-caae-fd7b1c01e878">
+      <Execution id="86e0f8bf-0f9d-408a-bbbf-2543867d60a5" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="ListarTipos" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-013 Objetos que superan el peso declarado de la carga devuelven 409" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="5f4967fc-4eb6-1631-130c-418195fe6314">
+      <Execution id="4f42290e-6910-4013-bde0-12d82c6b40b9" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="SuperaPesoDeclarado" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;BOOLEANO&quot;, valor: &quot;si&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="a70c42eb-7fe5-68cb-129e-b341c98133e0">
+      <Execution id="be2113bd-a014-4a2d-8e39-a66d656e6eef" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="ValorIncompatible" />
+    </UnitTest>
+    <UnitTest name="CP-INT-005 Un error inesperado devuelve 500 sin exponer excepciones ni cadenas de conexión" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="1e7103bc-f020-9be4-6776-37eede9bef6d">
+      <Execution id="09742a16-2b50-440d-8484-add50d81f34d" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.IntegracionTests" name="ErrorInternoSinDetalles" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;DECIMAL&quot;, valor: &quot;doce&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="7bb16c67-d18a-8250-fd38-51402bb998e4">
+      <Execution id="7eb56a54-9a26-404f-99da-999ab6e59993" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="ValorIncompatible" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-012 Categoría de tipo incorrecto en vehículo, entrega o estado devuelve 400(campo: &quot;estadoId&quot;, tipo: &quot;TIPO_ENTREGA&quot;, codigo: &quot;DIRECTA&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="49fa4209-28ef-eea0-fdae-11d2ca21164e">
+      <Execution id="55659d1e-f321-4d34-8dfb-bd4981e42a11" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="CategoriaTipoIncorrecto" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-011 Eliminar parámetro obligatorio devuelve 409" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="587e8437-cea8-dc68-bfdb-86f7b068b928">
+      <Execution id="1f60f2a2-7ff7-43ff-9910-99b9b506a7f6" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="EliminarObligatorio" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-004 Consultar carga inexistente devuelve 404" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="bd67a713-1b6f-270d-a633-72eee854d6d5">
+      <Execution id="5ef54d9f-f052-429f-a50d-d9b85d971015" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="ConsultarInexistente" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-003 Crear parámetro con valor compatible con su tipo devuelve 201 y valor normalizado(tipoDato: &quot;TEXTO&quot;, valor: &quot;Valor libre&quot;, esperado: &quot;Valor libre&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="55a1f307-75c7-dc5d-6291-c70e55d6aeb3">
+      <Execution id="f314605e-becb-463e-a5ca-8fedadc41e77" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="CrearParametroValido" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-021 Eliminar carga sin objetos devuelve 204 y luego 404" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="3a8c5e85-3c18-d307-0b53-930eeb13e795">
+      <Execution id="66da24ca-2d78-47b6-87aa-d092820ed3bd" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="EliminarSinObjetos" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-001 Listar categorías devuelve 200 y una lista" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="3288f321-ec7f-db45-58f3-e7e96811fa80">
+      <Execution id="7b10c7fd-3187-4707-91e0-ffa96653d81f" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="ListarCategorias" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-016 Eliminar parámetro no obligatorio devuelve 204 y luego 404" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="0e5c440c-e534-e6b7-b6b9-f2a5e484e4b7">
+      <Execution id="3d33c3bb-b9bd-48fa-b5f1-f167abdef8a3" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="EliminarNoObligatorio" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-009 Parámetro con campos obligatorios vacíos devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="746f1c65-7677-dc63-cd10-00f0ca7cf078">
+      <Execution id="e2678585-a744-44ff-aca2-2c6d18861071" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="CamposObligatoriosVacios" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-014 Desactivar categoría en uso devuelve 200 y conserva la carga" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="a8f5ece3-b040-5c38-64ee-1c88f81cad03">
+      <Execution id="c852b24d-139e-4a8c-9a8e-cb66113aa7a5" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="DesactivarCategoriaEnUso" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-009 Origen y destino inválidos devuelven 400(origen: &quot;Cali&quot;, destino: &quot;  &quot;, campo: &quot;destino&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="08befc51-b0c9-ea2f-1263-1a38072d2ba1">
+      <Execution id="1a738ead-dbbb-4bd6-8ffa-a79213ebe02b" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="OrigenDestinoInvalidos" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-007 Valor incompatible con el tipo de dato devuelve 400(tipoDato: &quot;ENTERO&quot;, valor: &quot;abc&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="805ede5e-596e-948e-e549-a7251312729f">
+      <Execution id="efd00859-584c-4ed4-8321-b8c64e83ca44" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="ValorIncompatible" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-008 Tipo de dato no permitido devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="9e760115-f4ff-5675-e038-18e5e6ff3a92">
+      <Execution id="e5588855-618d-4a34-869f-f5d6dea9532b" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="TipoDatoInvalido" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-016 Mover un objeto a una carga sin capacidad disponible devuelve 409" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="a06ef9dc-3774-d581-066b-0d5423db584a">
+      <Execution id="844063d7-264b-480a-9aad-bcffd1156d2b" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="MoverObjetoSinCapacidad" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-017 Código de categoría con formato inválido devuelve 400(codigo: &quot;CON ESPACIO&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="c0efab08-7347-7f9f-6a74-66e196fb9212">
+      <Execution id="73eec907-d177-49cd-a8ea-dd9e0696813c" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="CodigoFormatoInvalido" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-017 Código de categoría con formato inválido devuelve 400(codigo: &quot;X&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="215e1fa9-da19-4dc0-182a-fab2e7b001c8">
+      <Execution id="e88ee780-a2c3-4b7a-b14f-97189e4ccd7a" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="CodigoFormatoInvalido" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-002 Filtrar por tipo devuelve solo categorías de ese tipo(tipo: &quot;VEHICULO&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="5f6f1833-3f4f-c6ec-3897-b8c750e01699">
+      <Execution id="afc69578-03d9-4b88-a66d-2f278e302fa8" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="FiltrarPorTipo" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-003 Consultar carga por id devuelve 200 con sus clasificaciones" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="6ac7d014-b1b4-1784-772e-905a76abf749">
+      <Execution id="c06b0d48-aefd-415c-92ca-c460cec17b70" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="ConsultarPorId" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-012 El mismo código en otro tipo de categoría se permite (201)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="5cf92263-b757-3769-86fc-e8945ca9b0e3">
+      <Execution id="59d29c49-0287-4f60-9666-601d9bd032c3" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="MismoCodigoEnOtroTipo" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-014 Cantidad con tipo de dato incorrecto (decimal o texto) devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="be19bde0-06cf-d568-938f-e970d65405cc">
+      <Execution id="eb4cca7e-22d9-4e62-b34f-ebeb6f60378f" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="CantidadTipoIncorrecto" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-008 Objeto vinculado a una carga inexistente devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="9bf03a0a-9353-b947-f592-0e7b0a6047c3">
+      <Execution id="28383e46-d85a-41c0-a45e-5cdaf75756c1" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="CargaInexistente" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-009 Origen y destino inválidos devuelven 400(origen: &quot;Bogotá&quot;, destino: &quot;bogotá&quot;, campo: &quot;destino&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="d075b83f-b52c-ebd1-12e2-0eb62a5dbccb">
+      <Execution id="fec5c9da-eceb-49ce-bbf1-2605cc537864" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="OrigenDestinoInvalidos" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-012 Categoría de tipo incorrecto en vehículo, entrega o estado devuelve 400(campo: &quot;tipoVehiculoId&quot;, tipo: &quot;TIPO_CARGA&quot;, codigo: &quot;GENERAL&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="203c319b-3941-d334-dcd7-6909bf3ab913">
+      <Execution id="163d1dff-c0cf-4d9a-acf3-6ae58ef6f3de" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="CategoriaTipoIncorrecto" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-005 Consultar los objetos de una carga devuelve solo los de esa carga" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="34d3f420-f7ae-104d-9e2a-94cd1aa48724">
+      <Execution id="5d41b0bd-2299-4a6d-8399-8a5cd929ef96" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="ObjetosDeCarga" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-006 Consultar categoría por id devuelve 200" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="c3d5c906-c230-169e-9a6a-1b6169721775">
+      <Execution id="3974d120-0f24-4917-8b32-0d0c2ec79079" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="ConsultarPorId" />
+    </UnitTest>
+    <UnitTest name="CP-PAR-002 Filtrar parámetros por categoría y por estado activo" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="8e32f465-e9f3-e52b-d7ff-c04ca0553b8a">
+      <Execution id="a380216f-89ac-48da-8e41-7c2023c30510" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ParametrosTests" name="FiltrarParametros" />
+    </UnitTest>
+    <UnitTest name="CP-INT-002 SQLite impide borrar una categoría referenciada (clave foránea Restrict)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="b1dc92d1-b0d4-d70d-ff34-496856d9dd6b">
+      <Execution id="2f648f2a-9b1a-4563-8f71-8e387f9397d1" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.IntegracionTests" name="IntegridadReferencialEnBaseDeDatos" />
+    </UnitTest>
+    <UnitTest name="CP-INT-003 SQLite rechaza pesos negativos y cantidades en cero (restricciones CHECK)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="d8f619ed-4caa-6447-fe98-3faf096d2d94">
+      <Execution id="b2025087-7056-4ba5-a600-c3d7d7f269ba" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.IntegracionTests" name="RestriccionesCheck" />
+    </UnitTest>
+    <UnitTest name="CP-OBJ-010 Peso o volumen unitario negativos devuelven 400(campo: &quot;volumenUnitarioM3&quot;)" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="b9480959-0682-ad73-54e9-d3cad0321864">
+      <Execution id="edc1cc8d-6969-4f52-8c89-fac38f7315fe" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.ObjetosTests" name="ValoresFisicosNegativos" />
+    </UnitTest>
+    <UnitTest name="CP-CAR-011 Categoría VEHICULO usada como TIPO_CARGA devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="1ad4f2b4-131a-5430-2b7b-70c6e30a4a9b">
+      <Execution id="5bb5cf68-a1b9-4bde-80f6-cce9f5ee22ee" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CargasTests" name="VehiculoComoTipoCarga" />
+    </UnitTest>
+    <UnitTest name="CP-INT-004 Flujo completo: categoría → carga → objetos → eliminación ordenada respetando dependencias" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="311657c3-917b-e76d-bb2a-0c4fbd65e745">
+      <Execution id="602e416a-bbb5-438a-95fb-55aeef7080fd" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.IntegracionTests" name="FlujoCompleto" />
+    </UnitTest>
+    <UnitTest name="CP-CAT-009 Crear categoría con campos obligatorios vacíos devuelve 400" storage="c:\users\user\desktop\carga_pesada\tests\transportecargapesada.tests\bin\debug\net10.0\transportecargapesada.tests.dll" id="27f25b62-438a-12fd-422d-227a90ea1608">
+      <Execution id="5661b56b-921c-4939-9c80-974c82675453" />
+      <TestMethod codeBase="C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\bin\Debug\net10.0\TransporteCargaPesada.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="TransporteCargaPesada.Tests.CategoriasTests" name="CrearConCamposVacios" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="e8797ae8-226a-6237-ae79-7a0c91639677" executionId="c09a0ac3-5a51-4871-910f-71865163d956" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61771608-7a2a-052e-66e4-088478f267d5" executionId="d865bf66-5f00-4aac-a88b-3687b88f592a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f5cd9d1a-eed8-ae0b-0938-c673c886a833" executionId="750170bb-c1db-41bf-948e-aa82fadd595f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aa0a39e2-9ade-bd67-47ec-dc7e08e55849" executionId="d1ea930e-1389-4d0a-9da6-be1a99fe5a6e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e32f465-e9f3-e52b-d7ff-c04ca0553b8a" executionId="a380216f-89ac-48da-8e41-7c2023c30510" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="75288bd8-6f39-81ef-8812-d4bea5a8a5fe" executionId="75349db3-999c-46f3-b87e-62e87d93418b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="10680f4d-68f9-1702-4ceb-6055173669c5" executionId="21e294bf-a3de-4ab3-becd-7466835bf88c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9d23ea78-fe10-a91e-b395-48ac37234346" executionId="687576db-e874-4b18-9d05-b65d4525edca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d6829fca-d4e9-d9e8-15a8-d27924a8bde1" executionId="5b089d90-a991-4add-b6c7-3aa86cf2bb27" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="41b62ce7-13ff-3cee-4e8a-c451c48e280f" executionId="e529ffe2-59ab-496f-9382-54eec8431b0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7bb16c67-d18a-8250-fd38-51402bb998e4" executionId="7eb56a54-9a26-404f-99da-999ab6e59993" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5f4967fc-4eb6-1631-130c-418195fe6314" executionId="4f42290e-6910-4013-bde0-12d82c6b40b9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="91b68f81-ad42-d022-9e77-29dabcc8c70c" executionId="07efc8cb-d7a2-4b30-a799-d9500f62ef77" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="587e8437-cea8-dc68-bfdb-86f7b068b928" executionId="1f60f2a2-7ff7-43ff-9910-99b9b506a7f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e52710e7-c504-03ae-4e9b-e44ca95e9bf8" executionId="68264fc9-6d52-481f-bd1d-b5ce60a2348e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a8f5ece3-b040-5c38-64ee-1c88f81cad03" executionId="c852b24d-139e-4a8c-9a8e-cb66113aa7a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c8ee5982-3824-cf8b-5114-feac4d1ce620" executionId="32b5b300-8060-4b3a-919c-6fdb4096dda4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3288f321-ec7f-db45-58f3-e7e96811fa80" executionId="7b10c7fd-3187-4707-91e0-ffa96653d81f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="be19bde0-06cf-d568-938f-e970d65405cc" executionId="eb4cca7e-22d9-4e62-b34f-ebeb6f60378f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="788e37ea-8feb-db69-f7d2-c8a5e4f6fe8c" executionId="adf9f57e-e4ed-4f10-aad0-d3f88fc32550" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1264ce88-623f-7f72-cf8d-657a1ef29971" executionId="8f5dcb2b-bf56-427e-b9a5-b8e68004f968" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c2a1d70e-8efc-e6ea-4e08-f8d0bf111d98" executionId="5bdfd8e8-e1e0-42fa-878f-93394fc1aa61" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d8d5f20-877f-4924-d99b-3e5de59e8d25" executionId="62928c80-35f6-4581-87d3-cc03e39a8fc8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd1fa314-5103-0bfa-ea32-a3a593269b78" executionId="6b6800da-a955-4ca2-82be-ef007818c3bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="203c319b-3941-d334-dcd7-6909bf3ab913" executionId="163d1dff-c0cf-4d9a-acf3-6ae58ef6f3de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="18c8a379-f971-2b8f-56c9-63946730b65f" executionId="4ab86c47-8a2d-4b4c-bbdd-8ea7291dbb08" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e22d3d7-7d14-794b-2b98-d989ba34d3ea" executionId="caa42c30-ec00-4a1e-892b-dc94936bc620" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b59eedfc-de2e-5a98-b98e-91d89e4dd045" executionId="1f6f1f37-ba92-4402-9b76-0a676afbecea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="55a1f307-75c7-dc5d-6291-c70e55d6aeb3" executionId="f314605e-becb-463e-a5ca-8fedadc41e77" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="72df4c92-e19b-f45a-3936-5af647816cda" executionId="7635ba4e-5638-4d32-9eee-17fac072f837" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="79dfdca9-86f3-7082-4cc1-aedfa137df03" executionId="b7e9bc83-d04d-4bd0-a644-c8a710e6ef68" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3d5c906-c230-169e-9a6a-1b6169721775" executionId="3974d120-0f24-4917-8b32-0d0c2ec79079" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2af958bb-64f8-f39f-caae-fd7b1c01e878" executionId="86e0f8bf-0f9d-408a-bbbf-2543867d60a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0c0a71b3-bb5e-9e12-4ec1-bad4be01810b" executionId="e75eb244-61c0-4d75-a5a3-512d3a2856eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="311657c3-917b-e76d-bb2a-0c4fbd65e745" executionId="602e416a-bbb5-438a-95fb-55aeef7080fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4605571c-c1b2-256d-6aa7-68a166de477d" executionId="ea50ac8e-2c84-4ca5-b68d-9ec798ee51ef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1e7103bc-f020-9be4-6776-37eede9bef6d" executionId="09742a16-2b50-440d-8484-add50d81f34d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0e5c440c-e534-e6b7-b6b9-f2a5e484e4b7" executionId="3d33c3bb-b9bd-48fa-b5f1-f167abdef8a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="746f1c65-7677-dc63-cd10-00f0ca7cf078" executionId="e2678585-a744-44ff-aca2-2c6d18861071" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b9480959-0682-ad73-54e9-d3cad0321864" executionId="edc1cc8d-6969-4f52-8c89-fac38f7315fe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b010de24-435f-e49a-e4e5-8cf09d744f5f" executionId="f7e5d62f-d251-4357-b7a0-14453263730f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d438cf91-f704-600e-65c8-2ead9f2c0d08" executionId="d0317be1-519d-4a09-a60b-0781cd93823b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7c510a3-ab0c-d582-1977-69d42cd1c769" executionId="5cdd579d-fd3a-4918-a483-afef361f6362" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="08befc51-b0c9-ea2f-1263-1a38072d2ba1" executionId="1a738ead-dbbb-4bd6-8ffa-a79213ebe02b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c82ba3dc-f999-91bd-c895-b0035f568ab6" executionId="1f82b8f9-f243-45a3-8d5f-eeb1fd58a371" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a06ef9dc-3774-d581-066b-0d5423db584a" executionId="844063d7-264b-480a-9aad-bcffd1156d2b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="59e6ca68-70e1-90da-f640-721a2c8ac6e7" executionId="84fd777c-e562-4370-87b0-3e14fddcd1f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bd67a713-1b6f-270d-a633-72eee854d6d5" executionId="5ef54d9f-f052-429f-a50d-d9b85d971015" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5f6f1833-3f4f-c6ec-3897-b8c750e01699" executionId="afc69578-03d9-4b88-a66d-2f278e302fa8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb203969-c33c-b074-f093-cf8445bc89c4" executionId="0e9c63eb-aed8-4419-905b-c3e496edac0c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="effc9996-9499-1baa-7b6c-42d44c09a679" executionId="aca5c75f-93ec-4b19-8c97-1a16f8d4854f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2a84dc91-650e-aff2-b48a-52792344dec7" executionId="96c55c46-eef7-49fa-9c6a-c3bc6972d7ab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c211b46b-c5ee-9cc0-d19d-10358da55c12" executionId="bf09ae7d-eb02-42d4-bffc-d7e006270e77" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="49fa4209-28ef-eea0-fdae-11d2ca21164e" executionId="55659d1e-f321-4d34-8dfb-bd4981e42a11" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d8f619ed-4caa-6447-fe98-3faf096d2d94" executionId="b2025087-7056-4ba5-a600-c3d7d7f269ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a70c42eb-7fe5-68cb-129e-b341c98133e0" executionId="be2113bd-a014-4a2d-8e39-a66d656e6eef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45593c58-f5fe-b08b-5512-45e784f5dd9e" executionId="2aa1c2d2-831d-4bf4-9b2a-0ef04b473a00" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5bdbb5e6-12f2-1fa3-65d8-22206f52f234" executionId="8bdba708-1d5c-4a81-977d-c26de012bab4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2c109b0d-e6a8-e199-7663-9c7af7caa888" executionId="87ed02e4-b0ce-4333-9891-c0d7c51a36d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cde29903-e929-0eaf-38a0-79fe2416eef2" executionId="c6511aaa-024f-45ce-ae85-076599db6d63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b1dc92d1-b0d4-d70d-ff34-496856d9dd6b" executionId="2f648f2a-9b1a-4563-8f71-8e387f9397d1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e4730232-9a9b-c0b0-c849-9225e18a5a75" executionId="3a510adf-e1c5-42e5-81b9-a752ce4f39ab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0b245598-fd8e-e6a7-10e1-9b2710eaf8e8" executionId="25258a8d-30d4-4578-ab22-fe0b311b8037" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24f945be-130a-314b-3199-33d5e99439cf" executionId="77e98ca9-82fb-420f-8316-ffd08d043f69" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d075b83f-b52c-ebd1-12e2-0eb62a5dbccb" executionId="fec5c9da-eceb-49ce-bbf1-2605cc537864" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8300001a-750a-c47c-564b-2d33e54f7a18" executionId="02842499-f075-401b-86d6-37c06a7545bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="af72b77b-927d-6ad3-d5b3-07939b5e08f5" executionId="7d21ec7a-9f6c-4a04-a242-1e2349dd51dc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9bf03a0a-9353-b947-f592-0e7b0a6047c3" executionId="28383e46-d85a-41c0-a45e-5cdaf75756c1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ead5eeab-f3c5-d7c2-2eef-ee5db39a8fb1" executionId="7ea87731-9515-483d-a579-e732f4075c5f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d137a87-9111-3db5-f783-9138ed6745ff" executionId="b2c49a37-fd09-4409-9376-3651bcac536b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5cf92263-b757-3769-86fc-e8945ca9b0e3" executionId="59d29c49-0287-4f60-9666-601d9bd032c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9cf56b44-a0d1-8a4f-68ba-4138918499da" executionId="df2de5b7-f7e8-49ce-a98e-35cecb5c1e08" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1ad4f2b4-131a-5430-2b7b-70c6e30a4a9b" executionId="5bb5cf68-a1b9-4bde-80f6-cce9f5ee22ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="805ede5e-596e-948e-e549-a7251312729f" executionId="efd00859-584c-4ed4-8321-b8c64e83ca44" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="949321ce-7eac-fca8-bae4-8d5d56061d5a" executionId="054b42c3-100c-4328-94c5-5f64c2e792a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="642f3d52-2e73-c4c0-67ef-6cd3ff8ff161" executionId="ac9a0a61-477e-461d-bad6-91886a083f33" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="147e75ee-2c64-1258-86ac-2af8677a2600" executionId="9d24031e-33b1-43b1-8dcf-03c9fef00558" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="215e1fa9-da19-4dc0-182a-fab2e7b001c8" executionId="e88ee780-a2c3-4b7a-b14f-97189e4ccd7a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3b34483c-423f-1d2d-c680-ff7c31f11a90" executionId="03f33a24-85c1-44ce-99c3-402d41a706dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7ecb5b19-8b02-a513-be57-1446d8bbf6ae" executionId="e75c3609-8cfc-4634-8fa7-26c7d2c2b541" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0efab08-7347-7f9f-6a74-66e196fb9212" executionId="73eec907-d177-49cd-a8ea-dd9e0696813c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="74dc5d54-f343-961f-0a27-f3c7c8d8cf20" executionId="f3aaf3da-4562-47ef-bc1c-267a11cbbc75" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2386df24-ca17-ef84-feed-5793d6069759" executionId="2815d44c-64d0-4b51-b37c-d3ccdd8d909f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc2943b3-a052-8ccc-b6ac-4254a40a03f6" executionId="d9f0a4db-c3c1-4b31-822b-00a984a6b22e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="95380023-730d-65ed-e4a2-481798b2252b" executionId="f9af51ea-f5b7-4911-880e-bdc734fb5359" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0e2d81c7-02b1-5ef7-f67c-66d95013ac91" executionId="a0ee2d68-36de-4432-af0a-4d93bfef6a61" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9a3f8164-30a0-9cc0-ca50-6dc74e6524ad" executionId="e794c248-6d1c-4a5f-9f98-d5b31b5c7224" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8545b55f-231c-17d8-ba7d-50cc2a3f70dc" executionId="c7d8b5f4-6233-48a6-8f15-dfdcb795a7c1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="223ad461-0ae2-930c-9436-fb74f07dfe5d" executionId="fa4ac4da-3ce4-4e48-a564-674a34df5014" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9df3642b-f955-3b8c-ec0c-9cd1c6fa2bb6" executionId="77ae7ee9-9b98-4bb9-bfa6-90cf91951e95" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2417646d-e72d-101f-4be7-e22fb0c3609e" executionId="5670a4ca-6433-4a15-b0ea-067f69d566fe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0564ff7b-cef0-c176-bdaf-29cfbfb71c56" executionId="858f4a17-c824-4fd4-b915-1de23f6daee4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a21d30fe-5abb-4a08-fcaf-33345c99d622" executionId="075d39f9-5c6b-4656-a12a-650e48711fc0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cbda17e2-1bd7-d99b-699d-9792d599cab5" executionId="dbd70774-f7b1-4b9c-8268-42250495f0cb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cd34a1a8-5592-ab36-c659-605369f8cb84" executionId="9642a3c4-90db-433d-8c10-00215d295a15" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ac7d014-b1b4-1784-772e-905a76abf749" executionId="c06b0d48-aefd-415c-92ca-c460cec17b70" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27f25b62-438a-12fd-422d-227a90ea1608" executionId="5661b56b-921c-4939-9c80-974c82675453" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e760115-f4ff-5675-e038-18e5e6ff3a92" executionId="e5588855-618d-4a34-869f-f5d6dea9532b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="563cc86f-c475-c113-a223-88dd99aee8ec" executionId="97c21d2f-8472-410a-a7b8-f5606b518588" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="57225a69-fca0-d4d1-8dc7-8718c282ad05" executionId="3b0b4cdf-73ee-494d-9e30-acd3ea0f9dbd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3a8c5e85-3c18-d307-0b53-930eeb13e795" executionId="66da24ca-2d78-47b6-87aa-d092820ed3bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="34d3f420-f7ae-104d-9e2a-94cd1aa48724" executionId="5d41b0bd-2299-4a6d-8399-8a5cd929ef96" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f052d822-e31d-6782-42df-9c738084057f" executionId="ac965025-be56-4b7c-8798-83a66a28aba6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d31bf984-7820-f634-e949-f6ea82a4cf6f" executionId="888dd5a7-55d6-48ba-bfad-9478ce7fa9e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ed05b2e2-a87f-2485-ba89-98e81bd25c4f" executionId="14014d70-aea6-4fd5-aaf4-77e5c13eaf2d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="05667b34-99e1-729f-8b36-46d251cd8c54" executionId="e8b73b02-f451-42b5-9790-989a4f91f3b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b0aa7388-433e-bb61-0ec0-02e0652e309c" executionId="1dfc9a10-1266-4956-bb8b-79341e453094" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="feae0d3c-e6e4-cdf5-cda5-a9af6caba7f2" executionId="e162b3dd-a788-4313-b76a-24da8a103dae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61ba2868-32a2-d9ba-6590-b69418196d79" executionId="e1aa3036-0a2c-408f-a43d-0be72a531960" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="109" executed="109" passed="109" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.11)&#xD;
+[xUnit.net 00:00:03.52]   Discovering: TransporteCargaPesada.Tests&#xD;
+[xUnit.net 00:00:03.77]   Discovered:  TransporteCargaPesada.Tests&#xD;
+[xUnit.net 00:00:03.83]   Starting:    TransporteCargaPesada.Tests&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20261014160045_InicialTransporte'.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20261014160045_InicialTransporte'.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20261014160045_InicialTransporte'.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20261014160045_InicialTransporte'.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20261014160045_InicialTransporte'.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\User\Desktop\carga_pesada\src\TransporteCargaPesada.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\User\Desktop\carga_pesada\src\TransporteCargaPesada.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\User\Desktop\carga_pesada\src\TransporteCargaPesada.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\User\Desktop\carga_pesada\src\TransporteCargaPesada.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\User\Desktop\carga_pesada\src\TransporteCargaPesada.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20261014160045_InicialTransporte'.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\User\Desktop\carga_pesada\src\TransporteCargaPesada.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20261014160045_InicialTransporte'.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\User\Desktop\carga_pesada\src\TransporteCargaPesada.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20405]&#xD;
+      No migrations were applied. The database is already up to date.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\User\Desktop\carga_pesada\src\TransporteCargaPesada.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20261014160045_InicialTransporte'.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\User\Desktop\carga_pesada\src\TransporteCargaPesada.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20261014160045_InicialTransporte'.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\User\Desktop\carga_pesada\src\TransporteCargaPesada.Web&#xD;
+fail: TransporteCargaPesada.Errores[0]&#xD;
+      Error no controlado en GET /api/cargas&#xD;
+      System.InvalidOperationException: Fallo simulado. Data Source=C:/secreto/produccion.db;Password=1234&#xD;
+         at TransporteCargaPesada.Tests.Infraestructura.FiltroErrorSimulado.OnActionExecuting(ActionExecutingContext context) in C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\Infraestructura\FiltroErrorSimulado.cs:line 17&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()&#xD;
+      --- End of stack trace from previous location ---&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()&#xD;
+      --- End of stack trace from previous location ---&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeNextResourceFilter&gt;g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()&#xD;
+      --- End of stack trace from previous location ---&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)&#xD;
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)&#xD;
+         at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.&lt;Invoke&gt;g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)&#xD;
+fail: Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware[1]&#xD;
+      An unhandled exception has occurred while executing the request.&#xD;
+      System.InvalidOperationException: Fallo simulado. Data Source=C:/secreto/produccion.db;Password=1234&#xD;
+         at TransporteCargaPesada.Tests.Infraestructura.FiltroErrorSimulado.OnActionExecuting(ActionExecutingContext context) in C:\Users\User\Desktop\carga_pesada\tests\TransporteCargaPesada.Tests\Infraestructura\FiltroErrorSimulado.cs:line 17&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()&#xD;
+      --- End of stack trace from previous location ---&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()&#xD;
+      --- End of stack trace from previous location ---&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeNextResourceFilter&gt;g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()&#xD;
+      --- End of stack trace from previous location ---&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)&#xD;
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)&#xD;
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)&#xD;
+         at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.&lt;Invoke&gt;g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20261014160045_InicialTransporte'.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\User\Desktop\carga_pesada\src\TransporteCargaPesada.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:10.84]   Finished:    TransporteCargaPesada.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

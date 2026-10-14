@@ -1,0 +1,13 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">Ocurrió un error</h1>
+<p>No fue posible procesar la solicitud. Intente de nuevo o vuelva a la <a asp-page="/Index">página de inicio</a>.</p>
+
+@if (Model.ShowRequestId)
+{
+    <p class="text-muted small">Identificador de la solicitud: <code>@Model.RequestId</code></p>
+}

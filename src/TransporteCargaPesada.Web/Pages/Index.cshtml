@@ -1,0 +1,87 @@
+﻿@page
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="mb-4">
+    <h1 class="h3">Sistema de transporte de carga pesada</h1>
+    <p class="text-muted mb-0">
+        Gestión de cargas, objetos transportados, catálogos (categorías) y parámetros configurables.
+        Esta interfaz consume la API REST <code>/api</code>; todas las reglas de negocio se validan en el servidor.
+    </p>
+</div>
+
+<div id="mensajes"></div>
+
+<div class="row g-3 mb-4">
+    <div class="col-6 col-lg-3">
+        <a class="text-decoration-none" asp-page="/Cargas">
+            <div class="card tarjeta-indicador h-100"><div class="card-body">
+                <div class="text-muted">Cargas</div><div class="valor" id="totalCargas">…</div>
+                <div class="small text-muted">Servicios de transporte</div>
+            </div></div>
+        </a>
+    </div>
+    <div class="col-6 col-lg-3">
+        <a class="text-decoration-none" asp-page="/Objetos">
+            <div class="card tarjeta-indicador h-100"><div class="card-body">
+                <div class="text-muted">Objetos</div><div class="valor" id="totalObjetos">…</div>
+                <div class="small text-muted">Mercancías transportadas</div>
+            </div></div>
+        </a>
+    </div>
+    <div class="col-6 col-lg-3">
+        <a class="text-decoration-none" asp-page="/Categorias">
+            <div class="card tarjeta-indicador h-100"><div class="card-body">
+                <div class="text-muted">Categorías</div><div class="valor" id="totalCategorias">…</div>
+                <div class="small text-muted">Registros de catálogo</div>
+            </div></div>
+        </a>
+    </div>
+    <div class="col-6 col-lg-3">
+        <a class="text-decoration-none" asp-page="/Parametros">
+            <div class="card tarjeta-indicador h-100"><div class="card-body">
+                <div class="text-muted">Parámetros</div><div class="valor" id="totalParametros">…</div>
+                <div class="small text-muted">Configuraciones</div>
+            </div></div>
+        </a>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-lg-6">
+        <div class="card h-100"><div class="card-body">
+            <h2 class="h5">Cargas por estado</h2>
+            <table class="table table-sm mb-0">
+                <thead><tr><th>Estado</th><th class="text-end">Cargas</th></tr></thead>
+                <tbody id="tablaEstados"><tr><td colspan="2" class="text-muted">Cargando…</td></tr></tbody>
+            </table>
+        </div></div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card h-100"><div class="card-body">
+            <h2 class="h5">Límites configurados</h2>
+            <p class="small text-muted">Reglas académicas configurables desde <a asp-page="/Parametros">Parámetros</a>.</p>
+            <table class="table table-sm mb-0">
+                <thead><tr><th>Parámetro</th><th class="text-end">Valor</th></tr></thead>
+                <tbody id="tablaLimites"><tr><td colspan="2" class="text-muted">Cargando…</td></tr></tbody>
+            </table>
+        </div></div>
+    </div>
+    <div class="col-12">
+        <div class="card"><div class="card-body">
+            <h2 class="h5">Cómo demostrar el sistema</h2>
+            <ol class="mb-0">
+                <li>Revise los catálogos en <a asp-page="/Categorias">Categorías</a> y filtre por tipo (VEHICULO, TIPO_CARGA…).</li>
+                <li>Registre una carga en <a asp-page="/Cargas">Cargas</a>: solo se ofrecen categorías del tipo correcto.</li>
+                <li>Agregue objetos en <a asp-page="/Objetos">Objetos</a> e intente superar el peso declarado (respuesta 409).</li>
+                <li>Intente eliminar una carga con objetos o una categoría en uso (respuesta 409).</li>
+                <li>Cambie <code>PESO_MAXIMO_CARGA_KG</code> en <a asp-page="/Parametros">Parámetros</a> y registre una carga que lo supere (respuesta 400).</li>
+            </ol>
+        </div></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/pages/inicio.js" asp-append-version="true"></script>
+}
